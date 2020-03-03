@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
+import {
     Card,
     CardImg,
     HolderProvider,
@@ -10,17 +10,12 @@ import {
     AvatarAddOn,
     Button,
     Badge,
-    CardBody
+    CardBody,
 } from './../../../components';
 
 import { randomArray, randomAvatar } from './../../../utilities';
 
-const status = [
-    "warning",
-    "danger",
-    "success",
-    "secondary"
-];
+const status = ['warning', 'danger', 'success', 'secondary'];
 const stars = [
     <span key="stars5">
         <i className="fa fa-fw fa-star text-warning" />
@@ -66,7 +61,7 @@ const VideosResultsCard = () => (
                 <div className="col-md-4">
                     <HolderProvider.Icon
                         iconChar=""
-                        size={ 32 }
+                        size={32}
                         width="100p"
                         height={350}
                     >
@@ -77,61 +72,61 @@ const VideosResultsCard = () => (
                     <CardBody>
                         <div>
                             <a href="#" className="h6 mb-0">
-                                { faker.commerce.productName() }
+                                {faker.commerce.productName()}
                             </a>
                         </div>
                         <div className="text-success mb-3">
-                            { faker.internet.url() }
+                            {faker.internet.url()}
                         </div>
-                        <div className="mb-3">
-                            { faker.lorem.paragraph() }
-                        </div>
+                        <div className="mb-3">{faker.lorem.paragraph()}</div>
                         <div>
-                            { randomArray(stars) } <span className="ml-2">16 Reviews</span>
+                            {randomArray(stars)}{' '}
+                            <span className="ml-2">16 Reviews</span>
                         </div>
                         <div className="mb-2">
                             <Badge color="secondary" pill className="mr-1">
-                                { faker.internet.domainName() }
+                                {faker.internet.domainName()}
                             </Badge>
                             <Badge color="secondary" pill className="mr-1">
-                                { faker.internet.domainName() }
+                                {faker.internet.domainName()}
                             </Badge>
                             <Badge color="secondary" pill className="mr-1">
-                                { faker.internet.domainName() }
-                            </Badge>                       
+                                {faker.internet.domainName()}
+                            </Badge>
                         </div>
                         <div>
                             <Media>
                                 <Media left className="align-self-center mr-3">
                                     <Avatar.Image
                                         size="sm"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
-                                                color={ randomArray(status) }
+                                                color={randomArray(status)}
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <div className="mt-0">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </div>
                                 </Media>
-                            </Media>  
-                        </div>  
+                            </Media>
+                        </div>
                     </CardBody>
                 </div>
             </div>
         </Card>
     </React.Fragment>
-)
+);
 
 export { VideosResultsCard };

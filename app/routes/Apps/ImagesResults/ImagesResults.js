@@ -1,30 +1,22 @@
 import React from 'react';
 
-import { 
-    Container,
-    Row,
-    CardColumns,
-    Col
-} from './../../../components';
-import { HeaderMain } from "../../components/HeaderMain";
-import { SearchResultsLeftNav } from "../../components/SearchResults/SearchResultsLeftNav";
-import { SearchResultsHeader } from "../../components/SearchResults/SearchResultsHeader";
-import { ImagesResultsCard } from "../../components/SearchResults/ImagesResultsCard";
-import { Paginations } from "../../components/Paginations";
+import { Container, Row, CardColumns, Col } from './../../../components';
+import { HeaderMain } from '../../components/HeaderMain';
+import { SearchResultsLeftNav } from '../../components/SearchResults/SearchResultsLeftNav';
+import { SearchResultsHeader } from '../../components/SearchResults/SearchResultsHeader';
+import { ImagesResultsCard } from '../../components/SearchResults/ImagesResultsCard';
+import { Paginations } from '../../components/Paginations';
 
 const ImagesResults = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Images Results"
-                className="mb-5 mt-4"
-            />
-            { /* START Content */}
+            <HeaderMain title="Images Results" className="mb-5 mt-4" />
+            {/* START Content */}
             <Row>
-                <Col lg={ 3 }>
+                <Col lg={3}>
                     <SearchResultsLeftNav />
                 </Col>
-                <Col lg={ 9 }>
+                <Col lg={9}>
                     <SearchResultsHeader />
                     <CardColumns>
                         <ImagesResultsCard />
@@ -42,7 +34,7 @@ const ImagesResults = () => (
                     </div>
                 </Col>
             </Row>
-            { /* END Content */}
+            {/* END Content */}
         </Container>
     </React.Fragment>
 );

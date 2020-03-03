@@ -1,38 +1,34 @@
 import React from 'react';
 
-import { 
+import {
     Container,
     Row,
     Table,
     CardFooter,
     Card,
-    Col
+    Col,
 } from './../../../components';
 
+import { HeaderMain } from '../../components/HeaderMain';
+import { ProjectsSmHeader } from '../../components/Projects/ProjectsSmHeader';
+import { Paginations } from '../../components/Paginations';
 
-import { HeaderMain } from "../../components/HeaderMain";
-import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
-import { Paginations } from "../../components/Paginations";
-
-import { TrTableGalleryList } from "./components/TrTableGalleryList";
+import { TrTableGalleryList } from './components/TrTableGalleryList';
 
 const GalleryTable = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Gallery Table"
-                className="mb-5 mt-4"
-            />
-            { /* START Content */}
+            <HeaderMain title="Gallery Table" className="mb-5 mt-4" />
+            {/* START Content */}
             <Row>
-                <Col lg={ 12 }>
-                    <ProjectsSmHeader 
+                <Col lg={12}>
+                    <ProjectsSmHeader
                         subTitle="Gallery Table"
                         linkList="/apps/gallery-table"
                         linkGrid="/apps/gallery-grid"
                     />
                     <Card>
-                        { /* START Table */}
+                        {/* START Table */}
                         <Table className="mb-0" hover size="sm" responsive>
                             <thead>
                                 <tr>
@@ -47,37 +43,23 @@ const GalleryTable = () => (
                             </thead>
                             <tbody>
                                 <TrTableGalleryList />
-                                <TrTableGalleryList 
-                                    id="2"
-                                />
-                                <TrTableGalleryList 
-                                    id="3"
-                                />
-                                <TrTableGalleryList 
-                                    id="4"
-                                />
-                                <TrTableGalleryList 
-                                    id="5"
-                                />
-                                <TrTableGalleryList 
-                                    id="6"
-                                />
-                                <TrTableGalleryList 
-                                    id="7"
-                                />
-                                <TrTableGalleryList 
-                                    id="8"
-                                />
+                                <TrTableGalleryList id="2" />
+                                <TrTableGalleryList id="3" />
+                                <TrTableGalleryList id="4" />
+                                <TrTableGalleryList id="5" />
+                                <TrTableGalleryList id="6" />
+                                <TrTableGalleryList id="7" />
+                                <TrTableGalleryList id="8" />
                             </tbody>
                         </Table>
-                        { /* END Table */}
+                        {/* END Table */}
                         <CardFooter className="d-flex justify-content-center pb-0">
-                            <Paginations />    
+                            <Paginations />
                         </CardFooter>
                     </Card>
                 </Col>
             </Row>
-            { /* END Content */}
+            {/* END Content */}
         </Container>
     </React.Fragment>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
+import {
     Badge,
     Avatar,
     UncontrolledButtonDropdown,
@@ -9,21 +9,14 @@ import {
     DropdownMenu,
     AvatarAddOn,
     Media,
-    DropdownItem
+    DropdownItem,
 } from './../../../../components';
 
 import { randomArray, randomAvatar } from './../../../../utilities';
 
-const badges = [
-    "secondary"
-];
+const badges = ['secondary'];
 
-const status = [
-    "success",
-    "danger",
-    "warning",
-    "secondary"
-];
+const status = ['success', 'danger', 'warning', 'secondary'];
 
 const TrTableFilesList = () => (
     <React.Fragment>
@@ -31,55 +24,55 @@ const TrTableFilesList = () => (
             <td className="align-middle">
                 <Media>
                     <Media left middle>
-                       <i className="fa fa-fw fa-folder-o fa-3x mr-2"></i>
+                        <i className="fa fa-fw fa-folder-o fa-3x mr-2"></i>
                     </Media>
                     <Media body>
                         <div className="text-inverse">
-                            { faker.commerce.department() }   
+                            {faker.commerce.department()}
                         </div>
-                        <span>
-                            { faker.finance.amount() } Mb
-                        </span>
+                        <span>{faker.finance.amount()} Mb</span>
                     </Media>
                 </Media>
             </td>
             <td className="align-middle">
-                { faker.date.weekday() }, 12 { faker.date.month() }, 2018<br />
+                {faker.date.weekday()}, 12 {faker.date.month()}, 2018
+                <br />
                 12:23 PM
             </td>
             <td className="align-middle">
                 <Avatar.Image
                     size="md"
-                    src={ randomAvatar() }
+                    src={randomAvatar()}
                     addOns={[
-                        <AvatarAddOn.Icon 
+                        <AvatarAddOn.Icon
                             className="fa fa-circle"
                             color="white"
                             key="avatar-icon-bg"
                         />,
-                        <AvatarAddOn.Icon 
+                        <AvatarAddOn.Icon
                             className="fa fa-circle"
-                            color={ randomArray(status) }
+                            color={randomArray(status)}
                             key="avatar-icon-fg"
-                        />
+                        />,
                     ]}
                 />
             </td>
             <td className="align-middle">
-                <Badge color={ randomArray(badges) } pill className="mr-1">
-                    { faker.commerce.department() }   
+                <Badge color={randomArray(badges)} pill className="mr-1">
+                    {faker.commerce.department()}
                 </Badge>
-                <Badge color={ randomArray(badges) } pill className="mr-1">
-                    { faker.commerce.department() }   
+                <Badge color={randomArray(badges)} pill className="mr-1">
+                    {faker.commerce.department()}
                 </Badge>
-                <Badge color={ randomArray(badges) } pill className="mr-1">
-                    { faker.commerce.department() }   
+                <Badge color={randomArray(badges)} pill className="mr-1">
+                    {faker.commerce.department()}
                 </Badge>
             </td>
             <td className="align-middle text-right">
                 <UncontrolledButtonDropdown>
                     <DropdownToggle color="link">
-                        <i className="fa fa-gear" /><i className="fa fa-angle-down ml-2" />
+                        <i className="fa fa-gear" />
+                        <i className="fa fa-angle-down ml-2" />
                     </DropdownToggle>
                     <DropdownMenu right>
                         <DropdownItem>
@@ -108,6 +101,6 @@ const TrTableFilesList = () => (
             </td>
         </tr>
     </React.Fragment>
-)
+);
 
 export { TrTableFilesList };

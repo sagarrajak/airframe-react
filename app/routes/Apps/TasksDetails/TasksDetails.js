@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
+import {
     Container,
     Row,
     Col,
@@ -23,42 +23,48 @@ import {
     CustomInput,
     InputGroupAddon,
     Badge,
-    Avatar
+    Avatar,
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
-import { HeaderMain } from "../../components/HeaderMain";
-import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
-import { Attachment } from "../../components/Attachment";
-import { Comment } from "../../components/Comment";
+import { HeaderMain } from '../../components/HeaderMain';
+import { ProjectsSmHeader } from '../../components/Projects/ProjectsSmHeader';
+import { Attachment } from '../../components/Attachment';
+import { Comment } from '../../components/Comment';
 
 const TasksDetails = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Tasks Details"
-                className="mb-5 mt-4"
-            />
-            { /* START Header 1 */}
+            <HeaderMain title="Tasks Details" className="mb-5 mt-4" />
+            {/* START Header 1 */}
             <Row>
-                <Col lg={ 3 }>
-                    { /* START Left Nav  */}
+                <Col lg={3}>
+                    {/* START Left Nav  */}
                     <div className="mb-5">
-                        <div className="small mb-3">
-                            Task Details
-                        </div>
+                        <div className="small mb-3">Task Details</div>
                         <Table size="sm">
                             <tbody>
                                 <tr>
                                     <td className="align-middle">Project</td>
                                     <td className="text-right">
-                                        <a href="#" className="text-decoration-none">Analytics Redo</a>
+                                        <a
+                                            href="#"
+                                            className="text-decoration-none"
+                                        >
+                                            Analytics Redo
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle">Assigned by</td>
+                                    <td className="align-middle">
+                                        Assigned by
+                                    </td>
                                     <td className="text-right">
-                                        <a href="#" className="text-decoration-none">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        <a
+                                            href="#"
+                                            className="text-decoration-none"
+                                        >
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </a>
                                     </td>
                                 </tr>
@@ -78,27 +84,33 @@ const TasksDetails = () => (
                                     <td className="align-middle">Priority</td>
                                     <td className="text-right">
                                         <UncontrolledButtonDropdown>
-                                            <DropdownToggle color="link" className="p-0 text-decoration-none">
+                                            <DropdownToggle
+                                                color="link"
+                                                className="p-0 text-decoration-none"
+                                            >
                                                 <i className="fa fa-circle text-success mr-2"></i>
-                                                Small<i className="fa fa-angle-down ml-2" />
+                                                Small
+                                                <i className="fa fa-angle-down ml-2" />
                                             </DropdownToggle>
                                             <DropdownMenu right>
-                                                <DropdownItem header>Select Priority</DropdownItem>
+                                                <DropdownItem header>
+                                                    Select Priority
+                                                </DropdownItem>
                                                 <DropdownItem>
                                                     <i className="fa fa-circle text-danger mr-2"></i>
-                                                    Big 
+                                                    Big
                                                 </DropdownItem>
                                                 <DropdownItem>
                                                     <i className="fa fa-circle text-warning mr-2"></i>
-                                                    High 
+                                                    High
                                                 </DropdownItem>
                                                 <DropdownItem>
                                                     <i className="fa fa-circle text-primary mr-2"></i>
-                                                    Normal 
+                                                    Normal
                                                 </DropdownItem>
                                                 <DropdownItem active>
                                                     <i className="fa fa-circle text-success mr-2"></i>
-                                                    Small 
+                                                    Small
                                                 </DropdownItem>
                                             </DropdownMenu>
                                         </UncontrolledButtonDropdown>
@@ -117,7 +129,9 @@ const TasksDetails = () => (
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td className="align-middle">Date Assigned</td>
+                                    <td className="align-middle">
+                                        Date Assigned
+                                    </td>
                                     <td className="align-middle text-right">
                                         Wed, 16 Dec 2015, 12:17 PM
                                     </td>
@@ -125,28 +139,32 @@ const TasksDetails = () => (
                             </tbody>
                         </Table>
                     </div>
-                    { /* END Left Nav  */}
-                    { /* START Left Nav  */}
+                    {/* END Left Nav  */}
+                    {/* START Left Nav  */}
                     <div className="mb-4">
-                        <div className="small mb-3">
-                            Assigned to
-                        </div>
+                        <div className="small mb-3">Assigned to</div>
                         <Nav pills vertical>
                             <NavItem>
                                 <NavLink href="#" className="d-flex">
                                     <Media>
-                                        <Media left middle className="mr-3 align-self-center">
+                                        <Media
+                                            left
+                                            middle
+                                            className="mr-3 align-self-center"
+                                        >
                                             <Avatar.Image
                                                 size="md"
-                                                src={ randomAvatar() }
+                                                src={randomAvatar()}
                                             />
                                         </Media>
                                         <Media body>
                                             <div className="mt-0">
-                                                { faker.name.firstName() } { faker.name.lastName() }
+                                                {faker.name.firstName()}{' '}
+                                                {faker.name.lastName()}
                                             </div>
                                             <span className="small">
-                                                { faker.address.state() }, { faker.address.stateAbbr() }
+                                                {faker.address.state()},{' '}
+                                                {faker.address.stateAbbr()}
                                             </span>
                                         </Media>
                                     </Media>
@@ -156,18 +174,24 @@ const TasksDetails = () => (
                             <NavItem>
                                 <NavLink href="#" className="d-flex">
                                     <Media>
-                                        <Media left middle className="mr-3 align-self-center">
+                                        <Media
+                                            left
+                                            middle
+                                            className="mr-3 align-self-center"
+                                        >
                                             <Avatar.Image
                                                 size="md"
-                                                src={ randomAvatar() }
+                                                src={randomAvatar()}
                                             />
                                         </Media>
                                         <Media body>
                                             <div className="mt-0">
-                                                { faker.name.firstName() } { faker.name.lastName() }
+                                                {faker.name.firstName()}{' '}
+                                                {faker.name.lastName()}
                                             </div>
                                             <span className="small">
-                                                { faker.address.state() }, { faker.address.stateAbbr() }
+                                                {faker.address.state()},{' '}
+                                                {faker.address.stateAbbr()}
                                             </span>
                                         </Media>
                                     </Media>
@@ -177,18 +201,24 @@ const TasksDetails = () => (
                             <NavItem>
                                 <NavLink href="#" className="d-flex">
                                     <Media>
-                                        <Media left middle className="mr-3 align-self-center">
+                                        <Media
+                                            left
+                                            middle
+                                            className="mr-3 align-self-center"
+                                        >
                                             <Avatar.Image
                                                 size="md"
-                                                src={ randomAvatar() }
+                                                src={randomAvatar()}
                                             />
                                         </Media>
                                         <Media body>
                                             <div className="mt-0">
-                                                { faker.name.firstName() } { faker.name.lastName() }
+                                                {faker.name.firstName()}{' '}
+                                                {faker.name.lastName()}
                                             </div>
                                             <span className="small">
-                                                { faker.address.state() }, { faker.address.stateAbbr() }
+                                                {faker.address.state()},{' '}
+                                                {faker.address.stateAbbr()}
                                             </span>
                                         </Media>
                                     </Media>
@@ -203,48 +233,65 @@ const TasksDetails = () => (
                             </NavItem>
                         </Nav>
                     </div>
-                    { /* END Left Nav  */}                   
+                    {/* END Left Nav  */}
                 </Col>
-                <Col lg={ 9 }>
-                    <ProjectsSmHeader 
+                <Col lg={9}>
+                    <ProjectsSmHeader
                         subTitle="Tasks"
-                            subTitleLink="/apps/tasks/grid"
+                        subTitleLink="/apps/tasks/grid"
                         title="Task Details"
                     />
-                    { /* START Right Content */}
+                    {/* START Right Content */}
                     <Card>
                         <CardBody>
                             <Media>
                                 <Media left href="#">
-                                    <CustomInput type="checkbox" id="checkboxTaskDetails" label="" inline />
+                                    <CustomInput
+                                        type="checkbox"
+                                        id="checkboxTaskDetails"
+                                        label=""
+                                        inline
+                                    />
                                 </Media>
                                 <Media body>
                                     <div className="mb-3">
                                         <h5>
                                             <span className="mr-2">
-                                                #{ faker.random.number() }
+                                                #{faker.random.number()}
                                             </span>
-                                            { faker.hacker.phrase() }
+                                            {faker.hacker.phrase()}
                                         </h5>
-                                        <Badge pill color="primary" className="mr-1">
-                                            { faker.commerce.department() }
+                                        <Badge
+                                            pill
+                                            color="primary"
+                                            className="mr-1"
+                                        >
+                                            {faker.commerce.department()}
                                         </Badge>
-                                        <Badge pill color="secondary" className="mr-1">
-                                            { faker.commerce.department() }
+                                        <Badge
+                                            pill
+                                            color="secondary"
+                                            className="mr-1"
+                                        >
+                                            {faker.commerce.department()}
                                         </Badge>
-                                        <Badge pill color="secondary" className="mr-1">
-                                            { faker.commerce.department() }
+                                        <Badge
+                                            pill
+                                            color="secondary"
+                                            className="mr-1"
+                                        >
+                                            {faker.commerce.department()}
                                         </Badge>
                                     </div>
                                 </Media>
                             </Media>
                             <p className="lead">
-                                Animi ea magni voluptates accusamus laboriosam. Unde repellat hic id et aliquam ut qui dignissimos.
+                                Animi ea magni voluptates accusamus laboriosam.
+                                Unde repellat hic id et aliquam ut qui
+                                dignissimos.
                             </p>
-                            <p className="mb-4">
-                                { faker.lorem.paragraphs() }
-                            </p>
-                            { /* START Atachemnts */}
+                            <p className="mb-4">{faker.lorem.paragraphs()}</p>
+                            {/* START Atachemnts */}
                             <div className="mb-4">
                                 <div className="mb-3">
                                     <span className="small mr-3">
@@ -255,21 +302,21 @@ const TasksDetails = () => (
                                     </Badge>
                                 </div>
                                 <div className="mb-3">
-                                    <Attachment 
+                                    <Attachment
                                         icon="file-word-o"
                                         iconClassName="text-white"
                                         BgIconClassName="text-primary"
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <Attachment 
+                                    <Attachment
                                         icon="file-excel-o"
                                         iconClassName="text-white"
                                         BgIconClassName="text-success"
                                     />
                                 </div>
                                 <div className="mb-3">
-                                    <Attachment 
+                                    <Attachment
                                         icon="file-powerpoint-o"
                                         iconClassName="text-white"
                                         BgIconClassName="text-warning"
@@ -282,18 +329,16 @@ const TasksDetails = () => (
                                     </a>
                                 </div>
                             </div>
-                            { /* END Atachemnts */}
+                            {/* END Atachemnts */}
                             <div className="mb-3">
-                                <span className="small mr-3">
-                                    Comments
-                                </span>
+                                <span className="small mr-3">Comments</span>
                                 <Badge pill color="secondary">
                                     3
                                 </Badge>
-                            </div> 
+                            </div>
                             <Comment />
                             <Comment />
-                            { /* END Comment Media */}
+                            {/* END Comment Media */}
                         </CardBody>
                         <CardFooter>
                             <InputGroup>
@@ -311,11 +356,10 @@ const TasksDetails = () => (
                             </InputGroup>
                         </CardFooter>
                     </Card>
-                    { /* END Right Content */}
+                    {/* END Right Content */}
                 </Col>
             </Row>
-            { /* END Header 1 */}
-
+            {/* END Header 1 */}
         </Container>
     </React.Fragment>
 );

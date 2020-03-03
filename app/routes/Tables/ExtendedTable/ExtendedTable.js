@@ -9,16 +9,13 @@ import {
     CellEdit,
     ClearSearch,
     LargeTable,
-    SortTable
+    SortTable,
 } from './components';
-import { HeaderMain } from "../../components/HeaderMain";
+import { HeaderMain } from '../../components/HeaderMain';
 
 export const ExtendedTable = () => (
     <Container>
-        <HeaderMain 
-            title="Extended Tables"
-            className="mb-5 mt-4"
-        />
+        <HeaderMain title="Extended Tables" className="mb-5 mt-4" />
         <Row className="mb-5">
             <Col>
                 <AdvancedTableA />

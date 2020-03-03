@@ -3,11 +3,7 @@ import PropTypes from 'prop-types';
 import uid from 'uuid/v4';
 import _ from 'lodash';
 import faker from 'faker/locale/en_US';
-import {
-    DragDropContext,
-    Droppable,
-    Draggable
-} from 'react-beautiful-dnd';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import classNames from 'classnames';
 
 import {
@@ -18,14 +14,24 @@ import {
     Progress,
     Card,
     CardHeader,
-    CardTitle
+    CardTitle,
 } from './../../../../components';
 import { randomAvatar, randomArray } from './../../../../utilities';
 import { reorder } from './utilities';
 import classes from './common.scss';
 
-const allSkills = ['JavaScript', 'Photoshop', 'Management', 'Bootstrap',
-    'PHP', 'Sketch', 'MySQL', 'Mongo', 'Node.js', 'TypeScript'];
+const allSkills = [
+    'JavaScript',
+    'Photoshop',
+    'Management',
+    'Bootstrap',
+    'PHP',
+    'Sketch',
+    'MySQL',
+    'Mongo',
+    'Node.js',
+    'TypeScript',
+];
 
 const generateUser = () => ({
     id: uid(),
@@ -35,20 +41,22 @@ const generateUser = () => ({
     status: randomArray(['success', 'warning', 'danger']),
     skills: _.uniq(_.times(_.random(2, 5), () => randomArray(allSkills))),
     interviewProgress: _.random(40, 90),
-    portfolio: (Math.round(Math.random())) ? {
-        url: 'http://webkom.co',
-        title: 'www.webkom.co'
-    } : null
+    portfolio: Math.round(Math.random())
+        ? {
+              url: 'http://webkom.co',
+              title: 'www.webkom.co',
+          }
+        : null,
 });
 
-const getTableClass = (isDraggedOver) =>
+const getTableClass = isDraggedOver =>
     classNames(classes['table'], {
-        [classes['table--drag-over']]: isDraggedOver
+        [classes['table--drag-over']]: isDraggedOver,
     });
 
-const getRowClass = (isDragging) =>
+const getRowClass = isDragging =>
     classNames(classes['row'], {
-        [classes['row--dragging']]: isDragging
+        [classes['row--dragging']]: isDragging,
     });
 
 // Custom Table Cell - keeps cell width when the row
@@ -57,7 +65,7 @@ const getRowClass = (isDragging) =>
 class TableCell extends React.Component {
     static propTypes = {
         children: PropTypes.node,
-        isDragOccurring: PropTypes.bool
+        isDragOccurring: PropTypes.bool,
     };
 
     ref = React.createRef();
@@ -70,24 +78,24 @@ class TableCell extends React.Component {
 
         const isDragStarting =
             this.props.isDragOccurring && !prevProps.isDragOccurring;
-  
+
         if (!isDragStarting) {
             return null;
         }
-  
+
         const { width, height } = ref.getBoundingClientRect();
-  
+
         const snapshot = { width, height };
-  
+
         return snapshot;
     }
-  
+
     componentDidUpdate(prevProps, prevState, snapshot) {
         if (!this.ref) {
             return;
         }
         const ref = this.ref.current;
-  
+
         if (snapshot) {
             if (ref.style.width === snapshot.width) {
                 return;
@@ -96,117 +104,114 @@ class TableCell extends React.Component {
             ref.style.height = `${snapshot.height}px`;
             return;
         }
-  
+
         if (this.props.isDragOccurring) {
             return;
         }
-  
+
         // inline styles not applied
         if (ref.style.width == null) {
             return;
         }
-  
+
         // no snapshot and drag is finished - clear the inline styles
         ref.style.removeProperty('height');
         ref.style.removeProperty('width');
     }
-  
+
     render() {
         // eslint-disable-next-line no-unused-vars
         const { children, isDragOccurring, ...otherProps } = this.props;
-        return <td ref={this.ref} {...otherProps}>{children}</td>;
+        return (
+            <td ref={this.ref} {...otherProps}>
+                {children}
+            </td>
+        );
     }
 }
 
 // Draggable Table Row
 // ========================================================
-const DraggableRow = (props) => (
-    <Draggable
-        draggableId={props.id}
-        index={props.index}
-    >
-    {(provided, snapshot) => (
-        <tr
-            ref={ provided.innerRef }
-            { ...provided.draggableProps }
-            className={getRowClass(snapshot.isDragging)}
-        >
-            <TableCell
-                className="align-middle"
-                isDragOccurring={snapshot.isDragging}
-                { ...provided.dragHandleProps }
+const DraggableRow = props => (
+    <Draggable draggableId={props.id} index={props.index}>
+        {(provided, snapshot) => (
+            <tr
+                ref={provided.innerRef}
+                {...provided.draggableProps}
+                className={getRowClass(snapshot.isDragging)}
             >
-                <i className="fa fa-fw fa-arrows-v fa-lg d-block mx-auto text-muted" />
-            </TableCell>
-            <TableCell
-                className="align-middle"
-                isDragOccurring={snapshot.isDragging}
-            >
-                <Avatar.Image
-                    size="md"
-                    className="d-block"
-                    src={ props.avatarUrl }
-                    addOns={[
-                        <AvatarAddOn.Icon 
-                            className="fa fa-circle"
-                            color="white"
-                            key="avatar-icon-bg"
-                        />,
-                        <AvatarAddOn.Icon 
-                            className="fa fa-circle"
-                            color={ props.status }
-                            key="avatar-icon-fg"
-                        />
-                    ]}
-                /> 
-            </TableCell>
-            <TableCell
-                className="align-middle"
-                isDragOccurring={snapshot.isDragging}
-            >
-                <span className="mt-0 h6 mb-1">
-                    { props.name }
-                </span>
-                <p className="mb-0 text-muted text-truncate">
-                    { props.title }
-                </p>
-            </TableCell>
-            <TableCell
-                className="align-middle"
-                isDragOccurring={snapshot.isDragging}
-            >
-                {_.map(props.skills, (skill, index) => (
-                    <Badge
-                        key={ index }
-                        className={`px-2 ${index > 0 && 'ml-1'}`}
-                    >
-                        { skill }
-                    </Badge>
-                ))}
-            </TableCell>
-            <TableCell
-                className="align-middle"
-                isDragOccurring={snapshot.isDragging}
-            >
-                <Progress value={props.interviewProgress} slim />
-                <span className="fw-500">{ props.interviewProgress }%</span>
-            </TableCell>
-            <TableCell
-                className="text-right align-middle"
-                isDragOccurring={snapshot.isDragging}
-            >
-                {
-                    !_.isEmpty(props.portfolio) ? (
+                <TableCell
+                    className="align-middle"
+                    isDragOccurring={snapshot.isDragging}
+                    {...provided.dragHandleProps}
+                >
+                    <i className="fa fa-fw fa-arrows-v fa-lg d-block mx-auto text-muted" />
+                </TableCell>
+                <TableCell
+                    className="align-middle"
+                    isDragOccurring={snapshot.isDragging}
+                >
+                    <Avatar.Image
+                        size="md"
+                        className="d-block"
+                        src={props.avatarUrl}
+                        addOns={[
+                            <AvatarAddOn.Icon
+                                className="fa fa-circle"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon
+                                className="fa fa-circle"
+                                color={props.status}
+                                key="avatar-icon-fg"
+                            />,
+                        ]}
+                    />
+                </TableCell>
+                <TableCell
+                    className="align-middle"
+                    isDragOccurring={snapshot.isDragging}
+                >
+                    <span className="mt-0 h6 mb-1">{props.name}</span>
+                    <p className="mb-0 text-muted text-truncate">
+                        {props.title}
+                    </p>
+                </TableCell>
+                <TableCell
+                    className="align-middle"
+                    isDragOccurring={snapshot.isDragging}
+                >
+                    {_.map(props.skills, (skill, index) => (
+                        <Badge
+                            key={index}
+                            className={`px-2 ${index > 0 && 'ml-1'}`}
+                        >
+                            {skill}
+                        </Badge>
+                    ))}
+                </TableCell>
+                <TableCell
+                    className="align-middle"
+                    isDragOccurring={snapshot.isDragging}
+                >
+                    <Progress value={props.interviewProgress} slim />
+                    <span className="fw-500">{props.interviewProgress}%</span>
+                </TableCell>
+                <TableCell
+                    className="text-right align-middle"
+                    isDragOccurring={snapshot.isDragging}
+                >
+                    {!_.isEmpty(props.portfolio) ? (
                         <a href={props.portfolio.url}>
-                            { props.portfolio.title }
+                            {props.portfolio.title}
                         </a>
                     ) : (
                         <span>-</span>
-                    )
-                }
-            </TableCell>
-        </tr>
-    )}
+                    )}
+                </TableCell>
+            </tr>
+        )}
     </Draggable>
 );
 DraggableRow.propTypes = {
@@ -217,8 +222,8 @@ DraggableRow.propTypes = {
     skills: PropTypes.array.isRequired,
     interviewProgress: PropTypes.number.isRequired,
     portfolio: PropTypes.object,
-    index: PropTypes.number.isRequired
-}
+    index: PropTypes.number.isRequired,
+};
 
 // Demo Component
 // ========================================================
@@ -227,11 +232,11 @@ const initialState = _.times(5, generateUser);
 export class DraggableTable extends React.Component {
     static propTypes = {
         className: PropTypes.string,
-    }
+    };
 
     state = {
-        users: initialState
-    }
+        users: initialState,
+    };
 
     constructor(props) {
         super(props);
@@ -244,24 +249,25 @@ export class DraggableTable extends React.Component {
             return;
         }
 
-        const users = reorder(this.state.users,
-            source.index, destination.index);
+        const users = reorder(
+            this.state.users,
+            source.index,
+            destination.index,
+        );
         this.setState({ users });
     }
 
     recoverInitialState() {
         this.setState({
-            users: initialState
+            users: initialState,
         });
     }
 
     render() {
         return (
-            <Card className={ this.props.className }>
+            <Card className={this.props.className}>
                 <CardHeader className="bg-none bb-0">
-                    <CardTitle className="h6">
-                        Queue of Candidates
-                    </CardTitle>
+                    <CardTitle className="h6">Queue of Candidates</CardTitle>
                 </CardHeader>
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <Table className="mb-0">
@@ -276,21 +282,23 @@ export class DraggableTable extends React.Component {
                             </tr>
                         </thead>
                         <Droppable droppableId="table">
-                        {(provided, snapshot) => (
-                            <tbody
-                                ref={provided.innerRef}
-                                {...provided.droppableProps}
-                                className={getTableClass(snapshot.isDraggingOver)}
-                            >
-                                {_.map(this.state.users, (user, index) => (
-                                    <DraggableRow
-                                        key={user.id}
-                                        index={index}
-                                        { ...user }
-                                    />
-                                ))}
-                            </tbody>
-                        )}
+                            {(provided, snapshot) => (
+                                <tbody
+                                    ref={provided.innerRef}
+                                    {...provided.droppableProps}
+                                    className={getTableClass(
+                                        snapshot.isDraggingOver,
+                                    )}
+                                >
+                                    {_.map(this.state.users, (user, index) => (
+                                        <DraggableRow
+                                            key={user.id}
+                                            index={index}
+                                            {...user}
+                                        />
+                                    ))}
+                                </tbody>
+                            )}
                         </Droppable>
                     </Table>
                 </DragDropContext>

@@ -1,10 +1,7 @@
 import React from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
 
-import {
-    ButtonToolbar,
-    Button
-} from './../../../../components';
+import { ButtonToolbar, Button } from './../../../../components';
 import data from './exampleData';
 
 export class PublicMethods extends React.Component {

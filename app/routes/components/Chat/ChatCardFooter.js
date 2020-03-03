@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { 
+import {
     InputGroup,
     InputGroupAddon,
     Button,
-    Input
+    Input,
 } from './../../../components';
 
 const ChatCardFooter = () => (
@@ -18,12 +18,12 @@ const ChatCardFooter = () => (
             </InputGroupAddon>
             <Input placeholder="Your message..." />
             <InputGroupAddon addonType="append">
-                <Button color="primary" tag={ Link } to="/apps/chat">
+                <Button color="primary" tag={Link} to="/apps/chat">
                     <i className="fa fa fa-send"></i>
                 </Button>
             </InputGroupAddon>
         </InputGroup>
     </React.Fragment>
-)
+);
 
 export { ChatCardFooter };

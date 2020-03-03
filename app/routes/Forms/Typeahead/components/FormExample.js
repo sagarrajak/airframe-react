@@ -6,7 +6,7 @@ import {
     InputGroup,
     InputGroupAddon,
     FormGroup,
-    Button
+    Button,
 } from './../../../../components';
 import options from './exampleData';
 
@@ -14,12 +14,12 @@ const getInitialState = () => ({
     index: Math.floor(Math.random() * options.length),
     selected: [],
 });
-  
+
 export class FormExample extends React.Component {
     state = getInitialState();
-  
+
     render() {
-        const {index, selected} = this.state;
+        const { index, selected } = this.state;
         const state = options[index];
 
         let isInvalid;
@@ -46,7 +46,7 @@ export class FormExample extends React.Component {
                             isInvalid={isInvalid}
                             isValid={isValid}
                             labelKey="capital"
-                            onChange={(selected) => this.setState({selected})}
+                            onChange={selected => this.setState({ selected })}
                             options={_.sortBy(options, 'capital')}
                             placeholder="Select a capital..."
                             selected={selected}

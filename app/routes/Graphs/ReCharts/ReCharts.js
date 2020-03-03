@@ -6,36 +6,36 @@ import {
     Col,
     Card,
     CardBody,
-    CardDeck, 
-    Button
-} from './../../../components'
-import { HeaderMain } from "../../components/HeaderMain";
-import { HeaderDemo } from "../../components/HeaderDemo";
+    CardDeck,
+    Button,
+} from './../../../components';
+import { HeaderMain } from '../../components/HeaderMain';
+import { HeaderDemo } from '../../components/HeaderDemo';
 
-import { SimpleBarChart } from "./components/SimpleBarChart";
-import { StackedBarChart } from "./components/StackedBarChart";
-import { MixBarChart } from "./components/MixBarChart";
-import { PositiveAndNegativeBarChart } from "./components/PositiveAndNegativeBarChart";
-import { BarChartStackedBySign } from "./components/BarChartStackedBySign";
-import { BarChartHasBackground } from "./components/BarChartHasBackground";
-import { SimpleLineChart } from "./components/SimpleLineChart";
-import { DashedLineChart } from "./components/DashedLineChart";
-import { VerticalLineChart } from "./components/VerticalLineChart";
+import { SimpleBarChart } from './components/SimpleBarChart';
+import { StackedBarChart } from './components/StackedBarChart';
+import { MixBarChart } from './components/MixBarChart';
+import { PositiveAndNegativeBarChart } from './components/PositiveAndNegativeBarChart';
+import { BarChartStackedBySign } from './components/BarChartStackedBySign';
+import { BarChartHasBackground } from './components/BarChartHasBackground';
+import { SimpleLineChart } from './components/SimpleLineChart';
+import { DashedLineChart } from './components/DashedLineChart';
+import { VerticalLineChart } from './components/VerticalLineChart';
 import { CustomizedLabelLineChart } from './components/CustomizedLabelLineChart';
-import { SimpleAreaChart } from "./components/SimpleAreaChart";
-import { StackedAreaChart } from "./components/StackedAreaChart";
-import { PercentAreaChart } from "./components/PercentAreaChart";
-import { AreaChartFillByValue } from "./components/AreaChartFillByValue";
-import { TwoLevelPieChart } from "./components/TwoLevelPieChart";
-import { StraightAnglePieChart } from "./components/StraightAnglePieChart";
-import { PieChartWithCustomizedLabel } from "./components/PieChartWithCustomizedLabel";
-import { PieChartWithPaddingAngle } from "./components/PieChartWithPaddingAngle";
-import { PieChartWithPaddingAngleHalf } from "./components/PieChartWithPaddingAngleHalf";
-import { SpecifiedDomainRadarChart } from "./components/SpecifiedDomainRadarChart";
+import { SimpleAreaChart } from './components/SimpleAreaChart';
+import { StackedAreaChart } from './components/StackedAreaChart';
+import { PercentAreaChart } from './components/PercentAreaChart';
+import { AreaChartFillByValue } from './components/AreaChartFillByValue';
+import { TwoLevelPieChart } from './components/TwoLevelPieChart';
+import { StraightAnglePieChart } from './components/StraightAnglePieChart';
+import { PieChartWithCustomizedLabel } from './components/PieChartWithCustomizedLabel';
+import { PieChartWithPaddingAngle } from './components/PieChartWithPaddingAngle';
+import { PieChartWithPaddingAngleHalf } from './components/PieChartWithPaddingAngleHalf';
+import { SpecifiedDomainRadarChart } from './components/SpecifiedDomainRadarChart';
 import { SimpleRadialBarChart } from './components/SimpleRadialBarChart';
-import { LineBarAreaComposedChart } from "./components/LineBarAreaComposedChart";
-import { TinyLineChart } from "./components/TinyLineChart";
-import { TinyAreaChart } from "./components/TinyAreaChart";
+import { LineBarAreaComposedChart } from './components/LineBarAreaComposedChart';
+import { TinyLineChart } from './components/TinyLineChart';
+import { TinyAreaChart } from './components/TinyAreaChart';
 import { TinyBarChart } from './components/TinyBarChart';
 import { TinyPieChart } from './components/TinyPieChart';
 import { TinyDonutChart } from './components/TinyDonutChart';
@@ -43,39 +43,45 @@ import { VerticalComposedChart } from './components/VerticalComposedChart';
 
 export const ReCharts = () => (
     <Container>
-        <HeaderMain 
-            title="ReCharts"
-            className="mb-4 mt-4"
-        />
+        <HeaderMain title="ReCharts" className="mb-4 mt-4" />
         <p>
-            Recharts is a Redefined chart library built with React and D3. 
-            The main purpose of this library is to help you to write charts in React applications without any pain. 
-            Main principles of Recharts are:
+            Recharts is a Redefined chart library built with React and D3. The
+            main purpose of this library is to help you to write charts in React
+            applications without any pain. Main principles of Recharts are:
         </p>
         <ul className="mb-5">
-            <li><strong>Simply</strong> deploy with React components</li>
-            <li><strong>Native</strong> SVG support, lightweight depending only on some D3 submodules</li>
-            <li><strong>Declarative</strong> components, components of charts are purely presentational</li>
+            <li>
+                <strong>Simply</strong> deploy with React components
+            </li>
+            <li>
+                <strong>Native</strong> SVG support, lightweight depending only
+                on some D3 submodules
+            </li>
+            <li>
+                <strong>Declarative</strong> components, components of charts
+                are purely presentational
+            </li>
         </ul>
 
-        { /* START Header 1 */}
+        {/* START Header 1 */}
         <Row>
-            <Col lg={ 12 }>
-                <HeaderDemo 
-                    no={1} 
-                    title="Bar Charts" 
-                    subTitle={(
+            <Col lg={12}>
+                <HeaderDemo
+                    no={1}
+                    title="Bar Charts"
+                    subTitle={
                         <React.Fragment>
-                            Quickly build your charts with decoupled, reusable React components.
+                            Quickly build your charts with decoupled, reusable
+                            React components.
                         </React.Fragment>
-                    )}
+                    }
                 />
             </Col>
         </Row>
-        { /* END Header 1 */}
-        { /* START Section 1 */}
+        {/* END Header 1 */}
+        {/* START Section 1 */}
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -89,7 +95,11 @@ export const ReCharts = () => (
                             <p>Bar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/30763kr7/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/30763kr7/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -97,8 +107,8 @@ export const ReCharts = () => (
                     <SimpleBarChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -112,7 +122,11 @@ export const ReCharts = () => (
                             <p>Bar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/90v76x08/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/90v76x08/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -120,10 +134,10 @@ export const ReCharts = () => (
                     <StackedBarChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -137,7 +151,11 @@ export const ReCharts = () => (
                             <p>Bar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/9hjfkp73/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/9hjfkp73/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -145,8 +163,8 @@ export const ReCharts = () => (
                     <MixBarChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -160,7 +178,11 @@ export const ReCharts = () => (
                             <p>Bar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/q68cz43w/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/q68cz43w/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -168,10 +190,10 @@ export const ReCharts = () => (
                     <PositiveAndNegativeBarChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -185,7 +207,11 @@ export const ReCharts = () => (
                             <p>Bar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/p82xhe2a/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/p82xhe2a/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -193,8 +219,8 @@ export const ReCharts = () => (
                     <BarChartStackedBySign />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -208,7 +234,11 @@ export const ReCharts = () => (
                             <p>Bar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/q4eonc12/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/q4eonc12/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -216,29 +246,30 @@ export const ReCharts = () => (
                     <BarChartHasBackground />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
-        { /* START Section 1 */}
+        {/* START Section 1 */}
 
-        { /* START Header 2 */}
+        {/* START Header 2 */}
         <Row>
-            <Col lg={ 12 }>
-                <HeaderDemo 
-                    no={2} 
-                    title="Line Charts" 
+            <Col lg={12}>
+                <HeaderDemo
+                    no={2}
+                    title="Line Charts"
                     className="mt-5"
-                    subTitle={(
+                    subTitle={
                         <React.Fragment>
-                            Quickly build your charts with decoupled, reusable React components.
+                            Quickly build your charts with decoupled, reusable
+                            React components.
                         </React.Fragment>
-                    )}
+                    }
                 />
             </Col>
         </Row>
-        { /* END Header 2 */}
-        { /* START Section 2 */}
+        {/* END Header 2 */}
+        {/* START Section 2 */}
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -252,7 +283,11 @@ export const ReCharts = () => (
                             <p>Line Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/xqjtetw0/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/xqjtetw0/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -260,8 +295,8 @@ export const ReCharts = () => (
                     <SimpleLineChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -275,7 +310,11 @@ export const ReCharts = () => (
                             <p>Line Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/nptzh7ez/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/nptzh7ez/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -283,10 +322,10 @@ export const ReCharts = () => (
                     <DashedLineChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -300,7 +339,11 @@ export const ReCharts = () => (
                             <p>Line Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/rrr9q7x5/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/rrr9q7x5/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -308,8 +351,8 @@ export const ReCharts = () => (
                     <VerticalLineChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -323,7 +366,11 @@ export const ReCharts = () => (
                             <p>Line Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/9y9zrpjp/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/9y9zrpjp/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -331,29 +378,30 @@ export const ReCharts = () => (
                     <CustomizedLabelLineChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
-        { /* START Section 2 */}
+        {/* START Section 2 */}
 
-        { /* START Header 3 */}
+        {/* START Header 3 */}
         <Row>
-            <Col lg={ 12 }>
-                <HeaderDemo 
-                    no={3} 
-                    title="Area Charts" 
+            <Col lg={12}>
+                <HeaderDemo
+                    no={3}
+                    title="Area Charts"
                     className="mt-5"
-                    subTitle={(
+                    subTitle={
                         <React.Fragment>
-                            Quickly build your charts with decoupled, reusable React components.
+                            Quickly build your charts with decoupled, reusable
+                            React components.
                         </React.Fragment>
-                    )}
+                    }
                 />
             </Col>
         </Row>
-        { /* END Header 3 */}
-        { /* START Section 3 */}
+        {/* END Header 3 */}
+        {/* START Section 3 */}
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -367,7 +415,11 @@ export const ReCharts = () => (
                             <p>Area Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/Lrffmzfc/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/Lrffmzfc/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -375,8 +427,8 @@ export const ReCharts = () => (
                     <SimpleAreaChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -390,7 +442,11 @@ export const ReCharts = () => (
                             <p>Area Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/c1rLyqj1/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/c1rLyqj1/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -398,10 +454,10 @@ export const ReCharts = () => (
                     <StackedAreaChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -415,7 +471,11 @@ export const ReCharts = () => (
                             <p>Area Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/zsax2hyq/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/zsax2hyq/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -423,8 +483,8 @@ export const ReCharts = () => (
                     <PercentAreaChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -438,7 +498,11 @@ export const ReCharts = () => (
                             <p>Area Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/64v6ocdx/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/64v6ocdx/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -446,29 +510,30 @@ export const ReCharts = () => (
                     <AreaChartFillByValue />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
-        { /* START Section 3 */}
+        {/* START Section 3 */}
 
-        { /* START Header 4 */}
+        {/* START Header 4 */}
         <Row>
-            <Col lg={ 12 }>
-                <HeaderDemo 
-                    no={4} 
-                    title="Pie Charts" 
+            <Col lg={12}>
+                <HeaderDemo
+                    no={4}
+                    title="Pie Charts"
                     className="mt-5"
-                    subTitle={(
+                    subTitle={
                         <React.Fragment>
-                            Quickly build your charts with decoupled, reusable React components.
+                            Quickly build your charts with decoupled, reusable
+                            React components.
                         </React.Fragment>
-                    )}
+                    }
                 />
             </Col>
         </Row>
-        { /* END Header 4 */}
-        { /* START Section 4 */}
+        {/* END Header 4 */}
+        {/* START Section 4 */}
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -482,7 +547,11 @@ export const ReCharts = () => (
                             <p>Pie Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/w6wsrc52/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/w6wsrc52/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -490,8 +559,8 @@ export const ReCharts = () => (
                     <TwoLevelPieChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -505,7 +574,11 @@ export const ReCharts = () => (
                             <p>Pie Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/pb1jwdt1/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/pb1jwdt1/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -513,21 +586,23 @@ export const ReCharts = () => (
                     <StraightAnglePieChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex align-items-center mb-3">
                         <h6 className="card-title mb-1">
                             PieChartWithPaddingAngle
-                            <span className="small ml-1 text-muted">
-                                #4.03
-                            </span>
+                            <span className="small ml-1 text-muted">#4.03</span>
                         </h6>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/3Leoa7f4/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/3Leoa7f4/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -535,19 +610,21 @@ export const ReCharts = () => (
                     <PieChartWithPaddingAngle />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex align-items-center mb-3">
                         <h6 className="card-title mb-1">
                             PieChartWithPaddingAngleHalf
-                            <span className="small ml-1 text-muted">
-                                #4.04
-                            </span>
+                            <span className="small ml-1 text-muted">#4.04</span>
                         </h6>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/3Leoa7f4/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/3Leoa7f4/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -555,10 +632,10 @@ export const ReCharts = () => (
                     <PieChartWithPaddingAngleHalf />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -572,7 +649,11 @@ export const ReCharts = () => (
                             <p>Pie Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/c9pL8k61/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/c9pL8k61/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -580,29 +661,30 @@ export const ReCharts = () => (
                     <PieChartWithCustomizedLabel />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
-        { /* START Section 4 */}
+        {/* START Section 4 */}
 
-        { /* START Header 5 */}
+        {/* START Header 5 */}
         <Row>
-            <Col lg={ 12 }>
-                <HeaderDemo 
-                    no={5} 
-                    title="Radar Charts" 
+            <Col lg={12}>
+                <HeaderDemo
+                    no={5}
+                    title="Radar Charts"
                     className="mt-5"
-                    subTitle={(
+                    subTitle={
                         <React.Fragment>
-                            Quickly build your charts with decoupled, reusable React components.
+                            Quickly build your charts with decoupled, reusable
+                            React components.
                         </React.Fragment>
-                    )}
+                    }
                 />
             </Col>
         </Row>
-        { /* END Header 5 */}
-        { /* START Section 5 */}
+        {/* END Header 5 */}
+        {/* START Section 5 */}
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -616,7 +698,11 @@ export const ReCharts = () => (
                             <p>Radar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/dpgb3xjq/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/dpgb3xjq/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -624,8 +710,8 @@ export const ReCharts = () => (
                     <SpecifiedDomainRadarChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -639,7 +725,11 @@ export const ReCharts = () => (
                             <p>Radar Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/9km41z5z/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/9km41z5z/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -647,40 +737,43 @@ export const ReCharts = () => (
                     <SimpleRadialBarChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
-        { /* START Section 5 */}
+        {/* START Section 5 */}
 
-        { /* START Header 6 */}
+        {/* START Header 6 */}
         <Row>
-            <Col lg={ 12 }>
-                <HeaderDemo 
-                    no={6} 
-                    title="Composed Charts" 
+            <Col lg={12}>
+                <HeaderDemo
+                    no={6}
+                    title="Composed Charts"
                     className="mt-5"
-                    subTitle={(
+                    subTitle={
                         <React.Fragment>
-                            Quickly build your charts with decoupled, reusable React components.
+                            Quickly build your charts with decoupled, reusable
+                            React components.
                         </React.Fragment>
-                    )}
+                    }
                 />
             </Col>
         </Row>
-        { /* END Header 6 */}
-        { /* START Section 6 */}
+        {/* END Header 6 */}
+        {/* START Section 6 */}
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex align-items-center mb-3">
                         <h6 className="card-title mb-1">
                             LineBarAreaComposedChart
-                            <span className="small ml-1 text-muted">
-                                #6.01
-                            </span>
+                            <span className="small ml-1 text-muted">#6.01</span>
                         </h6>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/9xopwa9v/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/9xopwa9v/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -688,8 +781,8 @@ export const ReCharts = () => (
                     <LineBarAreaComposedChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex">
@@ -703,7 +796,11 @@ export const ReCharts = () => (
                             <p>Composed Charts</p>
                         </div>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/shjsn5su/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/shjsn5su/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -711,40 +808,43 @@ export const ReCharts = () => (
                     <VerticalComposedChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
-        { /* START Section 6 */}
+        {/* START Section 6 */}
 
-        { /* START Header 7 */}
+        {/* START Header 7 */}
         <Row>
-            <Col lg={ 12 }>
-                <HeaderDemo 
-                    no={7} 
-                    title="Tiny Charts" 
+            <Col lg={12}>
+                <HeaderDemo
+                    no={7}
+                    title="Tiny Charts"
                     className="mt-5"
-                    subTitle={(
+                    subTitle={
                         <React.Fragment>
-                            Quickly build your charts with decoupled, reusable React components.
+                            Quickly build your charts with decoupled, reusable
+                            React components.
                         </React.Fragment>
-                    )}
+                    }
                 />
             </Col>
         </Row>
-        { /* END Header 7 */}
-        { /* START Section 7 */}
+        {/* END Header 7 */}
+        {/* START Section 7 */}
         <CardDeck>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex align-items-center mb-3">
                         <h6 className="card-title mb-1">
                             TinyLineChart
-                            <span className="small ml-1 text-muted">
-                                #7.01
-                            </span>
+                            <span className="small ml-1 text-muted">#7.01</span>
                         </h6>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/exh283uh/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/exh283uh/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -752,19 +852,21 @@ export const ReCharts = () => (
                     <TinyLineChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex align-items-center mb-3">
                         <h6 className="card-title mb-1">
                             TinyAreaChart
-                            <span className="small ml-1 text-muted">
-                                #7.02
-                            </span>
+                            <span className="small ml-1 text-muted">#7.02</span>
                         </h6>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/tv8zfzxo/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/tv8zfzxo/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -772,19 +874,21 @@ export const ReCharts = () => (
                     <TinyAreaChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
-            { /* START Card Graph */}
+            {/* START Card Graph */}
+            {/* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
                     <div className="d-flex align-items-center mb-3">
                         <h6 className="card-title mb-1">
                             TinyBarChart
-                            <span className="small ml-1 text-muted">
-                                #7.03
-                            </span>
+                            <span className="small ml-1 text-muted">#7.03</span>
                         </h6>
                         <span className="ml-auto">
-                            <Button color="link" href="https://jsfiddle.net/alidingling/9kd8rssL/" target="_blank">
+                            <Button
+                                color="link"
+                                href="https://jsfiddle.net/alidingling/9kd8rssL/"
+                                target="_blank"
+                            >
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
@@ -792,11 +896,11 @@ export const ReCharts = () => (
                     <TinyBarChart />
                 </CardBody>
             </Card>
-            { /* START Card Graph */}
+            {/* START Card Graph */}
         </CardDeck>
         <Row>
-            <Col lg={ 3 }>
-                { /* START Card Graph */}
+            <Col lg={3}>
+                {/* START Card Graph */}
                 <Card className="mb-3">
                     <CardBody>
                         <div className="d-flex align-items-center mb-3">
@@ -807,7 +911,11 @@ export const ReCharts = () => (
                                 </span>
                             </h6>
                             <span className="ml-auto">
-                                <Button color="link" href="https://jsfiddle.net/alidingling/9kd8rssL/" target="_blank">
+                                <Button
+                                    color="link"
+                                    href="https://jsfiddle.net/alidingling/9kd8rssL/"
+                                    target="_blank"
+                                >
                                     <i className="fa fa-external-link"></i>
                                 </Button>
                             </span>
@@ -815,10 +923,10 @@ export const ReCharts = () => (
                         <TinyDonutChart />
                     </CardBody>
                 </Card>
-                { /* START Card Graph */}
+                {/* START Card Graph */}
             </Col>
-            <Col lg={ 3 }>
-                { /* START Card Graph */}
+            <Col lg={3}>
+                {/* START Card Graph */}
                 <Card className="mb-3">
                     <CardBody>
                         <div className="d-flex align-items-center mb-3">
@@ -829,7 +937,11 @@ export const ReCharts = () => (
                                 </span>
                             </h6>
                             <span className="ml-auto">
-                                <Button color="link" href="https://jsfiddle.net/alidingling/9kd8rssL/" target="_blank">
+                                <Button
+                                    color="link"
+                                    href="https://jsfiddle.net/alidingling/9kd8rssL/"
+                                    target="_blank"
+                                >
                                     <i className="fa fa-external-link"></i>
                                 </Button>
                             </span>
@@ -837,10 +949,10 @@ export const ReCharts = () => (
                         <TinyPieChart />
                     </CardBody>
                 </Card>
-                { /* START Card Graph */}
+                {/* START Card Graph */}
             </Col>
         </Row>
-        { /* START Section 7 */}
+        {/* START Section 7 */}
     </Container>
 );
 

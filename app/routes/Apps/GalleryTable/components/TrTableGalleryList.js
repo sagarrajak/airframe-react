@@ -2,7 +2,7 @@ import React from 'react';
 import faker from 'faker/locale/en_US';
 import PropTypes from 'prop-types';
 
-import { 
+import {
     Badge,
     CustomInput,
     Avatar,
@@ -11,33 +11,31 @@ import {
     Media,
     AvatarAddOn,
     Button,
-    UncontrolledTooltip
+    UncontrolledTooltip,
 } from './../../../../components';
 
 import { randomArray, randomAvatar } from './../../../../utilities';
 
-const status = [
-    "secondary",
-    "danger",
-    "success",
-    "warning"
-];
-const badges = [
-    "secondary"
-];
+const status = ['secondary', 'danger', 'success', 'warning'];
+const badges = ['secondary'];
 
-const TrTableGalleryList = (props) => (
+const TrTableGalleryList = props => (
     <React.Fragment>
         <tr>
             <td className="align-middle">
-                <CustomInput type="checkbox" id={`trTableGalleryList-${ props.id }` } label="" inline />
+                <CustomInput
+                    type="checkbox"
+                    id={`trTableGalleryList-${props.id}`}
+                    label=""
+                    inline
+                />
             </td>
             <td className="align-middle">
                 <HolderProvider.Icon
                     iconChar=""
-                    size={ 16 }
-                    width={ 100 }
-                    height={ 100 }
+                    size={16}
+                    width={100}
+                    height={100}
                 >
                     <CardImg className="rounded" />
                 </HolderProvider.Icon>
@@ -45,21 +43,19 @@ const TrTableGalleryList = (props) => (
             <td className="align-middle">
                 <span>
                     <a className="text-inverse" href="#">
-                        { faker.commerce.productName() }
+                        {faker.commerce.productName()}
                     </a>
                     <br />
-                    <span href="#">
-                        { faker.system.fileName() }
-                    </span>
+                    <span href="#">{faker.system.fileName()}</span>
                     <br />
-                    <Badge pill color={ randomArray(badges) } className="mr-1">
-                        { faker.commerce.department() }
+                    <Badge pill color={randomArray(badges)} className="mr-1">
+                        {faker.commerce.department()}
                     </Badge>
-                    <Badge pill color={ randomArray(badges) } className="mr-1">
-                        { faker.commerce.department() }
+                    <Badge pill color={randomArray(badges)} className="mr-1">
+                        {faker.commerce.department()}
                     </Badge>
-                    <Badge pill color={ randomArray(badges) } className="mr-1">
-                        { faker.commerce.department() }
+                    <Badge pill color={randomArray(badges)} className="mr-1">
+                        {faker.commerce.department()}
                     </Badge>
                 </span>
             </td>
@@ -68,55 +64,63 @@ const TrTableGalleryList = (props) => (
                     <Media left className="align-self-center mr-3">
                         <Avatar.Image
                             size="md"
-                            src={ randomAvatar() }
+                            src={randomAvatar()}
                             addOns={[
-                                <AvatarAddOn.Icon 
+                                <AvatarAddOn.Icon
                                     className="fa fa-circle"
                                     color="white"
                                     key="avatar-icon-bg"
                                 />,
-                                <AvatarAddOn.Icon 
+                                <AvatarAddOn.Icon
                                     className="fa fa-circle"
-                                    color={ randomArray(status) }
+                                    color={randomArray(status)}
                                     key="avatar-icon-fg"
-                                />
+                                />,
                             ]}
-                        /> 
+                        />
                     </Media>
                     <Media body>
-                        <a className="mt-0 text-decoration-none d-flex" href="#">
-                            { faker.name.firstName() } { faker.name.lastName() }
+                        <a
+                            className="mt-0 text-decoration-none d-flex"
+                            href="#"
+                        >
+                            {faker.name.firstName()} {faker.name.lastName()}
                         </a>
                         <span>
-                            { faker.address.state() }, { faker.address.stateAbbr() } 
+                            {faker.address.state()}, {faker.address.stateAbbr()}
                         </span>
                     </Media>
                 </Media>
             </td>
+            <td className="align-middle">22-Jul-2012</td>
             <td className="align-middle">
-                22-Jul-2012
-            </td>
-            <td className="align-middle">
-                Size: { faker.random.number() } Kb<br />
+                Size: {faker.random.number()} Kb
+                <br />
                 Format: .png
             </td>
             <td className="align-middle text-right">
-                <Button color="link" id={`trTableGalleryListTooltip-${ props.id }` }>
+                <Button
+                    color="link"
+                    id={`trTableGalleryListTooltip-${props.id}`}
+                >
                     <i className="fa fa-fw fa-download"></i>
                 </Button>
-                <UncontrolledTooltip placement="left" target={`trTableGalleryListTooltip-${ props.id }` }>
-                   Download
+                <UncontrolledTooltip
+                    placement="left"
+                    target={`trTableGalleryListTooltip-${props.id}`}
+                >
+                    Download
                 </UncontrolledTooltip>
             </td>
         </tr>
     </React.Fragment>
-)
+);
 
 TrTableGalleryList.propTypes = {
-    id: PropTypes.node
+    id: PropTypes.node,
 };
 TrTableGalleryList.defaultProps = {
-    id: "1"
+    id: '1',
 };
 
 export { TrTableGalleryList };

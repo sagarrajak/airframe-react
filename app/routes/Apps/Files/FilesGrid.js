@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { CardColumns } from './../../../components';
-import { FilesCardGrid } from "../../components/Files/FilesCardGrid";
-import { Paginations } from "../../components/Paginations";
+import { FilesCardGrid } from '../../components/Files/FilesCardGrid';
+import { Paginations } from '../../components/Paginations';
 
 const FilesGrid = () => (
     <React.Fragment>
@@ -18,7 +18,7 @@ const FilesGrid = () => (
             <FilesCardGrid />
         </CardColumns>
         <div className="d-flex justify-content-center">
-        	<Paginations />
+            <Paginations />
         </div>
     </React.Fragment>
 );

@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
+import {
     Checkable,
     Container,
     Row,
@@ -17,41 +17,38 @@ import {
     ListGroup,
     ListGroupItem,
     Nav,
-    NavItem, 
+    NavItem,
     NavLink,
     CustomInput,
     Badge,
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
-import { HeaderMain } from "../../components/HeaderMain";
-import { HeaderDemo } from "../../components/HeaderDemo";
+import { HeaderMain } from '../../components/HeaderMain';
+import { HeaderDemo } from '../../components/HeaderDemo';
 
 const MediaObjects = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Media Objects"
-                className="mb-5 mt-4"
-            />
-            { /* START Header 1 */}
+            <HeaderMain title="Media Objects" className="mb-5 mt-4" />
+            {/* START Header 1 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={1} 
-                        title="Media Options" 
-                        subTitle={(
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={1}
+                        title="Media Options"
+                        subTitle={
                             <React.Fragment>
                                 Media list and media object layouts
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 1 */}
-            { /* START Section 1 */}
+            {/* END Header 1 */}
+            {/* START Section 1 */}
             <Row>
-                { /* START Col6 1 */}
-                <Col lg={ 6 }>
+                {/* START Col6 1 */}
+                <Col lg={6}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
@@ -64,84 +61,81 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
@@ -149,7 +143,7 @@ const MediaObjects = () => (
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
-                                Media: Link 
+                                Media: Link
                                 <span className="small ml-1 text-muted">
                                     #1.02
                                 </span>
@@ -158,90 +152,87 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 h6 mb-1">
                                         <a href="javascript:;">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </a>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 h6 mb-1">
                                         <a href="javascript:;">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </a>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 h6 mb-1">
                                         <a href="javascript:;">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </a>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
@@ -249,7 +240,7 @@ const MediaObjects = () => (
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
-                                Media: Right Badge 
+                                Media: Right Badge
                                 <span className="small ml-1 text-muted">
                                     #1.03
                                 </span>
@@ -258,28 +249,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right middle>
                                     <Badge color="secondary">Offline</Badge>
@@ -289,28 +279,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right middle>
                                     <Badge color="danger">Busy</Badge>
@@ -320,28 +309,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right middle>
                                     <Badge color="success">Online</Badge>
@@ -357,97 +345,122 @@ const MediaObjects = () => (
                                     #1.04
                                 </span>
                             </CardTitle>
-                            <Checkable tag={ Media }>
-                                <Checkable.Trigger tag={ Media } left top className="mr-4">
+                            <Checkable tag={Media}>
+                                <Checkable.Trigger
+                                    tag={Media}
+                                    left
+                                    top
+                                    className="mr-4"
+                                >
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Checkable.Trigger>
-                                <Checkable.Trigger tag={ Media } body>
+                                <Checkable.Trigger tag={Media} body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Checkable.Trigger>
                                 <Media right top>
-                                    <Checkable.Input tag={ CustomInput } type="checkbox" id="rightCheckbox1" defaultChecked />
+                                    <Checkable.Input
+                                        tag={CustomInput}
+                                        type="checkbox"
+                                        id="rightCheckbox1"
+                                        defaultChecked
+                                    />
                                 </Media>
                             </Checkable>
-                            <Checkable tag={ Media }>
-                                <Checkable.Trigger tag={ Media } left top className="mr-4">
+                            <Checkable tag={Media}>
+                                <Checkable.Trigger
+                                    tag={Media}
+                                    left
+                                    top
+                                    className="mr-4"
+                                >
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Checkable.Trigger>
-                                <Checkable.Trigger tag={ Media } body>
+                                <Checkable.Trigger tag={Media} body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Checkable.Trigger>
                                 <Media right top>
-                                    <Checkable.Input tag={ CustomInput } type="checkbox" id="rightCheckbox2" />
+                                    <Checkable.Input
+                                        tag={CustomInput}
+                                        type="checkbox"
+                                        id="rightCheckbox2"
+                                    />
                                 </Media>
                             </Checkable>
-                            <Checkable tag={ Media }>
-                                <Checkable.Trigger tag={ Media } left top className="mr-4">
+                            <Checkable tag={Media}>
+                                <Checkable.Trigger
+                                    tag={Media}
+                                    left
+                                    top
+                                    className="mr-4"
+                                >
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Checkable.Trigger>
-                                <Checkable.Trigger tag={ Media } body>
+                                <Checkable.Trigger tag={Media} body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Checkable.Trigger>
                                 <Media right top>
-                                    <Checkable.Input tag={ CustomInput } type="checkbox" id="rightCheckbox3" />
+                                    <Checkable.Input
+                                        tag={CustomInput}
+                                        type="checkbox"
+                                        id="rightCheckbox3"
+                                    />
                                 </Media>
                             </Checkable>
                         </CardBody>
@@ -460,97 +473,125 @@ const MediaObjects = () => (
                                     #1.05
                                 </span>
                             </CardTitle>
-                            <Checkable tag={ Media }>
-                                <Checkable.Trigger tag={ Media } left top className="mr-4">
+                            <Checkable tag={Media}>
+                                <Checkable.Trigger
+                                    tag={Media}
+                                    left
+                                    top
+                                    className="mr-4"
+                                >
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Checkable.Trigger>
-                                <Checkable.Trigger tag={ Media } body>
+                                <Checkable.Trigger tag={Media} body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Checkable.Trigger>
-                                <Checkable.Trigger tag={ Media } right top>
-                                    <Checkable.Input tag={ CustomInput } type="radio" id="rightRadio1" name="customRadio" defaultChecked />
+                                <Checkable.Trigger tag={Media} right top>
+                                    <Checkable.Input
+                                        tag={CustomInput}
+                                        type="radio"
+                                        id="rightRadio1"
+                                        name="customRadio"
+                                        defaultChecked
+                                    />
                                 </Checkable.Trigger>
                             </Checkable>
-                            <Checkable tag={ Media }>
-                                <Checkable.Trigger tag={ Media } left top className="mr-4">
+                            <Checkable tag={Media}>
+                                <Checkable.Trigger
+                                    tag={Media}
+                                    left
+                                    top
+                                    className="mr-4"
+                                >
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Checkable.Trigger>
-                                <Checkable.Trigger tag={ Media } body>
+                                <Checkable.Trigger tag={Media} body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Checkable.Trigger>
                                 <Media right top>
-                                    <Checkable.Input tag={ CustomInput } type="radio" id="rightRadio2" name="customRadio" />
+                                    <Checkable.Input
+                                        tag={CustomInput}
+                                        type="radio"
+                                        id="rightRadio2"
+                                        name="customRadio"
+                                    />
                                 </Media>
                             </Checkable>
-                            <Checkable tag={ Media }>
-                                <Checkable.Trigger tag={ Media } left top className="mr-4">
+                            <Checkable tag={Media}>
+                                <Checkable.Trigger
+                                    tag={Media}
+                                    left
+                                    top
+                                    className="mr-4"
+                                >
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Checkable.Trigger>
-                                <Checkable.Trigger tag={ Media } body>
+                                <Checkable.Trigger tag={Media} body>
                                     <span className="mt-0 h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Checkable.Trigger>
                                 <Media right top>
-                                    <Checkable.Input tag={ CustomInput } type="radio" id="rightRadio3" name="customRadio" />
+                                    <Checkable.Input
+                                        tag={CustomInput}
+                                        type="radio"
+                                        id="rightRadio3"
+                                        name="customRadio"
+                                    />
                                 </Media>
                             </Checkable>
                         </CardBody>
@@ -574,9 +615,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         Success
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
@@ -590,9 +629,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         Danger
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
@@ -606,9 +643,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         Warning
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
@@ -623,41 +658,54 @@ const MediaObjects = () => (
                             </CardTitle>
                             <Media>
                                 <Media left className="mr-3">
-                                    <CustomInput type="radio" id="leftRadio1" name="leftRadio" label="" defaultChecked />
+                                    <CustomInput
+                                        type="radio"
+                                        id="leftRadio1"
+                                        name="leftRadio"
+                                        label=""
+                                        defaultChecked
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-3">
-                                    <CustomInput type="radio" id="leftRadio2" name="leftRadio" label="" />
+                                    <CustomInput
+                                        type="radio"
+                                        id="leftRadio2"
+                                        name="leftRadio"
+                                        label=""
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-3">
-                                    <CustomInput type="radio" id="leftRadio3" name="leftRadio" label="" />
+                                    <CustomInput
+                                        type="radio"
+                                        id="leftRadio3"
+                                        name="leftRadio"
+                                        label=""
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
@@ -673,93 +721,90 @@ const MediaObjects = () => (
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                         </CardBody>
                     </Card>
                 </Col>
-                { /* END Col6 1 */}
-                { /* START Col6 2 */}
-                <Col lg={ 6 }>
+                {/* END Col6 1 */}
+                {/* START Col6 2 */}
+                <Col lg={6}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
@@ -771,85 +816,82 @@ const MediaObjects = () => (
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1 text-success">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1 text-danger">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1 text-warning">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                         </CardBody>
@@ -865,85 +907,88 @@ const MediaObjects = () => (
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
                                     <p className="text-muted">
-                                        { faker.lorem.sentence() }
+                                        {faker.lorem.sentence()}
                                     </p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
                                     <p className="text-muted">
-                                        { faker.lorem.sentence() }
+                                        {faker.lorem.sentence()}
                                     </p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                             <Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
                                     <p className="text-muted">
-                                        { faker.lorem.sentence() }
+                                        {faker.lorem.sentence()}
                                     </p>
                                 </Media>
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                             </Media>
                         </CardBody>
@@ -960,28 +1005,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top>
                                     <i className="fa fa-circle text-danger"></i>
@@ -991,28 +1035,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top>
                                     <i className="fa fa-circle text-warning"></i>
@@ -1022,28 +1065,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top>
                                     <i className="fa fa-circle text-success"></i>
@@ -1063,28 +1105,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top className="ml-2">
                                     <i className="fa fa-user"></i>
@@ -1094,28 +1135,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top className="ml-2">
                                     <i className="fa fa-gear"></i>
@@ -1125,28 +1165,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top className="ml-2">
                                     <i className="fa fa-exclamation-circle"></i>
@@ -1166,28 +1205,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top className="ml-2">
                                     <Button outline color="secondary" size="sm">
@@ -1199,28 +1237,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top className="ml-2">
                                     <Button outline color="secondary" size="sm">
@@ -1232,28 +1269,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="secondary"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                                 <Media left top className="ml-2">
                                     <Button outline color="secondary" size="sm">
@@ -1279,9 +1315,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         Document PDF
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
@@ -1292,9 +1326,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         Document Word
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
@@ -1305,9 +1337,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         Document Excell
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
@@ -1322,70 +1352,82 @@ const MediaObjects = () => (
                             </CardTitle>
                             <Media>
                                 <Media left className="mr-3">
-                                    <CustomInput type="checkbox" id="leftCheckbox1" label="" defaultChecked />
+                                    <CustomInput
+                                        type="checkbox"
+                                        id="leftCheckbox1"
+                                        label=""
+                                        defaultChecked
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-3">
-                                    <CustomInput type="checkbox" id="leftCheckbox2" name="leftRadio" label="" />
+                                    <CustomInput
+                                        type="checkbox"
+                                        id="leftCheckbox2"
+                                        name="leftRadio"
+                                        label=""
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-3">
-                                    <CustomInput type="checkbox" id="leftCheckbox3" name="leftRadio" label="" />
+                                    <CustomInput
+                                        type="checkbox"
+                                        id="leftCheckbox3"
+                                        name="leftRadio"
+                                        label=""
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
-                    </Card>     
+                    </Card>
                 </Col>
-            { /* END Col6 2 */}
+                {/* END Col6 2 */}
             </Row>
-            { /* END Section 1 */}
+            {/* END Section 1 */}
 
-            { /* START Header 2 */}
+            {/* START Header 2 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={2} 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={2}
                         title="Media Text"
-                        className="mt-5" 
-                        subTitle={(
+                        className="mt-5"
+                        subTitle={
                             <React.Fragment>
                                 Media list and media object layouts
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 2 */}
-            { /* START Section 2 */}
+            {/* END Header 2 */}
+            {/* START Section 2 */}
             <Row>
-                { /* START Col6 1 */}
-                <Col lg={ 6 }>
+                {/* START Col6 1 */}
+                <Col lg={6}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
@@ -1398,99 +1440,98 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="d-flex mb-1">
                                         <span className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <span className="small align-self-center">
                                             <span className="mx-2">•</span>Now
                                         </span>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="d-flex mb-1">
                                         <span className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <span className="small align-self-center">
-                                            <span className="mx-2">•</span>Yesterday
+                                            <span className="mx-2">•</span>
+                                            Yesterday
                                         </span>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="d-flex mb-1">
                                         <span className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <span className="small align-self-center">
-                                            <span className="mx-2">•</span>12:23 PM
+                                            <span className="mx-2">•</span>12:23
+                                            PM
                                         </span>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
@@ -1507,99 +1548,96 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="d-flex mb-1">
                                         <span className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <span className="small align-self-center ml-auto">
                                             Now
                                         </span>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="d-flex mb-1">
                                         <span className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <span className="small align-self-center ml-auto">
                                             Yesterday
                                         </span>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="d-flex mb-1">
                                         <span className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <span className="small align-self-center ml-auto">
                                             12:23 PM
                                         </span>
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
@@ -1616,107 +1654,104 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <div className="mb-1">
                                         <div className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </div>
                                         <span className="small">
-                                           { faker.name.title() }
+                                            {faker.name.title()}
                                         </span>
                                     </div>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <div className="mb-1">
                                         <div className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </div>
                                         <span className="small">
-                                           { faker.name.title() }
+                                            {faker.name.title()}
                                         </span>
                                     </div>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                             <Media>
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <div className="mb-1">
                                         <div className="mt-0 d-flex h6 mb-0">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </div>
                                         <span className="small">
-                                           { faker.name.title() }
+                                            {faker.name.title()}
                                         </span>
                                     </div>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                 </Media>
                             </Media>
                         </CardBody>
                     </Card>
                 </Col>
-                { /* END Col6 1 */}
-                { /* START Col6 2 */}
-                <Col lg={ 6 }>
+                {/* END Col6 1 */}
+                {/* START Col6 2 */}
+                <Col lg={6}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
@@ -1729,29 +1764,34 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
                                     <p>
-                                        { faker.lorem.sentence() }<br />
-                                        <a href="javascript:;" className="small text-success">
-                                            { faker.internet.url() }
+                                        {faker.lorem.sentence()}
+                                        <br />
+                                        <a
+                                            href="javascript:;"
+                                            className="small text-success"
+                                        >
+                                            {faker.internet.url()}
                                         </a>
                                     </p>
                                 </Media>
@@ -1760,29 +1800,34 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
                                     <p>
-                                        { faker.lorem.sentence() }<br />
-                                        <a href="javascript:;" className="small text-success">
-                                            { faker.internet.url() }
+                                        {faker.lorem.sentence()}
+                                        <br />
+                                        <a
+                                            href="javascript:;"
+                                            className="small text-success"
+                                        >
+                                            {faker.internet.url()}
                                         </a>
                                     </p>
                                 </Media>
@@ -1791,29 +1836,34 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
                                     <p>
-                                        { faker.lorem.sentence() }<br />
-                                        <a href="javascript:;" className="small text-success">
-                                            { faker.internet.url() }
+                                        {faker.lorem.sentence()}
+                                        <br />
+                                        <a
+                                            href="javascript:;"
+                                            className="small text-success"
+                                        >
+                                            {faker.internet.url()}
                                         </a>
                                     </p>
                                 </Media>
@@ -1832,28 +1882,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="danger"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                     <ButtonGroup size="sm" className="mb-3">
                                         <Button outline color="secondary">
                                             <i className="fa fa-reply"></i>
@@ -1871,28 +1920,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="warning"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                     <ButtonGroup size="sm" className="mb-3">
                                         <Button outline color="secondary">
                                             <i className="fa fa-reply"></i>
@@ -1910,28 +1958,27 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src={ randomAvatar() }
+                                        src={randomAvatar()}
                                         addOns={[
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="white"
                                                 key="avatar-icon-bg"
                                             />,
-                                            <AvatarAddOn.Icon 
+                                            <AvatarAddOn.Icon
                                                 className="fa fa-circle"
                                                 color="success"
                                                 key="avatar-icon-fg"
-                                            />
+                                            />,
                                         ]}
-                                    /> 
+                                    />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
-                                        { faker.name.firstName() } { faker.name.lastName() }
+                                        {faker.name.firstName()}{' '}
+                                        {faker.name.lastName()}
                                     </span>
-                                    <p>
-                                        { faker.lorem.sentence() }
-                                    </p>
+                                    <p>{faker.lorem.sentence()}</p>
                                     <ButtonGroup size="sm" className="mb-3">
                                         <Button outline color="secondary">
                                             <i className="fa fa-reply"></i>
@@ -1948,30 +1995,30 @@ const MediaObjects = () => (
                         </CardBody>
                     </Card>
                 </Col>
-            { /* END Col6 2 */}
+                {/* END Col6 2 */}
             </Row>
-            { /* END Section 2 */}
+            {/* END Section 2 */}
 
-            { /* START Header 3 */}
+            {/* START Header 3 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={3} 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={3}
                         title="Media Layouts"
-                        className="mt-5" 
-                        subTitle={(
+                        className="mt-5"
+                        subTitle={
                             <React.Fragment>
                                 Media list and media object layouts
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 3 */}
-            { /* START Section 3 */}
+            {/* END Header 3 */}
+            {/* START Section 3 */}
             <Row>
-                { /* START Col6 1 */}
-                <Col lg={ 6 }>
+                {/* START Col6 1 */}
+                <Col lg={6}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-0">
@@ -1987,27 +2034,28 @@ const MediaObjects = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src={ randomAvatar() }
+                                            src={randomAvatar()}
                                             addOns={[
-                                                <AvatarAddOn.Icon 
+                                                <AvatarAddOn.Icon
                                                     className="fa fa-circle"
                                                     color="white"
                                                     key="avatar-icon-bg"
                                                 />,
-                                                <AvatarAddOn.Icon 
+                                                <AvatarAddOn.Icon
                                                     className="fa fa-circle"
                                                     color="danger"
                                                     key="avatar-icon-fg"
-                                                />
+                                                />,
                                             ]}
-                                        /> 
+                                        />
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <p className="mb-0">
-                                            { faker.lorem.sentence() }
+                                            {faker.lorem.sentence()}
                                         </p>
                                     </Media>
                                 </Media>
@@ -2017,57 +2065,59 @@ const MediaObjects = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src={ randomAvatar() }
+                                            src={randomAvatar()}
                                             addOns={[
-                                                <AvatarAddOn.Icon 
+                                                <AvatarAddOn.Icon
                                                     className="fa fa-circle"
                                                     color="white"
                                                     key="avatar-icon-bg"
                                                 />,
-                                                <AvatarAddOn.Icon 
+                                                <AvatarAddOn.Icon
                                                     className="fa fa-circle"
                                                     color="warning"
                                                     key="avatar-icon-fg"
-                                                />
+                                                />,
                                             ]}
-                                        /> 
+                                        />
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <p className="mb-0">
-                                            { faker.lorem.sentence() }
+                                            {faker.lorem.sentence()}
                                         </p>
                                     </Media>
                                 </Media>
                             </ListGroupItem>
-                             <ListGroupItem>
+                            <ListGroupItem>
                                 <Media>
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src={ randomAvatar() }
+                                            src={randomAvatar()}
                                             addOns={[
-                                                <AvatarAddOn.Icon 
+                                                <AvatarAddOn.Icon
                                                     className="fa fa-circle"
                                                     color="white"
                                                     key="avatar-icon-bg"
                                                 />,
-                                                <AvatarAddOn.Icon 
+                                                <AvatarAddOn.Icon
                                                     className="fa fa-circle"
                                                     color="success"
                                                     key="avatar-icon-fg"
-                                                />
+                                                />,
                                             ]}
-                                        /> 
+                                        />
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
                                         <p className="mb-0">
-                                            { faker.lorem.sentence() }
+                                            {faker.lorem.sentence()}
                                         </p>
                                     </Media>
                                 </Media>
@@ -2075,9 +2125,9 @@ const MediaObjects = () => (
                         </ListGroup>
                     </Card>
                 </Col>
-                { /* END Col6 1 */}
-                { /* START Col6 2 */}
-                <Col lg={ 6 }>
+                {/* END Col6 1 */}
+                {/* START Col6 2 */}
+                <Col lg={6}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
@@ -2093,27 +2143,28 @@ const MediaObjects = () => (
                                             <Media left top className="mr-4">
                                                 <Avatar.Image
                                                     size="md"
-                                                    src={ randomAvatar() }
+                                                    src={randomAvatar()}
                                                     addOns={[
-                                                        <AvatarAddOn.Icon 
+                                                        <AvatarAddOn.Icon
                                                             className="fa fa-circle"
                                                             color="white"
                                                             key="avatar-icon-bg"
                                                         />,
-                                                        <AvatarAddOn.Icon 
+                                                        <AvatarAddOn.Icon
                                                             className="fa fa-circle"
                                                             color="danger"
                                                             key="avatar-icon-fg"
-                                                        />
+                                                        />,
                                                     ]}
-                                                /> 
+                                                />
                                             </Media>
                                             <Media body>
                                                 <span className="mt-0 d-flex h6 mb-1">
-                                                    { faker.name.firstName() } { faker.name.lastName() }
+                                                    {faker.name.firstName()}{' '}
+                                                    {faker.name.lastName()}
                                                 </span>
                                                 <p className="mb-0">
-                                                    { faker.lorem.sentence() }
+                                                    {faker.lorem.sentence()}
                                                 </p>
                                             </Media>
                                         </Media>
@@ -2125,27 +2176,28 @@ const MediaObjects = () => (
                                             <Media left top className="mr-4">
                                                 <Avatar.Image
                                                     size="md"
-                                                    src={ randomAvatar() }
+                                                    src={randomAvatar()}
                                                     addOns={[
-                                                        <AvatarAddOn.Icon 
+                                                        <AvatarAddOn.Icon
                                                             className="fa fa-circle"
                                                             color="white"
                                                             key="avatar-icon-bg"
                                                         />,
-                                                        <AvatarAddOn.Icon 
+                                                        <AvatarAddOn.Icon
                                                             className="fa fa-circle"
                                                             color="warning"
                                                             key="avatar-icon-fg"
-                                                        />
+                                                        />,
                                                     ]}
-                                                /> 
+                                                />
                                             </Media>
                                             <Media body>
                                                 <span className="mt-0 d-flex h6 mb-1">
-                                                    { faker.name.firstName() } { faker.name.lastName() }
+                                                    {faker.name.firstName()}{' '}
+                                                    {faker.name.lastName()}
                                                 </span>
                                                 <p className="mb-0">
-                                                    { faker.lorem.sentence() }
+                                                    {faker.lorem.sentence()}
                                                 </p>
                                             </Media>
                                         </Media>
@@ -2157,27 +2209,28 @@ const MediaObjects = () => (
                                             <Media left top className="mr-4">
                                                 <Avatar.Image
                                                     size="md"
-                                                    src={ randomAvatar() }
+                                                    src={randomAvatar()}
                                                     addOns={[
-                                                        <AvatarAddOn.Icon 
+                                                        <AvatarAddOn.Icon
                                                             className="fa fa-circle"
                                                             color="white"
                                                             key="avatar-icon-bg"
                                                         />,
-                                                        <AvatarAddOn.Icon 
+                                                        <AvatarAddOn.Icon
                                                             className="fa fa-circle"
                                                             color="success"
                                                             key="avatar-icon-fg"
-                                                        />
+                                                        />,
                                                     ]}
-                                                /> 
+                                                />
                                             </Media>
                                             <Media body>
                                                 <span className="mt-0 d-flex h6 mb-1">
-                                                    { faker.name.firstName() } { faker.name.lastName() }
+                                                    {faker.name.firstName()}{' '}
+                                                    {faker.name.lastName()}
                                                 </span>
                                                 <p className="mb-0">
-                                                    { faker.lorem.sentence() }
+                                                    {faker.lorem.sentence()}
                                                 </p>
                                             </Media>
                                         </Media>
@@ -2187,10 +2240,9 @@ const MediaObjects = () => (
                         </CardBody>
                     </Card>
                 </Col>
-            { /* END Col6 2 */}
+                {/* END Col6 2 */}
             </Row>
-            { /* END Section 3 */}
-
+            {/* END Section 3 */}
         </Container>
     </React.Fragment>
 );

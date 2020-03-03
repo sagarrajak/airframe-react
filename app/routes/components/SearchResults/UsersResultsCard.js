@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
+import {
     Card,
     UncontrolledTooltip,
     UncontrolledButtonDropdown,
@@ -10,31 +10,32 @@ import {
     DropdownItem,
     Button,
     Badge,
-    CardBody
+    CardBody,
 } from './../../../components';
 
-import {
-    Profile
-} from "./../Profile";
+import { Profile } from './../Profile';
 
 import { randomArray } from './../../../utilities';
 
-const badgesColors = [
-    "info",
-    "primary",
-    "secondary"
-];
+const badgesColors = ['info', 'primary', 'secondary'];
 
 const UsersResultsCard = () => (
     <React.Fragment>
-        { /* START Card */}
+        {/* START Card */}
         <Card className="mb-3">
             <CardBody>
                 <div className="d-flex">
-                    <Button color="link" size="sm" id="tooltipGridAddToFavorites">
+                    <Button
+                        color="link"
+                        size="sm"
+                        id="tooltipGridAddToFavorites"
+                    >
                         <i className="fa fa-star-o"></i>
                     </Button>
-                    <UncontrolledTooltip placement="top" target="tooltipGridAddToFavorites">
+                    <UncontrolledTooltip
+                        placement="top"
+                        target="tooltipGridAddToFavorites"
+                    >
                         Add To Favorites
                     </UncontrolledTooltip>
                     <UncontrolledButtonDropdown className="ml-auto">
@@ -73,34 +74,36 @@ const UsersResultsCard = () => (
                 <Profile />
                 <div className="text-center mb-4">
                     <div className="mb-2">
-                        <span className="small">
-                            Labels
-                        </span>
+                        <span className="small">Labels</span>
                     </div>
-                    <Badge pill color={ randomArray(badgesColors) } className="mr-1">
-                        { faker.commerce.department() }
+                    <Badge
+                        pill
+                        color={randomArray(badgesColors)}
+                        className="mr-1"
+                    >
+                        {faker.commerce.department()}
                     </Badge>
-                    <Badge pill color={ randomArray(badgesColors) } className="mr-1">
-                        { faker.commerce.department() }
+                    <Badge
+                        pill
+                        color={randomArray(badgesColors)}
+                        className="mr-1"
+                    >
+                        {faker.commerce.department()}
                     </Badge>
-                    <Badge pill color={ randomArray(badgesColors) }>
-                        { faker.commerce.department() }
+                    <Badge pill color={randomArray(badgesColors)}>
+                        {faker.commerce.department()}
                     </Badge>
                 </div>
                 <div className="text-center mb-4">
                     <div className="mb-2">
-                        <span className="small">
-                            Profile
-                        </span>
+                        <span className="small">Profile</span>
                     </div>
-                    <p className="mb-0">
-                        { faker.lorem.paragraph() }
-                    </p>
-                </div>                
+                    <p className="mb-0">{faker.lorem.paragraph()}</p>
+                </div>
             </CardBody>
         </Card>
-        { /* END Card */}
+        {/* END Card */}
     </React.Fragment>
-)
+);
 
 export { UsersResultsCard };

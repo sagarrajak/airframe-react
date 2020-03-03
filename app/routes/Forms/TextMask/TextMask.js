@@ -1,9 +1,9 @@
 import React from 'react';
-import MaskedInput from 'react-text-mask'
+import MaskedInput from 'react-text-mask';
 import {
     createAutoCorrectedDatePipe,
     createNumberMask,
-    emailMask
+    emailMask,
 } from 'text-mask-addons';
 
 import {
@@ -14,32 +14,34 @@ import {
     Col,
     FormGroup,
     Label,
-    Input
+    Input,
 } from './../../../components';
 
-import { HeaderMain } from "../../components/HeaderMain";
+import { HeaderMain } from '../../components/HeaderMain';
 
 const autoCorrectedDatePipe = createAutoCorrectedDatePipe('mm/dd/yyyy');
 const dolarsMask = createNumberMask({ prefix: '$' });
 const dolarsMaskDecimal = createNumberMask({ prefix: '$', allowDecimal: true });
-const percentageMask = createNumberMask({ prefix: '', suffix: '%', integerLimit: 3 });
+const percentageMask = createNumberMask({
+    prefix: '',
+    suffix: '%',
+    integerLimit: 3,
+});
 const upperCasePipe = conformedValue => conformedValue.toUpperCase();
 
 export const TextMask = () => (
     <Container>
-        <HeaderMain 
-            title="Text Mask"
-            className="mb-4 mt-4"
-        />
+        <HeaderMain title="Text Mask" className="mb-4 mt-4" />
         <p className="mb-3">
-            Text Mask is an input mask library. 
-            It can create input masks for <code>phone</code>, 
-            <code>date</code>, <code>currency</code>, <code>zip code</code>, <code>percentage</code>, <code>email</code>, and literally anything!
+            Text Mask is an input mask library. It can create input masks for{' '}
+            <code>phone</code>,<code>date</code>, <code>currency</code>,{' '}
+            <code>zip code</code>, <code>percentage</code>, <code>email</code>,
+            and literally anything!
         </p>
         <Card>
             <CardBody>
                 <Row>
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="uSPhoneNumber">
                                 US Phone Number
@@ -48,14 +50,29 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ ['(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/] }
-                                placeholder='(555) 495-3947'
-                                tag={ MaskedInput }
+                                mask={[
+                                    '(',
+                                    /[1-9]/,
+                                    /\d/,
+                                    /\d/,
+                                    ')',
+                                    ' ',
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                    '-',
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                ]}
+                                placeholder="(555) 495-3947"
+                                tag={MaskedInput}
                                 id="uSPhoneNumber"
                             />
                         </FormGroup>
                     </Col>
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="uSPhoneNumberWith">
                                 US Phone Number With Masked Input
@@ -64,14 +81,32 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ ['+', '1', ' ', '(', /[1-9]/, /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/] }
-                                placeholder='+1 (555) 495-3947'
-                                tag={ MaskedInput }
+                                mask={[
+                                    '+',
+                                    '1',
+                                    ' ',
+                                    '(',
+                                    /[1-9]/,
+                                    /\d/,
+                                    /\d/,
+                                    ')',
+                                    ' ',
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                    '-',
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                ]}
+                                placeholder="+1 (555) 495-3947"
+                                tag={MaskedInput}
                                 id="uSPhoneNumberWith"
                             />
                         </FormGroup>
                     </Col>
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="date">
                                 Date
@@ -80,15 +115,26 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/] }
-                                placeholder='25/09/1970'
-                                tag={ MaskedInput }
+                                mask={[
+                                    /\d/,
+                                    /\d/,
+                                    '/',
+                                    /\d/,
+                                    /\d/,
+                                    '/',
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                ]}
+                                placeholder="25/09/1970"
+                                tag={MaskedInput}
                                 id="date"
                             />
                         </FormGroup>
                     </Col>
 
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="dateAuto">
                                 Date (Auto-Corrected)
@@ -97,16 +143,27 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ [/\d/, /\d/, '/', /\d/, /\d/, '/', /\d/, /\d/, /\d/, /\d/] }
-                                keepCharPositions={ true }
-                                pipe={ autoCorrectedDatePipe }
-                                placeholder='Please Enter a Date'
-                                tag={ MaskedInput }
+                                mask={[
+                                    /\d/,
+                                    /\d/,
+                                    '/',
+                                    /\d/,
+                                    /\d/,
+                                    '/',
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                    /\d/,
+                                ]}
+                                keepCharPositions={true}
+                                pipe={autoCorrectedDatePipe}
+                                placeholder="Please Enter a Date"
+                                tag={MaskedInput}
                                 id="dateAuto"
                             />
                         </FormGroup>
                     </Col>
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="uSDollarAmount">
                                 US dollar amount
@@ -115,15 +172,15 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ dolarsMask }
-                                className='text-right form-control'
-                                placeholder='Enter an amount'
-                                tag={ MaskedInput }
+                                mask={dolarsMask}
+                                className="text-right form-control"
+                                placeholder="Enter an amount"
+                                tag={MaskedInput}
                                 id="uSDollarAmount"
                             />
                         </FormGroup>
                     </Col>
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="uSDollarAmountAllows">
                                 US dollar amount (allows decimal)
@@ -132,16 +189,16 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ dolarsMaskDecimal }
-                                className='text-right form-control'
-                                placeholder='Enter an amount'
-                                tag={ MaskedInput }
+                                mask={dolarsMaskDecimal}
+                                className="text-right form-control"
+                                placeholder="Enter an amount"
+                                tag={MaskedInput}
                                 id="uSDollarAmountAllows"
                             />
                         </FormGroup>
                     </Col>
 
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="percentageAmount">
                                 Percentage Amount
@@ -150,15 +207,15 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ percentageMask }
-                                className='text-right form-control'
-                                placeholder='Enter an amount'
-                                tag={ MaskedInput }
+                                mask={percentageMask}
+                                className="text-right form-control"
+                                placeholder="Enter an amount"
+                                tag={MaskedInput}
                                 id="percentageAmount"
                             />
                         </FormGroup>
                     </Col>
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="email">
                                 Email
@@ -167,14 +224,14 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ emailMask }
-                                placeholder='john@smith.com'
-                                tag={ MaskedInput }
+                                mask={emailMask}
+                                placeholder="john@smith.com"
+                                tag={MaskedInput}
                                 id="email"
                             />
                         </FormGroup>
                     </Col>
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="uSZipCode">
                                 US Zip Code
@@ -183,15 +240,15 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                mask={ [/[1-9]/, /\d/, /\d/, /\d/, /\d/] }
-                                placeholder='94303'
-                                tag={ MaskedInput }
+                                mask={[/[1-9]/, /\d/, /\d/, /\d/, /\d/]}
+                                placeholder="94303"
+                                tag={MaskedInput}
                                 id="uSZipCode"
                             />
                         </FormGroup>
                     </Col>
 
-                    <Col lg={ 4 }>
+                    <Col lg={4}>
                         <FormGroup>
                             <Label for="canadianPostal">
                                 Canadian Postal Code
@@ -200,17 +257,24 @@ export const TextMask = () => (
                                 </span>
                             </Label>
                             <Input
-                                pipe={ upperCasePipe }
-                                mask={ [/[A-Z]/i, /\d/, /[A-Z]/i, ' ', /\d/, /[A-Z]/i, /\d/] }
-                                placeholder='K1A 0B2'
-                                tag={ MaskedInput }
+                                pipe={upperCasePipe}
+                                mask={[
+                                    /[A-Z]/i,
+                                    /\d/,
+                                    /[A-Z]/i,
+                                    ' ',
+                                    /\d/,
+                                    /[A-Z]/i,
+                                    /\d/,
+                                ]}
+                                placeholder="K1A 0B2"
+                                tag={MaskedInput}
                                 id="canadianPostal"
                             />
                         </FormGroup>
                     </Col>
-                </Row>      
+                </Row>
             </CardBody>
         </Card>
-
     </Container>
 );

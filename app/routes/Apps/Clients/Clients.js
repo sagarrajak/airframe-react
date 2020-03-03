@@ -1,7 +1,7 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
+import {
     Container,
     Row,
     Col,
@@ -20,26 +20,23 @@ import {
     PaginationLink,
     PaginationItem,
     UncontrolledTooltip,
-    UncontrolledTabs
+    UncontrolledTabs,
 } from './../../../components';
 
-import { HeaderMain } from "../../components/HeaderMain";
-import { Profile } from "../../components/Profile";
-import { DlRowContacts } from "../../components/Profile/DlRowContacts";
-import { DlRowAddress } from "../../components/Profile/DlRowAddress";
-import { TrTableClients } from "./components/TrTableClients";
-import { TrTableCompanies } from "./components/TrTableCompanies";
+import { HeaderMain } from '../../components/HeaderMain';
+import { Profile } from '../../components/Profile';
+import { DlRowContacts } from '../../components/Profile/DlRowContacts';
+import { DlRowAddress } from '../../components/Profile/DlRowAddress';
+import { TrTableClients } from './components/TrTableClients';
+import { TrTableCompanies } from './components/TrTableCompanies';
 
 const Clients = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Clients"
-                className="mb-5 mt-4"
-            />
-            { /* START Content */}
+            <HeaderMain title="Clients" className="mb-5 mt-4" />
+            {/* START Content */}
             <Row>
-                <Col lg={ 8 }>
+                <Col lg={8}>
                     <Card className="mb-3">
                         <UncontrolledTabs initialActiveTabId="clients">
                             <CardBody>
@@ -58,20 +55,34 @@ const Clients = () => (
                                     </Nav>
                                     <ButtonToolbar className="ml-auto">
                                         <ButtonGroup>
-                                            <Button color="link" className="align-self-center mr-2 text-decoration-none" id="tooltipSettings">
+                                            <Button
+                                                color="link"
+                                                className="align-self-center mr-2 text-decoration-none"
+                                                id="tooltipSettings"
+                                            >
                                                 <i className="fa fa-fw fa-gear"></i>
                                             </Button>
                                         </ButtonGroup>
                                         <ButtonGroup>
-                                            <Button color="primary" className="align-self-center" id="tooltipAddNew">
+                                            <Button
+                                                color="primary"
+                                                className="align-self-center"
+                                                id="tooltipAddNew"
+                                            >
                                                 <i className="fa fa-fw fa-plus"></i>
                                             </Button>
                                         </ButtonGroup>
                                     </ButtonToolbar>
-                                    <UncontrolledTooltip placement="right" target="tooltipAddNew">
+                                    <UncontrolledTooltip
+                                        placement="right"
+                                        target="tooltipAddNew"
+                                    >
                                         Add New
                                     </UncontrolledTooltip>
-                                    <UncontrolledTooltip placement="right" target="tooltipSettings">
+                                    <UncontrolledTooltip
+                                        placement="right"
+                                        target="tooltipSettings"
+                                    >
                                         Settings
                                     </UncontrolledTooltip>
                                 </div>
@@ -79,7 +90,7 @@ const Clients = () => (
 
                             <UncontrolledTabs.TabContent>
                                 <TabPane tabId="clients">
-                                    { /* START Table */}
+                                    {/* START Table */}
                                     <Table className="mb-0" hover responsive>
                                         <thead>
                                             <tr>
@@ -87,42 +98,30 @@ const Clients = () => (
                                                 <th className="bt-0"></th>
                                                 <th className="bt-0">Name</th>
                                                 <th className="bt-0">Email</th>
-                                                <th className="text-right bt-0">Phone</th>
-                                                <th className="text-right bt-0">Label</th>
+                                                <th className="text-right bt-0">
+                                                    Phone
+                                                </th>
+                                                <th className="text-right bt-0">
+                                                    Label
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <TrTableClients />
-                                            <TrTableClients 
-                                                id="2"
-                                            />
-                                            <TrTableClients 
-                                                id="3"
-                                            />
-                                            <TrTableClients 
-                                                id="4"
-                                            />
-                                            <TrTableClients 
-                                                id="5"
-                                            />
-                                            <TrTableClients 
-                                                id="6"
-                                            />
-                                            <TrTableClients 
-                                                id="7"
-                                            />
-                                            <TrTableClients 
-                                                id="8"
-                                            />
-                                            <TrTableClients 
-                                                id="9"
-                                            />
+                                            <TrTableClients id="2" />
+                                            <TrTableClients id="3" />
+                                            <TrTableClients id="4" />
+                                            <TrTableClients id="5" />
+                                            <TrTableClients id="6" />
+                                            <TrTableClients id="7" />
+                                            <TrTableClients id="8" />
+                                            <TrTableClients id="9" />
                                         </tbody>
                                     </Table>
-                                    { /* END Table */}
+                                    {/* END Table */}
                                 </TabPane>
                                 <TabPane tabId="companies">
-                                    { /* START Table */}
+                                    {/* START Table */}
                                     <Table className="mb-0" hover responsive>
                                         <thead>
                                             <tr>
@@ -130,48 +129,30 @@ const Clients = () => (
                                                 <th className="bt-0"></th>
                                                 <th className="bt-0">Name</th>
                                                 <th className="bt-0">PM</th>
-                                                <th className="text-right bt-0">Phone</th>
-                                                <th className="text-right bt-0">Label</th>
+                                                <th className="text-right bt-0">
+                                                    Phone
+                                                </th>
+                                                <th className="text-right bt-0">
+                                                    Label
+                                                </th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <TrTableCompanies />
-                                            <TrTableCompanies 
-                                                id="2"
-                                            />
-                                            <TrTableCompanies 
-                                                id="3"
-                                            />
-                                            <TrTableCompanies 
-                                                id="4"
-                                            />
-                                            <TrTableCompanies 
-                                                id="5"
-                                            />
-                                            <TrTableCompanies 
-                                                id="6"
-                                            />
-                                            <TrTableCompanies 
-                                                id="7"
-                                            />
-                                            <TrTableCompanies 
-                                                id="8"
-                                            />
-                                            <TrTableCompanies 
-                                                id="9"
-                                            />
-                                            <TrTableCompanies 
-                                                id="10"
-                                            />
-                                            <TrTableCompanies 
-                                                id="11"
-                                            />
-                                            <TrTableCompanies 
-                                                id="12"
-                                            />
+                                            <TrTableCompanies id="2" />
+                                            <TrTableCompanies id="3" />
+                                            <TrTableCompanies id="4" />
+                                            <TrTableCompanies id="5" />
+                                            <TrTableCompanies id="6" />
+                                            <TrTableCompanies id="7" />
+                                            <TrTableCompanies id="8" />
+                                            <TrTableCompanies id="9" />
+                                            <TrTableCompanies id="10" />
+                                            <TrTableCompanies id="11" />
+                                            <TrTableCompanies id="12" />
                                         </tbody>
                                     </Table>
-                                    { /* END Table */}
+                                    {/* END Table */}
                                 </TabPane>
                             </UncontrolledTabs.TabContent>
                         </UncontrolledTabs>
@@ -180,26 +161,23 @@ const Clients = () => (
                             <span className="align-self-center">
                                 Showing 1 to 10 of 57 entries
                             </span>
-                            <Pagination aria-label="Page navigation example" className="ml-auto">
+                            <Pagination
+                                aria-label="Page navigation example"
+                                className="ml-auto"
+                            >
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
                                         <i className="fa fa-fw fa-angle-left"></i>
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#">
@@ -210,7 +188,7 @@ const Clients = () => (
                         </CardFooter>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card>
                         <CardBody>
                             <Profile />
@@ -229,56 +207,53 @@ const Clients = () => (
                                         <span>Relases</span>
                                     </li>
                                 </ul>
-                            </div>                                
+                            </div>
                             <Row className="mt-3">
-                                <Col sm={ 6 }>
+                                <Col sm={6}>
                                     <Button color="primary" block>
                                         Message
-                                    </Button> 
+                                    </Button>
                                 </Col>
-                                <Col sm={ 6 }>
+                                <Col sm={6}>
                                     <Button color="secondary" outline block>
                                         Edit
-                                    </Button> 
+                                    </Button>
                                 </Col>
                             </Row>
                             <div className="mt-4 mb-2">
-                                <span className="small">
-                                    Profile
-                                </span>
+                                <span className="small">Profile</span>
                             </div>
                             <p className="text-left">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                Dicta sapiente earum, necessitatibus commodi eius pariatur 
-                                repudiandae cum sunt officiis ex!
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. Dicta sapiente earum,
+                                necessitatibus commodi eius pariatur repudiandae
+                                cum sunt officiis ex!
                             </p>
                             <div className="mt-4 mb-2">
-                                <span className="small">
-                                    Labels
-                                </span>
+                                <span className="small">Labels</span>
                             </div>
                             <div className="text-left mb-4">
                                 <Badge pill color="primary" className="mr-1">
-                                    { faker.commerce.department() }
+                                    {faker.commerce.department()}
                                 </Badge>
                                 <Badge pill color="secondary" className="mr-1">
-                                    { faker.commerce.department() }
+                                    {faker.commerce.department()}
                                 </Badge>
                                 <Badge pill color="primary" className="mr-1">
-                                    { faker.commerce.department() }
+                                    {faker.commerce.department()}
                                 </Badge>
                             </div>
                             <div className="mt-4 mb-2">
                                 <span className="small">Contact</span>
                             </div>
-                            <DlRowContacts 
+                            <DlRowContacts
                                 leftSideClassName="text-left"
                                 rightSideClassName="text-right text-inverse"
                             />
                             <div className="mt-4 mb-2">
                                 <span className="small">Address</span>
                             </div>
-                            <DlRowAddress 
+                            <DlRowAddress
                                 leftSideClassName="text-left"
                                 rightSideClassName="text-right text-inverse"
                             />
@@ -286,8 +261,7 @@ const Clients = () => (
                     </Card>
                 </Col>
             </Row>
-            { /* END Content */}
-
+            {/* END Content */}
         </Container>
     </React.Fragment>
 );

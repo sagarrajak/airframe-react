@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
     Container,
     Row,
     Col,
@@ -9,38 +9,35 @@ import {
     CardBody,
     Pagination,
     PaginationItem,
-    PaginationLink
+    PaginationLink,
 } from './../../../components';
-import { HeaderMain } from "../../components/HeaderMain";
-import { HeaderDemo } from "../../components/HeaderDemo";
+import { HeaderMain } from '../../components/HeaderMain';
+import { HeaderDemo } from '../../components/HeaderDemo';
 
 const Paginations = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Paginations"
-                className="mb-5 mt-4"
-            />
-            { /* START Header 1 */}
-            <Row> 
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={1} 
-                        title="Paginations" 
-                        subTitle={(
+            <HeaderMain title="Paginations" className="mb-5 mt-4" />
+            {/* START Header 1 */}
+            <Row>
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={1}
+                        title="Paginations"
+                        subTitle={
                             <React.Fragment>
-                                Documentation and examples for showing pagination to 
-                                indicate a series of related content exists across m
-                                ultiple pages.
+                                Documentation and examples for showing
+                                pagination to indicate a series of related
+                                content exists across m ultiple pages.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 1 */}
-            { /* START Section 1 */}
+            {/* END Header 1 */}
+            {/* START Section 1 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -49,36 +46,32 @@ const Paginations = () => (
                                     #1.01
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Default example
-                            </p>
+                            <p className="card-text">Default example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
-                                    <PaginationLink previous href="#">Previous</PaginationLink>
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationLink href="#">
-                                        1
+                                    <PaginationLink previous href="#">
+                                        Previous
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink previous href="#">Next</PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink previous href="#">
+                                        Next
+                                    </PaginationLink>
                                 </PaginationItem>
                             </Pagination>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -87,36 +80,32 @@ const Paginations = () => (
                                     #1.02
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Disabled example
-                            </p>
+                            <p className="card-text">Disabled example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem disabled>
-                                    <PaginationLink previous href="#">Previous</PaginationLink>
-                                </PaginationItem>
-                                <PaginationItem>
-                                    <PaginationLink href="#">
-                                        1
+                                    <PaginationLink previous href="#">
+                                        Previous
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink previous href="#">Next</PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink previous href="#">
+                                        Next
+                                    </PaginationLink>
                                 </PaginationItem>
                             </Pagination>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -125,58 +114,56 @@ const Paginations = () => (
                                     #1.03
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Active example
-                            </p>
+                            <p className="card-text">Active example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
-                                    <PaginationLink previous href="#">Previous</PaginationLink>
+                                    <PaginationLink previous href="#">
+                                        Previous
+                                    </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink previous href="#">Next</PaginationLink>
+                                    <PaginationLink previous href="#">
+                                        Next
+                                    </PaginationLink>
                                 </PaginationItem>
                             </Pagination>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 1 */}
-            { /* START Header 2 */}
+            {/* END Section 1 */}
+            {/* START Header 2 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={2} 
-                        title="Paginations with Icons" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={2}
+                        title="Paginations with Icons"
                         className="mt-5"
-                        subTitle={(
+                        subTitle={
                             <React.Fragment>
-                                Looking to use an icon or symbol in place of text for some pagination links? 
-                                Be sure to provide proper screen reader support with <code>aria</code> attributes and 
-                                the <code>.sr-only</code> utility.
+                                Looking to use an icon or symbol in place of
+                                text for some pagination links? Be sure to
+                                provide proper screen reader support with{' '}
+                                <code>aria</code> attributes and the{' '}
+                                <code>.sr-only</code> utility.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 2 */}
-            { /* START Section 2 */}
+            {/* END Header 2 */}
+            {/* START Section 2 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -185,27 +172,19 @@ const Paginations = () => (
                                     #2.01
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Icons example
-                            </p>
+                            <p className="card-text">Icons example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
                                     <PaginationLink previous href="#" />
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#" />
@@ -221,9 +200,7 @@ const Paginations = () => (
                                     #2.02
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Icons example
-                            </p>
+                            <p className="card-text">Icons example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
@@ -231,28 +208,22 @@ const Paginations = () => (
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationLink next href="#">
-                                        <i className="fa fa-fw fa-chevron-right"></i>
-                                    </PaginationLink>
+                                    <i className="fa fa-fw fa-chevron-right"></i>
+                                </PaginationLink>
                             </Pagination>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -261,9 +232,7 @@ const Paginations = () => (
                                     #2.03
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Icons example
-                            </p>
+                            <p className="card-text">Icons example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
@@ -271,19 +240,13 @@ const Paginations = () => (
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#">
@@ -301,9 +264,7 @@ const Paginations = () => (
                                     #2.04
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Icons example
-                            </p>
+                            <p className="card-text">Icons example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
@@ -311,19 +272,13 @@ const Paginations = () => (
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#">
@@ -334,7 +289,7 @@ const Paginations = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -343,9 +298,7 @@ const Paginations = () => (
                                     #2.05
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Icons example
-                            </p>
+                            <p className="card-text">Icons example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
@@ -353,19 +306,13 @@ const Paginations = () => (
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#">
@@ -383,9 +330,7 @@ const Paginations = () => (
                                     #2.05
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Icons example
-                            </p>
+                            <p className="card-text">Icons example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
@@ -393,51 +338,45 @@ const Paginations = () => (
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem active>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationLink next href="#">
-                                        <i className="fa fa-fw fa-caret-right"></i>
-                                    </PaginationLink>
+                                    <i className="fa fa-fw fa-caret-right"></i>
+                                </PaginationLink>
                             </Pagination>
                         </CardBody>
                     </Card>
-
                 </Col>
             </Row>
-            { /* END Section 2 */}
-            { /* START Header 3 */}
+            {/* END Section 2 */}
+            {/* START Header 3 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={4} 
-                        title="Paginations Sizes" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={4}
+                        title="Paginations Sizes"
                         className="mt-5"
-                         subTitle={(
+                        subTitle={
                             <React.Fragment>
-                                Fancy larger or smaller pagination? 
-                                Add <code>.pagination-lg</code> or <code>.pagination-sm</code> 
+                                Fancy larger or smaller pagination? Add{' '}
+                                <code>.pagination-lg</code> or{' '}
+                                <code>.pagination-sm</code>
                                 for additional sizes.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 3 */}
-            { /* START Section 3 */}
+            {/* END Header 3 */}
+            {/* START Section 3 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -446,29 +385,24 @@ const Paginations = () => (
                                     #3.01
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Large example
-                            </p>
-                            <Pagination aria-label="Page navigation example" size="lg">
+                            <p className="card-text">Large example</p>
+                            <Pagination
+                                aria-label="Page navigation example"
+                                size="lg"
+                            >
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
                                         <i className="fa fa-fw fa-angle-left"></i>
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#">
@@ -479,7 +413,7 @@ const Paginations = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -488,9 +422,7 @@ const Paginations = () => (
                                     #3.02
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Default example
-                            </p>
+                            <p className="card-text">Default example</p>
                             <Pagination aria-label="Page navigation example">
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
@@ -498,19 +430,13 @@ const Paginations = () => (
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#">
@@ -521,7 +447,7 @@ const Paginations = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -530,29 +456,24 @@ const Paginations = () => (
                                     #3.03
                                 </span>
                             </CardTitle>
-                            <p className="card-text">
-                                Small example
-                            </p>
-                            <Pagination aria-label="Page navigation example" size="sm">
+                            <p className="card-text">Small example</p>
+                            <Pagination
+                                aria-label="Page navigation example"
+                                size="sm"
+                            >
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
                                         <i className="fa fa-fw fa-angle-left"></i>
                                     </PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        1
-                                    </PaginationLink>
+                                    <PaginationLink href="#">1</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        2
-                                    </PaginationLink>
+                                    <PaginationLink href="#">2</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
-                                    <PaginationLink href="#">
-                                        3
-                                    </PaginationLink>
+                                    <PaginationLink href="#">3</PaginationLink>
                                 </PaginationItem>
                                 <PaginationItem>
                                     <PaginationLink next href="#">
@@ -564,7 +485,7 @@ const Paginations = () => (
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 3 */}
+            {/* END Section 3 */}
         </Container>
     </React.Fragment>
 );

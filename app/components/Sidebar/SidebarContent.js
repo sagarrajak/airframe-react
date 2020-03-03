@@ -10,8 +10,8 @@ export class SidebarContent extends React.Component {
         slim: PropTypes.bool,
         collapsed: PropTypes.bool,
         animationsDisabled: PropTypes.bool,
-        pageConfig: PropTypes.object
-    }
+        pageConfig: PropTypes.object,
+    };
 
     sidebarRef = React.createRef();
 
@@ -32,10 +32,9 @@ export class SidebarContent extends React.Component {
         this.slimSidebarAnimate.assignParentElement(this.sidebarRef.current);
         this.slimMenuAnimate.assignSidebarElement(this.sidebarRef.current);
 
-        this.sidebarEntryAnimate.executeAnimation()
-            .then(() => {
-                this.setState({ entryAnimationFinished: true });
-            });
+        this.sidebarEntryAnimate.executeAnimation().then(() => {
+            this.setState({ entryAnimationFinished: true });
+        });
     }
 
     componentWillUnmount() {
@@ -53,16 +52,22 @@ export class SidebarContent extends React.Component {
             children,
         } = this.props;
 
-        const sidebarClass = classNames('sidebar', 'sidebar--animations-enabled', {
-            'sidebar--slim': slim || pageConfig.sidebarSlim,
-            'sidebar--collapsed': collapsed || pageConfig.sidebarCollapsed,
-            'sidebar--animations-disabled': animationsDisabled || pageConfig.animationsDisabled,
-            'sidebar--animate-entry-complete': this.state.entryAnimationFinished,
-        });
+        const sidebarClass = classNames(
+            'sidebar',
+            'sidebar--animations-enabled',
+            {
+                'sidebar--slim': slim || pageConfig.sidebarSlim,
+                'sidebar--collapsed': collapsed || pageConfig.sidebarCollapsed,
+                'sidebar--animations-disabled':
+                    animationsDisabled || pageConfig.animationsDisabled,
+                'sidebar--animate-entry-complete': this.state
+                    .entryAnimationFinished,
+            },
+        );
 
         return (
-            <div className={ sidebarClass } ref={ this.sidebarRef }>
-                { children }
+            <div className={sidebarClass} ref={this.sidebarRef}>
+                {children}
             </div>
         );
     }

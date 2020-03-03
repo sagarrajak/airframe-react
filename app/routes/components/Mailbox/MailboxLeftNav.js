@@ -1,21 +1,20 @@
 import React from 'react';
 
-import { 
-    Nav,
-    NavItem,
-    NavLink,
-    Badge
-} from './../../../components';
+import { Nav, NavItem, NavLink, Badge } from './../../../components';
 
 const MailboxLeftNav = () => (
     <React.Fragment>
-        { /* START Left Nav  */}
+        {/* START Left Nav  */}
         <div className="mb-4">
             <Nav pills vertical>
                 <NavItem>
                     <NavLink href="#" active className="d-flex">
                         Inbox
-                        <Badge pill color="secondary" className="align-self-center ml-auto">
+                        <Badge
+                            pill
+                            color="secondary"
+                            className="align-self-center ml-auto"
+                        >
                             12
                         </Badge>
                     </NavLink>
@@ -23,7 +22,11 @@ const MailboxLeftNav = () => (
                 <NavItem>
                     <NavLink href="#" className="d-flex">
                         Draft
-                        <Badge pill color="secondary" className="align-self-center ml-auto">
+                        <Badge
+                            pill
+                            color="secondary"
+                            className="align-self-center ml-auto"
+                        >
                             12
                         </Badge>
                     </NavLink>
@@ -31,7 +34,11 @@ const MailboxLeftNav = () => (
                 <NavItem>
                     <NavLink href="#" className="d-flex">
                         Sent
-                        <Badge pill color="secondary" className="align-self-center ml-auto">
+                        <Badge
+                            pill
+                            color="secondary"
+                            className="align-self-center ml-auto"
+                        >
                             2
                         </Badge>
                     </NavLink>
@@ -39,19 +46,21 @@ const MailboxLeftNav = () => (
                 <NavItem>
                     <NavLink href="#" className="d-flex">
                         Trash
-                        <Badge pill color="secondary" className="align-self-center ml-auto">
+                        <Badge
+                            pill
+                            color="secondary"
+                            className="align-self-center ml-auto"
+                        >
                             45
                         </Badge>
                     </NavLink>
                 </NavItem>
             </Nav>
         </div>
-        { /* END Left Nav  */}
-        { /* START Left Nav  */}
+        {/* END Left Nav  */}
+        {/* START Left Nav  */}
         <div className="mb-4">
-            <div className="small mb-3">
-                Labels
-            </div>
+            <div className="small mb-3">Labels</div>
             <Nav pills vertical>
                 <NavItem>
                     <NavLink href="#">
@@ -91,8 +100,8 @@ const MailboxLeftNav = () => (
                 </NavItem>
             </Nav>
         </div>
-        { /* END Left Nav  */}
+        {/* END Left Nav  */}
     </React.Fragment>
-)
+);
 
 export { MailboxLeftNav };

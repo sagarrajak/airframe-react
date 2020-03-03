@@ -1,16 +1,16 @@
 import React from 'react';
 import { map } from 'lodash';
-import { 
-    AreaChart, 
-    CartesianGrid, 
-    XAxis, 
-    YAxis, 
-    Tooltip, 
+import {
+    AreaChart,
+    CartesianGrid,
+    XAxis,
+    YAxis,
+    Tooltip,
     ResponsiveContainer,
     Area,
     Dot,
     Rectangle,
-    Polygon
+    Polygon,
 } from './../../../components/recharts';
 
 import colors from './../../../colors';

@@ -4,15 +4,9 @@ import _ from 'lodash';
 import numeral from 'numeral';
 import moment from 'moment';
 
-import {
-    Table,
-    Button,
-    UncontrolledTooltip
-} from './../../../../components';
+import { Table, Button, UncontrolledTooltip } from './../../../../components';
 import classes from './common.scss';
-import {
-    getFileIcon
-} from './../utilities';
+import { getFileIcon } from './../utilities';
 
 export const FilesList = ({ files, onFileRemove }) => (
     <Table responsive hover className="mt-3">
@@ -27,47 +21,50 @@ export const FilesList = ({ files, onFileRemove }) => (
             </tr>
         </thead>
         <tbody>
-        {
-            _.map(files, (file, index) => (
-                <tr key={ index }>
+            {_.map(files, (file, index) => (
+                <tr key={index}>
                     <td className="align-middle">
-                        <div className={ classes['ph--small'] }>
-                            <i className={`fa fa-fw fa-2x ${getFileIcon(file)}`} />
+                        <div className={classes['ph--small']}>
+                            <i
+                                className={`fa fa-fw fa-2x ${getFileIcon(
+                                    file,
+                                )}`}
+                            />
                         </div>
                     </td>
-                    <td className="align-middle">
-                        { file.name }
-                    </td>
+                    <td className="align-middle">{file.name}</td>
                     <td className="align-middle text-uppercase">
-                        { numeral(file.size).format('0.00a') }B
+                        {numeral(file.size).format('0.00a')}B
                     </td>
+                    <td className="align-middle">You</td>
                     <td className="align-middle">
-                        You
-                    </td>
-                    <td className="align-middle">
-                        { moment(file.modifiedDate).format('DD-MMM-YYYY, HH:mm') }
+                        {moment(file.modifiedDate).format('DD-MMM-YYYY, HH:mm')}
                     </td>
                     <td className="text-right align-middle">
                         <Button
                             color="link"
-                            onClick={() => {onFileRemove(file)}}
+                            onClick={() => {
+                                onFileRemove(file);
+                            }}
                             size="sm"
                             id={`delete-file-${index}`}
                         >
                             <i className="fa fa-times fa-fw text-danger"></i>
                         </Button>
-                        <UncontrolledTooltip placement="left" target={`delete-file-${index}`}>
+                        <UncontrolledTooltip
+                            placement="left"
+                            target={`delete-file-${index}`}
+                        >
                             Delete File
                         </UncontrolledTooltip>
                     </td>
                 </tr>
-            ))
-        }
+            ))}
         </tbody>
     </Table>
 );
 
 FilesList.propTypes = {
     files: PropTypes.array,
-    onFileRemove: PropTypes.func
-}
+    onFileRemove: PropTypes.func,
+};

@@ -1,12 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import {
-    Navbar,
-    Nav,
-    NavItem,
-    SidebarTrigger
-} from './../../components';
+import { Navbar, Nav, NavItem, SidebarTrigger } from './../../components';
 
 import { NavbarActivityFeed } from './NavbarActivityFeed';
 import { NavbarMessages } from './NavbarMessages';
@@ -17,7 +12,7 @@ export const DefaultNavbar = () => (
     <Navbar light expand="xs" fluid>
         <Nav navbar>
             <NavItem className="mr-3">
-                <SidebarTrigger/>
+                <SidebarTrigger />
             </NavItem>
             <NavItem className="navbar-brand d-lg-none">
                 <Link to="/">
@@ -39,9 +34,7 @@ export const DefaultNavbar = () => (
                 <span className="navbar-text px-2">
                     <i className="fa fa-angle-right"></i>
                 </span>
-                <span className="navbar-text">
-                    Page Link
-                </span>
+                <span className="navbar-text">Page Link</span>
             </NavItem>
         </Nav>
         <Nav navbar className="ml-auto">

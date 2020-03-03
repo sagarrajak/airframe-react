@@ -1,12 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import {
-    Navbar,
-    Nav,
-    NavItem,
-    SidebarTrigger
-} from './../../components';
+import { Navbar, Nav, NavItem, SidebarTrigger } from './../../components';
 
 import { NavbarActivityFeed } from './NavbarActivityFeed';
 import { NavbarMessages } from './NavbarMessages';
@@ -16,12 +11,10 @@ export const SidebarANavbar = () => (
     <Navbar light expand="xs" fluid>
         <Nav navbar>
             <NavItem className="mr-3">
-                <SidebarTrigger/>
+                <SidebarTrigger />
             </NavItem>
             <NavItem className="navbar-brand h5 mb-0 d-lg-none">
-                <Link to="/">
-                    react.bs4
-                </Link>
+                <Link to="/">react.bs4</Link>
             </NavItem>
         </Nav>
         <Nav navbar className="ml-auto">

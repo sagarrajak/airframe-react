@@ -11,22 +11,22 @@ import {
     Button,
     Label,
     EmptyLayout,
-    ThemeConsumer
+    ThemeConsumer,
 } from './../../../components';
 
-import { HeaderAuth } from "../../components/Pages/HeaderAuth";
-import { FooterAuth } from "../../components/Pages/FooterAuth";
+import { HeaderAuth } from '../../components/Pages/HeaderAuth';
+import { FooterAuth } from '../../components/Pages/FooterAuth';
 
 const ComingSoon = () => (
     <EmptyLayout>
         <EmptyLayout.Section center>
-            { /* START Header */}
-            <HeaderAuth 
+            {/* START Header */}
+            <HeaderAuth
                 title="Coming Soon"
                 icon="clock-o"
                 text="Our website is under construction. Still, the app is not ready, but we're working hard on it and will be available for around:"
             />
-            { /* END Header */}
+            {/* END Header */}
             <ul className="list-inline my-5 text-center">
                 <li className="list-inline-item text-center mr-2">
                     <h2 className="mb-0">16</h2>
@@ -45,33 +45,35 @@ const ComingSoon = () => (
                     <div>Sec</div>
                 </li>
             </ul>
-            { /* START Form */}
+            {/* START Form */}
             <Form className="mb-3">
                 <FormGroup>
-                    <Label for="email">
-                        Enter email
-                    </Label>
+                    <Label for="email">Enter email</Label>
                     <InputGroup>
-                        <Input type="email" name="email" id="email" placeholder="Enter here..." />
+                        <Input
+                            type="email"
+                            name="email"
+                            id="email"
+                            placeholder="Enter here..."
+                        />
                         <InputGroupAddon addonType="append">
                             <ThemeConsumer>
-                            {
-                                ({ color }) => (
-                                    <Button color={ color } tag={ Link } to="/">
+                                {({ color }) => (
+                                    <Button color={color} tag={Link} to="/">
                                         Subscribe
                                     </Button>
-                                )
-                            }
+                                )}
                             </ThemeConsumer>
                         </InputGroupAddon>
                     </InputGroup>
                     <FormText className="muted">
-                        If you want to be informed about the start, please subscribe to the newsletter
+                        If you want to be informed about the start, please
+                        subscribe to the newsletter
                     </FormText>
                 </FormGroup>
             </Form>
-            { /* END Form */}
-            { /* START Bottom Links */}
+            {/* END Form */}
+            {/* START Bottom Links */}
             <div className="d-flex mb-5">
                 <Link to="/" className="text-decoration-none">
                     <i className="fa fa-angle-left mr-2" /> Back to Home
@@ -80,10 +82,10 @@ const ComingSoon = () => (
                     Contact
                 </Link>
             </div>
-            { /* END Bottom Links */}
-            { /* START Footer */}
+            {/* END Bottom Links */}
+            {/* START Footer */}
             <FooterAuth />
-            { /* END Footer */}
+            {/* END Footer */}
         </EmptyLayout.Section>
     </EmptyLayout>
 );

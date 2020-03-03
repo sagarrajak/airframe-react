@@ -12,9 +12,9 @@ export class AsyncPagination extends React.Component {
         options: [],
         query: '',
     };
-  
+
     _cache = {};
-  
+
     render() {
         return (
             <AsyncTypeahead
@@ -27,20 +27,20 @@ export class AsyncPagination extends React.Component {
                 onSearch={this._handleSearch}
                 paginate
                 placeholder="Search for a Github user..."
-                renderMenuItemChildren={(option) => (
+                renderMenuItemChildren={option => (
                     <GithubMenuItem key={option.id} user={option} />
                 )}
                 useCache={false}
             />
         );
     }
-  
-    _handleInputChange = (query) => {
-        this.setState({query});
-    }
-  
+
+    _handleInputChange = query => {
+        this.setState({ query });
+    };
+
     _handlePagination = (e, shownResults) => {
-        const {query} = this.state;
+        const { query } = this.state;
         const cachedQuery = this._cache[query];
 
         // Don't make another request if:
@@ -53,35 +53,33 @@ export class AsyncPagination extends React.Component {
             return;
         }
 
-        this.setState({isLoading: true});
+        this.setState({ isLoading: true });
 
         const page = cachedQuery.page + 1;
 
-        makeAndHandleRequest(query, page)
-            .then((resp) => {
-                const options = cachedQuery.options.concat(resp.options);
-                this._cache[query] = {...cachedQuery, options, page};
-                this.setState({
-                    isLoading: false,
-                    options,
-                });
+        makeAndHandleRequest(query, page).then(resp => {
+            const options = cachedQuery.options.concat(resp.options);
+            this._cache[query] = { ...cachedQuery, options, page };
+            this.setState({
+                isLoading: false,
+                options,
             });
-    }
-  
-    _handleSearch = (query) => {
+        });
+    };
+
+    _handleSearch = query => {
         if (this._cache[query]) {
-            this.setState({options: this._cache[query].options});
+            this.setState({ options: this._cache[query].options });
             return;
         }
-  
-        this.setState({isLoading: true});
-        makeAndHandleRequest(query)
-            .then((resp) => {
-                this._cache[query] = {...resp, page: 1};
-                this.setState({
-                    isLoading: false,
-                    options: resp.options,
-                });
+
+        this.setState({ isLoading: true });
+        makeAndHandleRequest(query).then(resp => {
+            this._cache[query] = { ...resp, page: 1 };
+            this.setState({
+                isLoading: false,
+                options: resp.options,
             });
-    }
+        });
+    };
 }

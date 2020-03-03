@@ -1,10 +1,7 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
-    Card,
-    CardBody
-} from './../../../components';
+import { Card, CardBody } from './../../../components';
 
 import { randomArray } from './../../../utilities';
 
@@ -51,26 +48,20 @@ const SearchResultsCard = () => (
         <Card className="mb-3">
             <CardBody>
                 <a href="#" className="h6 text-decoration-none">
-                    { faker.lorem.sentence() }
+                    {faker.lorem.sentence()}
                 </a>
                 <br />
                 <div className="mb-2">
-                    <span className="text-success">
-                        { faker.internet.url() }
-                    </span>
+                    <span className="text-success">{faker.internet.url()}</span>
                     <span className="mx-2">·</span>
-                    { randomArray(stars) }
+                    {randomArray(stars)}
                     <span className="mx-2">·</span>
-                    <span>
-                        Votes
-                    </span>
+                    <span>Votes</span>
                 </div>
-                <p className="mb-0">
-                    { faker.lorem.paragraph() }
-                </p>
+                <p className="mb-0">{faker.lorem.paragraph()}</p>
             </CardBody>
         </Card>
     </React.Fragment>
-)
+);
 
 export { SearchResultsCard };

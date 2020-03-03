@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
     Container,
     Row,
     Col,
@@ -10,41 +10,40 @@ import {
     FormFeedback,
     Badge,
     CustomInput,
-    Form, 
-    FormGroup, 
-    Label, 
-    Input, 
-    FormText
+    Form,
+    FormGroup,
+    Label,
+    Input,
+    FormText,
 } from './../../../components';
 
-import { HeaderMain } from "../../components/HeaderMain";
-import { HeaderDemo } from "../../components/HeaderDemo";
+import { HeaderMain } from '../../components/HeaderMain';
+import { HeaderDemo } from '../../components/HeaderDemo';
 
 const Forms = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Forms"
-                className="mb-5 mt-4"
-            />
-            { /* START Header 1 */}
-            <Row> 
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={1} 
-                        title="Basic Inputs" 
-                        subTitle={(
+            <HeaderMain title="Forms" className="mb-5 mt-4" />
+            {/* START Header 1 */}
+            <Row>
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={1}
+                        title="Basic Inputs"
+                        subTitle={
                             <React.Fragment>
-                                Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+                                Indicate the current page’s location within a
+                                navigational hierarchy that automatically adds
+                                separators via CSS.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 1 */}
-            { /* START Section 1 */}
+            {/* END Header 1 */}
+            {/* START Section 1 */}
             <Row>
-                <Col lg={ 12 }>
+                <Col lg={12}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6" className="mb-4">
@@ -53,150 +52,160 @@ const Forms = () => (
                                     #1.01
                                 </span>
                             </CardTitle>
-                            { /* START Form */}
+                            {/* START Form */}
                             <Form>
-                                { /* START Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="input" sm={3}>
                                         Input
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="" 
-                                            name="" 
-                                            id="input" 
-                                            placeholder="" 
+                                        <Input
+                                            type=""
+                                            name=""
+                                            id="input"
+                                            placeholder=""
                                         />
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="inputPassword" sm={3}>
                                         Password
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="password" 
-                                            name="password" 
-                                            id="inputPassword" 
-                                            placeholder="" 
+                                        <Input
+                                            type="password"
+                                            name="password"
+                                            id="inputPassword"
+                                            placeholder=""
                                         />
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
-                                    <Label for="inputPasswordPlaceholder" sm={3}>
+                                    <Label
+                                        for="inputPasswordPlaceholder"
+                                        sm={3}
+                                    >
                                         Input Placeholder
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="email" 
-                                            name="email" 
-                                            id="inputPasswordPlaceholder" 
-                                            placeholder="Placeholder..." 
+                                        <Input
+                                            type="email"
+                                            name="email"
+                                            id="inputPasswordPlaceholder"
+                                            placeholder="Placeholder..."
                                         />
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="inputPasswordReadonly" sm={3}>
                                         Input Readonly
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="" 
-                                            name="email" 
-                                            id="inputPasswordReadonly" 
-                                            placeholder="Readonly Input..." 
+                                        <Input
+                                            type=""
+                                            name="email"
+                                            id="inputPasswordReadonly"
+                                            placeholder="Readonly Input..."
                                             readOnly
                                         />
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="inputPasswordDisabled" sm={3}>
                                         Input Disabled
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="" 
-                                            name="" 
-                                            id="inputPasswordDisabled" 
-                                            placeholder="Disabled" 
+                                        <Input
+                                            type=""
+                                            name=""
+                                            id="inputPasswordDisabled"
+                                            placeholder="Disabled"
                                             disabled
                                         />
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Select */}
+                                {/* END Input */}
+                                {/* START Select */}
                                 <FormGroup row>
                                     <Label for="defaultSelect" sm={3}>
                                         Default Select
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="select" 
-                                            name="select" 
-                                            id="defaultSelect" 
+                                        <Input
+                                            type="select"
+                                            name="select"
+                                            id="defaultSelect"
                                         >
-                                            <option defaultValue="">Open this Select Menu</option>
+                                            <option defaultValue="">
+                                                Open this Select Menu
+                                            </option>
                                             <option>One</option>
                                             <option>Two</option>
                                             <option>Three</option>
                                         </Input>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
-                                { /* START Select */}
+                                {/* END Select */}
+                                {/* START Select */}
                                 <FormGroup row>
                                     <Label for="customSelect" sm={3}>
                                         Custom Select
                                     </Label>
                                     <Col sm={9}>
-                                        <CustomInput 
-                                            type="select" 
-                                            name="customSelect" 
-                                            id="customSelect"  
+                                        <CustomInput
+                                            type="select"
+                                            name="customSelect"
+                                            id="customSelect"
                                         >
-                                            <option defaultValue="">Open this Select Menu</option>
+                                            <option defaultValue="">
+                                                Open this Select Menu
+                                            </option>
                                             <option>One</option>
                                             <option>Two</option>
                                             <option>Three</option>
                                         </CustomInput>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
-                                { /* START Input */}
+                                {/* END Select */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="staticText" sm={3}>
                                         Static Text
                                     </Label>
                                     <Col sm={9}>
-                                        <Input plaintext initialValue="static@text.com" />
+                                        <Input
+                                            plaintext
+                                            initialValue="static@text.com"
+                                        />
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="textArea" sm={3}>
                                         Textarea
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="textarea" 
-                                            name="text" 
-                                            id="textArea" 
-                                            placeholder="Enter text..." 
+                                        <Input
+                                            type="textarea"
+                                            name="text"
+                                            id="textArea"
+                                            placeholder="Enter text..."
                                         />
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
+                                {/* END Input */}
                             </Form>
-                            { /* END Form */}
+                            {/* END Form */}
 
                             <CardTitle tag="h6" className="mt-5 mb-4">
                                 Forms: Selects
@@ -204,17 +213,17 @@ const Forms = () => (
                                     #1.02
                                 </span>
                             </CardTitle>
-                            { /* START Form */}
+                            {/* START Form */}
                             <Form>
-                                { /* START Select */}
+                                {/* START Select */}
                                 <FormGroup row>
                                     <Label for="multipleSelect" sm={3}>
                                         Multiple Select
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="select" 
-                                            name="select" 
+                                        <Input
+                                            type="select"
+                                            name="select"
                                             id="multipleSelect"
                                             multiple
                                         >
@@ -225,16 +234,16 @@ const Forms = () => (
                                         </Input>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
-                                { /* START Select */}
+                                {/* END Select */}
+                                {/* START Select */}
                                 <FormGroup row>
                                     <Label for="multipleSelectDisabled" sm={3}>
                                         Multiple Select Disabled
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="select" 
-                                            name="select" 
+                                        <Input
+                                            type="select"
+                                            name="select"
                                             id="multipleSelectDisabled"
                                             multiple
                                             disabled
@@ -246,9 +255,9 @@ const Forms = () => (
                                         </Input>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
+                                {/* END Select */}
                             </Form>
-                            { /* END Form */}
+                            {/* END Form */}
 
                             <CardTitle tag="h6" className="mt-5 mb-4">
                                 Forms: File Inputs
@@ -256,58 +265,92 @@ const Forms = () => (
                                     #1.03
                                 </span>
                             </CardTitle>
-                            { /* START Form */}
+                            {/* START Form */}
                             <Form>
-                                { /* START Select */}
+                                {/* START Select */}
                                 <FormGroup row>
-                                    <Label for="fileInput" sm={3}>File Input</Label>
+                                    <Label for="fileInput" sm={3}>
+                                        File Input
+                                    </Label>
                                     <Col sm={9}>
-                                        <Input type="file" name="file" id="fileInput" />
+                                        <Input
+                                            type="file"
+                                            name="file"
+                                            id="fileInput"
+                                        />
                                         <FormText color="muted">
-                                            This is some placeholder block-level help text for the above input.
-                                            Its a bit lighter and easily wraps to a new line.
+                                            This is some placeholder block-level
+                                            help text for the above input. Its a
+                                            bit lighter and easily wraps to a
+                                            new line.
                                         </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
-                                { /* START Select */}
+                                {/* END Select */}
+                                {/* START Select */}
                                 <FormGroup row>
-                                    <Label for="fileInputStyle" sm={3}>File Browser</Label>
+                                    <Label for="fileInputStyle" sm={3}>
+                                        File Browser
+                                    </Label>
                                     <Col sm={9}>
-                                        <CustomInput type="file" id="fileInputStyle" name="customFile" />
+                                        <CustomInput
+                                            type="file"
+                                            id="fileInputStyle"
+                                            name="customFile"
+                                        />
                                         <FormText color="muted">
-                                            This is some placeholder block-level help text for the above input.
-                                            It&apos;s a bit lighter and easily wraps to a new line.
+                                            This is some placeholder block-level
+                                            help text for the above input.
+                                            It&apos;s a bit lighter and easily
+                                            wraps to a new line.
                                         </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
-                                { /* START Select */}
+                                {/* END Select */}
+                                {/* START Select */}
                                 <FormGroup row>
-                                    <Label for="fileInputStyleDisabled" sm={3}>File Browser Disabled</Label>
+                                    <Label for="fileInputStyleDisabled" sm={3}>
+                                        File Browser Disabled
+                                    </Label>
                                     <Col sm={9}>
-                                        <CustomInput type="file" id="fileInputStyleDisabled" name="customFile" disabled />
+                                        <CustomInput
+                                            type="file"
+                                            id="fileInputStyleDisabled"
+                                            name="customFile"
+                                            disabled
+                                        />
                                         <FormText color="muted">
-                                            This is some placeholder block-level help text for the above input.
-                                            It&apos;s a bit lighter and easily wraps to a new line.
+                                            This is some placeholder block-level
+                                            help text for the above input.
+                                            It&apos;s a bit lighter and easily
+                                            wraps to a new line.
                                         </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
-                                { /* START Select */}
+                                {/* END Select */}
+                                {/* START Select */}
                                 <FormGroup row>
-                                    <Label for="fileInputStyleCustom" sm={3}>File Browser Custom Label</Label>
+                                    <Label for="fileInputStyleCustom" sm={3}>
+                                        File Browser Custom Label
+                                    </Label>
                                     <Col sm={9}>
-                                        <CustomInput type="file" id="fileInputStyleCustom" name="customFile" label="Yo, select a file!" />
+                                        <CustomInput
+                                            type="file"
+                                            id="fileInputStyleCustom"
+                                            name="customFile"
+                                            label="Yo, select a file!"
+                                        />
                                         <FormText color="muted">
-                                            This is some placeholder block-level help text for the above input.
-                                            It&apos;s a bit lighter and easily wraps to a new line.
+                                            This is some placeholder block-level
+                                            help text for the above input.
+                                            It&apos;s a bit lighter and easily
+                                            wraps to a new line.
                                         </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Select */}
+                                {/* END Select */}
                             </Form>
-                            { /* END Form */}
+                            {/* END Form */}
 
                             <CardTitle tag="h6" className="mt-5 mb-4">
                                 Forms: Text Helpers
@@ -315,43 +358,51 @@ const Forms = () => (
                                     #1.04
                                 </span>
                             </CardTitle>
-                            { /* START Form */}
+                            {/* START Form */}
                             <Form>
-                                { /* START Inputs */}
+                                {/* START Inputs */}
                                 <FormGroup row>
                                     <Label for="inputHelper-1" sm={3}>
                                         Input Helper
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputHelper-1" 
-                                                    placeholder="" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputHelper-1"
+                                                    placeholder=""
                                                 />
                                                 <FormText color="muted">
                                                     Left Text Helper
                                                 </FormText>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputHelper-2" 
-                                                    placeholder="" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputHelper-2"
+                                                    placeholder=""
                                                 />
                                                 <FormText color="muted text-center">
                                                     Center Text Helper
                                                 </FormText>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 }>
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputHelper-3" 
-                                                    placeholder="" 
+                                            <Col sm={12} lg={4}>
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputHelper-3"
+                                                    placeholder=""
                                                 />
                                                 <FormText color="muted text-right">
                                                     Right Text Helper
@@ -360,67 +411,82 @@ const Forms = () => (
                                         </Row>
                                     </Col>
                                 </FormGroup>
-                                { /* END Inputs */}
-                                { /* START Inputs */}
+                                {/* END Inputs */}
+                                {/* START Inputs */}
                                 <FormGroup row>
                                     <Label for="inputIcon-1" sm={3}>
                                         Input Icon
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputIcon-1" 
-                                                    placeholder="" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputIcon-1"
+                                                    placeholder=""
                                                 />
                                                 <FormText color="muted">
                                                     <i className="fa fa-info-circle mr-2"></i>
-                                                    We&apos;ll never share your email.
+                                                    We&apos;ll never share your
+                                                    email.
                                                 </FormText>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputIcon-2" 
-                                                    placeholder="" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputIcon-2"
+                                                    placeholder=""
                                                 />
                                                 <FormText color="muted text-center">
                                                     <i className="fa fa-info-circle mr-2"></i>
-                                                    We&apos;ll never share your email.
+                                                    We&apos;ll never share your
+                                                    email.
                                                 </FormText>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 }>
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputIcon-3" 
-                                                    placeholder="" 
+                                            <Col sm={12} lg={4}>
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputIcon-3"
+                                                    placeholder=""
                                                 />
                                                 <FormText color="muted text-right">
                                                     <i className="fa fa-info-circle mr-2"></i>
-                                                    We&apos;ll never share your email.
+                                                    We&apos;ll never share your
+                                                    email.
                                                 </FormText>
                                             </Col>
                                         </Row>
                                     </Col>
                                 </FormGroup>
-                                { /* END Inputs */}
-                                { /* START Inputs */}
+                                {/* END Inputs */}
+                                {/* START Inputs */}
                                 <FormGroup row>
                                     <Label for="inputBadge-1" sm={3}>
                                         Input Badge
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputBadge-1" 
-                                                    placeholder="" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputBadge-1"
+                                                    placeholder=""
                                                 />
                                                 <FormText>
                                                     <Badge color="primary">
@@ -428,12 +494,16 @@ const Forms = () => (
                                                     </Badge>
                                                 </FormText>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputBadge-2" 
-                                                    placeholder="" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputBadge-2"
+                                                    placeholder=""
                                                 />
                                                 <FormText className="text-center">
                                                     <Badge color="success">
@@ -441,12 +511,12 @@ const Forms = () => (
                                                     </Badge>
                                                 </FormText>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 }>
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="inputBadge-3" 
-                                                    placeholder="" 
+                                            <Col sm={12} lg={4}>
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="inputBadge-3"
+                                                    placeholder=""
                                                 />
                                                 <FormText className="text-right">
                                                     <Badge color="warning">
@@ -457,19 +527,22 @@ const Forms = () => (
                                         </Row>
                                     </Col>
                                 </FormGroup>
-                                { /* END Inputs */}
-                                { /* START Input Inline */}
+                                {/* END Inputs */}
+                                {/* START Input Inline */}
                                 <FormGroup row>
                                     <Label for="inputInline" sm={3}>
                                         Input Inline
                                     </Label>
-                                    <Col sm={9} className="d-flex align-items-center">
+                                    <Col
+                                        sm={9}
+                                        className="d-flex align-items-center"
+                                    >
                                         <FormGroup check inline>
-                                            <Input 
-                                                type="text" 
-                                                name="" 
-                                                id="inputInline" 
-                                                placeholder="" 
+                                            <Input
+                                                type="text"
+                                                name=""
+                                                id="inputInline"
+                                                placeholder=""
                                             />
                                         </FormGroup>
                                         <FormGroup check inline>
@@ -479,19 +552,22 @@ const Forms = () => (
                                         </FormGroup>
                                     </Col>
                                 </FormGroup>
-                                { /* END Input Inline */}
-                                { /* START Input Inline */}
+                                {/* END Input Inline */}
+                                {/* START Input Inline */}
                                 <FormGroup row>
                                     <Label for="inputInlineBadge" sm={3}>
                                         Input Inline Badge
                                     </Label>
-                                    <Col sm={9} className="d-flex align-items-center">
+                                    <Col
+                                        sm={9}
+                                        className="d-flex align-items-center"
+                                    >
                                         <FormGroup check inline>
-                                            <Input 
-                                                type="text" 
-                                                name="" 
-                                                id="inputInlineBadge" 
-                                                placeholder="" 
+                                            <Input
+                                                type="text"
+                                                name=""
+                                                id="inputInlineBadge"
+                                                placeholder=""
                                             />
                                         </FormGroup>
                                         <FormGroup check inline>
@@ -501,9 +577,9 @@ const Forms = () => (
                                         </FormGroup>
                                     </Col>
                                 </FormGroup>
-                                { /* END Input Inline */}
+                                {/* END Input Inline */}
                             </Form>
-                            { /* END Form */}
+                            {/* END Form */}
 
                             <CardTitle tag="h6" className="mt-5 mb-4">
                                 Forms: Validations
@@ -511,145 +587,188 @@ const Forms = () => (
                                     #1.05
                                 </span>
                             </CardTitle>
-                            { /* START Form */}
+                            {/* START Form */}
                             <Form>
-                                { /* START Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="inputWithoutValidation" sm={3}>
                                         Input Without Validation
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="text" 
-                                            name="" 
-                                            id="inputWithoutValidation" 
-                                            placeholder="" 
+                                        <Input
+                                            type="text"
+                                            name=""
+                                            id="inputWithoutValidation"
+                                            placeholder=""
                                         />
-                                        <FormFeedback>You will not be able to see this</FormFeedback>
-                                        <FormText>Example help text that remains unchanged.</FormText>
+                                        <FormFeedback>
+                                            You will not be able to see this
+                                        </FormFeedback>
+                                        <FormText>
+                                            Example help text that remains
+                                            unchanged.
+                                        </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="inputValidation-1" sm={3}>
                                         Input Validation
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="text" 
-                                            name="" 
-                                            id="inputValidation-1" 
-                                            placeholder="" 
+                                        <Input
+                                            type="text"
+                                            name=""
+                                            id="inputValidation-1"
+                                            placeholder=""
                                             valid
                                             defaultValue="Mark"
                                         />
-                                        <FormFeedback valid>Looks good!</FormFeedback>
-                                        <FormText>Example help text that remains unchanged.</FormText>
+                                        <FormFeedback valid>
+                                            Looks good!
+                                        </FormFeedback>
+                                        <FormText>
+                                            Example help text that remains
+                                            unchanged.
+                                        </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="inputValidation-2" sm={3}>
                                         Input Validation
                                     </Label>
                                     <Col sm={9}>
-                                        <Input 
-                                            type="text" 
-                                            name="" 
-                                            id="inputValidation-2" 
-                                            placeholder="Username..." 
+                                        <Input
+                                            type="text"
+                                            name=""
+                                            id="inputValidation-2"
+                                            placeholder="Username..."
                                             invalid
                                         />
-                                        <FormFeedback>Oh noes! that name is already taken</FormFeedback>
-                                        <FormText>Example help text that remains unchanged.</FormText>
+                                        <FormFeedback>
+                                            Oh noes! that name is already taken
+                                        </FormFeedback>
+                                        <FormText>
+                                            Example help text that remains
+                                            unchanged.
+                                        </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START Input */}
+                                {/* END Input */}
+                                {/* START Input */}
                                 <FormGroup row>
                                     <Label for="selectCustomValidation" sm={3}>
                                         Select Custom Validation
                                     </Label>
                                     <Col sm={9}>
-                                        <CustomInput 
-                                            type="select" 
-                                            name="customSelect" 
-                                            id="selectCustomValidation" 
-                                            invalid 
+                                        <CustomInput
+                                            type="select"
+                                            name="customSelect"
+                                            id="selectCustomValidation"
+                                            invalid
                                         >
-                                            <option defaultValue="">Open this Select Menu</option>
+                                            <option defaultValue="">
+                                                Open this Select Menu
+                                            </option>
                                             <option>One</option>
                                             <option>Two</option>
                                             <option>Three</option>
                                         </CustomInput>
-                                        <FormFeedback>Example invalid custom select feedback</FormFeedback>
-                                        <FormText>Example help text that remains unchanged.</FormText>
+                                        <FormFeedback>
+                                            Example invalid custom select
+                                            feedback
+                                        </FormFeedback>
+                                        <FormText>
+                                            Example help text that remains
+                                            unchanged.
+                                        </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END Input */}
-                                { /* START File Input */}
+                                {/* END Input */}
+                                {/* START File Input */}
                                 <FormGroup row>
-                                    <Label for="fileInputStyleValidation" sm={3}>
+                                    <Label
+                                        for="fileInputStyleValidation"
+                                        sm={3}
+                                    >
                                         File Browser Validation
                                     </Label>
                                     <Col sm={9}>
-                                        <CustomInput 
-                                            type="file" 
-                                            id="fileInputStyleValidation" 
-                                            name="customFile" 
+                                        <CustomInput
+                                            type="file"
+                                            id="fileInputStyleValidation"
+                                            name="customFile"
                                             invalid
                                         />
-                                        <FormFeedback>Example invalid custom file feedback</FormFeedback>
-                                        <FormText>Example help text that remains unchanged.</FormText>
+                                        <FormFeedback>
+                                            Example invalid custom file feedback
+                                        </FormFeedback>
+                                        <FormText>
+                                            Example help text that remains
+                                            unchanged.
+                                        </FormText>
                                     </Col>
                                 </FormGroup>
-                                { /* END File Input */}
-                                { /* START Inputs */}
+                                {/* END File Input */}
+                                {/* START Inputs */}
                                 <FormGroup row>
                                     <Label for="validationTooltips-1" sm={3}>
                                         Validation Tooltips
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-5 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="validationTooltips-1" 
-                                                    placeholder="" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-5 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="validationTooltips-1"
+                                                    placeholder=""
                                                     defaultValue="Mark"
                                                     valid
                                                 />
                                                 <FormFeedback valid tooltip>
-                                                    Sweet! that name is available
+                                                    Sweet! that name is
+                                                    available
                                                 </FormFeedback>
                                                 <FormText>
-                                                    Example help text that remains unchanged.
+                                                    Example help text that
+                                                    remains unchanged.
                                                 </FormText>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="validationTooltips-2" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="validationTooltips-2"
                                                     placeholder=""
                                                     invalid
                                                 />
                                                 <FormFeedback tooltip>
-                                                    Oh noes! that name is already taken
+                                                    Oh noes! that name is
+                                                    already taken
                                                 </FormFeedback>
                                                 <FormText>
-                                                    Example help text that remains unchanged.
+                                                    Example help text that
+                                                    remains unchanged.
                                                 </FormText>
                                             </Col>
                                         </Row>
                                     </Col>
                                 </FormGroup>
-                                { /* END Inputs */}
+                                {/* END Inputs */}
                             </Form>
-                            { /* END Form */}
+                            {/* END Form */}
 
                             <CardTitle tag="h6" className="mt-5 mb-4">
                                 Forms: Sizes
@@ -657,45 +776,61 @@ const Forms = () => (
                                     #1.06
                                 </span>
                             </CardTitle>
-                            { /* START Form */}
+                            {/* START Form */}
                             <Form>
-                                { /* START Inputs */}
+                                {/* START Inputs */}
                                 <FormGroup row>
                                     <Label for="largeSize-1" sm={3} size="lg">
-                                       Large Size
+                                        Large Size
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="largeSize-1" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="largeSize-1"
                                                     placeholder="Large (lg) Input"
-                                                    bsSize="lg" 
+                                                    bsSize="lg"
                                                 />
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="select" 
-                                                    name="select" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="select"
+                                                    name="select"
                                                     id="largeSize-2"
-                                                    bsSize="lg" 
+                                                    bsSize="lg"
                                                 >
-                                                    <option defaultValue="">Large (lg) Select</option>
+                                                    <option defaultValue="">
+                                                        Large (lg) Select
+                                                    </option>
                                                     <option>One</option>
                                                     <option>Two</option>
                                                     <option>Three</option>
                                                 </Input>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <CustomInput 
-                                                    type="select" 
-                                                    name="customSelect" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <CustomInput
+                                                    type="select"
+                                                    name="customSelect"
                                                     id="largeSize-3"
-                                                    bsSize="lg" 
+                                                    bsSize="lg"
                                                 >
-                                                    <option defaultValue="">Large (lg) Custom</option>
+                                                    <option defaultValue="">
+                                                        Large (lg) Custom
+                                                    </option>
                                                     <option>One</option>
                                                     <option>Two</option>
                                                     <option>Three</option>
@@ -704,41 +839,53 @@ const Forms = () => (
                                         </Row>
                                     </Col>
                                 </FormGroup>
-                                { /* END Inputs */}
-                                { /* START Inputs */}
+                                {/* END Inputs */}
+                                {/* START Inputs */}
                                 <FormGroup row>
                                     <Label for="defaultSize-1" sm={3}>
-                                       Default Size
+                                        Default Size
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="defaultSize-1" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="defaultSize-1"
                                                     placeholder="Default Input"
                                                 />
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="select" 
-                                                    name="select" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="select"
+                                                    name="select"
                                                     id="defaultSize-2"
                                                 >
-                                                    <option defaultValue="">Default Select</option>
+                                                    <option defaultValue="">
+                                                        Default Select
+                                                    </option>
                                                     <option>One</option>
                                                     <option>Two</option>
                                                     <option>Three</option>
                                                 </Input>
                                             </Col>
                                             <Col>
-                                                <CustomInput 
-                                                    type="select" 
-                                                    name="customSelect" 
+                                                <CustomInput
+                                                    type="select"
+                                                    name="customSelect"
                                                     id="defaultSize-3"
                                                 >
-                                                    <option defaultValue="">Default Custom</option>
+                                                    <option defaultValue="">
+                                                        Default Custom
+                                                    </option>
                                                     <option>One</option>
                                                     <option>Two</option>
                                                     <option>Three</option>
@@ -747,44 +894,56 @@ const Forms = () => (
                                         </Row>
                                     </Col>
                                 </FormGroup>
-                                { /* END Inputs */}
-                                { /* START Inputs */}
+                                {/* END Inputs */}
+                                {/* START Inputs */}
                                 <FormGroup row>
                                     <Label for="smSize-1" sm={3} size="sm">
-                                       Small Size
+                                        Small Size
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="text" 
-                                                    name="" 
-                                                    id="smSize-1" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="text"
+                                                    name=""
+                                                    id="smSize-1"
                                                     placeholder="Small (sm) Input"
-                                                    bsSize="sm" 
+                                                    bsSize="sm"
                                                 />
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
-                                                <Input 
-                                                    type="select" 
-                                                    name="select" 
+                                            <Col
+                                                sm={12}
+                                                lg={4}
+                                                className="mb-3 mb-md-0"
+                                            >
+                                                <Input
+                                                    type="select"
+                                                    name="select"
                                                     id="smSize-2"
-                                                    bsSize="sm" 
+                                                    bsSize="sm"
                                                 >
-                                                    <option defaultValue="">Small (sm) Select</option>
+                                                    <option defaultValue="">
+                                                        Small (sm) Select
+                                                    </option>
                                                     <option>One</option>
                                                     <option>Two</option>
                                                     <option>Three</option>
                                                 </Input>
                                             </Col>
-                                            <Col sm={ 12 } lg={ 4 }>
-                                                <CustomInput 
-                                                    type="select" 
-                                                    name="customSelect" 
+                                            <Col sm={12} lg={4}>
+                                                <CustomInput
+                                                    type="select"
+                                                    name="customSelect"
                                                     id="smSize-3"
-                                                    bsSize="sm" 
+                                                    bsSize="sm"
                                                 >
-                                                    <option defaultValue="">Small (sm) Custom</option>
+                                                    <option defaultValue="">
+                                                        Small (sm) Custom
+                                                    </option>
                                                     <option>One</option>
                                                     <option>Two</option>
                                                     <option>Three</option>
@@ -793,39 +952,41 @@ const Forms = () => (
                                         </Row>
                                     </Col>
                                 </FormGroup>
-                                { /* END Inputs */}
+                                {/* END Inputs */}
                             </Form>
-                            { /* END Form */}
+                            {/* END Form */}
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 1 */}
+            {/* END Section 1 */}
 
-            { /* START Header 2 */}
-            <Row> 
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={2} 
-                        title="Checkboxes" 
+            {/* START Header 2 */}
+            <Row>
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={2}
+                        title="Checkboxes"
                         className="mt-5"
-                        subTitle={(
+                        subTitle={
                             <React.Fragment>
-                                Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+                                Indicate the current page’s location within a
+                                navigational hierarchy that automatically adds
+                                separators via CSS.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 2 */}
-            { /* START Section 2 */}
+            {/* END Header 2 */}
+            {/* START Section 2 */}
             <Row>
-                <Col lg={ 12 }>
+                <Col lg={12}>
                     <Card className="mb-3">
                         <CardBody>
                             <Row>
-                                <Col lg={ 6 }>
-                                    { /* START Checkboxes */}
+                                <Col lg={6}>
+                                    {/* START Checkboxes */}
                                     <div className="mb-5">
                                         <CardTitle tag="h6">
                                             Forms: Checkboxes Stacked
@@ -837,7 +998,10 @@ const Forms = () => (
                                             <FormGroup>
                                                 <FormGroup check>
                                                     <Label check>
-                                                        <Input type="checkbox" defaultChecked />{' '}
+                                                        <Input
+                                                            type="checkbox"
+                                                            defaultChecked
+                                                        />{' '}
                                                         Checked Checkbox
                                                     </Label>
                                                 </FormGroup>
@@ -849,15 +1013,18 @@ const Forms = () => (
                                                 </FormGroup>
                                                 <FormGroup check disabled>
                                                     <Label check>
-                                                        <Input type="checkbox" disabled />{' '}
+                                                        <Input
+                                                            type="checkbox"
+                                                            disabled
+                                                        />{' '}
                                                         Disabled Checkbox
                                                     </Label>
                                                 </FormGroup>
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Checkboxes */}
-                                    { /* START Checkboxes */}
+                                    {/* END Checkboxes */}
+                                    {/* START Checkboxes */}
                                     <div>
                                         <CardTitle tag="h6">
                                             Forms: Checkboxes Inline
@@ -869,7 +1036,10 @@ const Forms = () => (
                                             <FormGroup>
                                                 <FormGroup check inline>
                                                     <Label check>
-                                                        <Input type="checkbox" defaultChecked />{' '}
+                                                        <Input
+                                                            type="checkbox"
+                                                            defaultChecked
+                                                        />{' '}
                                                         Checked
                                                     </Label>
                                                 </FormGroup>
@@ -879,19 +1049,26 @@ const Forms = () => (
                                                         Unchecked
                                                     </Label>
                                                 </FormGroup>
-                                                <FormGroup check disabled inline>
+                                                <FormGroup
+                                                    check
+                                                    disabled
+                                                    inline
+                                                >
                                                     <Label check>
-                                                        <Input type="checkbox" disabled />{' '}
+                                                        <Input
+                                                            type="checkbox"
+                                                            disabled
+                                                        />{' '}
                                                         Disabled
                                                     </Label>
                                                 </FormGroup>
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Checkboxes */}
+                                    {/* END Checkboxes */}
                                 </Col>
-                                <Col lg={ 6 }>
-                                    { /* START Checkboxes */}
+                                <Col lg={6}>
+                                    {/* START Checkboxes */}
                                     <div className="mb-5">
                                         <CardTitle tag="h6">
                                             Forms: Checkboxes Stacked Custom
@@ -901,27 +1078,27 @@ const Forms = () => (
                                         </CardTitle>
                                         <Form>
                                             <FormGroup>
-                                                <CustomInput 
-                                                    type="checkbox" 
-                                                    id="checkboxesStackedCustom1" 
+                                                <CustomInput
+                                                    type="checkbox"
+                                                    id="checkboxesStackedCustom1"
                                                     label="Checked Checkbox Custom"
-                                                    defaultChecked 
+                                                    defaultChecked
                                                 />
-                                                <CustomInput 
-                                                    type="checkbox" 
-                                                    id="checkboxesStackedCustom2" 
-                                                    label="Unchecked Checkbox Custom" 
+                                                <CustomInput
+                                                    type="checkbox"
+                                                    id="checkboxesStackedCustom2"
+                                                    label="Unchecked Checkbox Custom"
                                                 />
-                                                <CustomInput 
-                                                    type="checkbox" 
-                                                    id="checkboxesStackedCustom3" 
-                                                    label="Disabled Checkbox Custom" 
+                                                <CustomInput
+                                                    type="checkbox"
+                                                    id="checkboxesStackedCustom3"
+                                                    label="Disabled Checkbox Custom"
                                                 />
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Checkboxes */}
-                                    { /* START Checkboxes */}
+                                    {/* END Checkboxes */}
+                                    {/* START Checkboxes */}
                                     <div>
                                         <CardTitle tag="h6">
                                             Forms: Checkboxes Inline
@@ -931,62 +1108,64 @@ const Forms = () => (
                                         </CardTitle>
                                         <Form>
                                             <FormGroup>
-                                                <CustomInput 
-                                                    type="checkbox" 
-                                                    id="checkboxesInlineCustom1" 
-                                                    label="Checked Custom" 
+                                                <CustomInput
+                                                    type="checkbox"
+                                                    id="checkboxesInlineCustom1"
+                                                    label="Checked Custom"
                                                     inline
                                                     defaultChecked
                                                 />
-                                                <CustomInput 
-                                                    type="checkbox" 
-                                                    id="checkboxesInlineCustom2" 
-                                                    label="Unchecked Custom" 
+                                                <CustomInput
+                                                    type="checkbox"
+                                                    id="checkboxesInlineCustom2"
+                                                    label="Unchecked Custom"
                                                     inline
                                                 />
-                                                <CustomInput 
-                                                    type="checkbox" 
-                                                    id="checkboxesInlineCustom3" 
-                                                    label="Disabled Custom" 
+                                                <CustomInput
+                                                    type="checkbox"
+                                                    id="checkboxesInlineCustom3"
+                                                    label="Disabled Custom"
                                                     inline
                                                     disabled
                                                 />
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Checkboxes */}
+                                    {/* END Checkboxes */}
                                 </Col>
                             </Row>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 2 */}
+            {/* END Section 2 */}
 
-            { /* START Header 3 */}
-            <Row> 
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={3} 
-                        title="Radios" 
+            {/* START Header 3 */}
+            <Row>
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={3}
+                        title="Radios"
                         className="mt-5"
-                        subTitle={(
+                        subTitle={
                             <React.Fragment>
-                                Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+                                Indicate the current page’s location within a
+                                navigational hierarchy that automatically adds
+                                separators via CSS.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 3 */}
-            { /* START Section 3 */}
+            {/* END Header 3 */}
+            {/* START Section 3 */}
             <Row>
-                <Col lg={ 12 }>
+                <Col lg={12}>
                     <Card className="mb-3">
                         <CardBody>
                             <Row>
-                                <Col lg={ 6 }>
-                                    { /* START Radios */}
+                                <Col lg={6}>
+                                    {/* START Radios */}
                                     <div className="mb-5">
                                         <CardTitle tag="h6">
                                             Forms: Radio Stacked
@@ -998,27 +1177,38 @@ const Forms = () => (
                                             <FormGroup>
                                                 <FormGroup check>
                                                     <Label check>
-                                                        <Input type="radio" name="radioStacked" defaultChecked />{' '}
+                                                        <Input
+                                                            type="radio"
+                                                            name="radioStacked"
+                                                            defaultChecked
+                                                        />{' '}
                                                         Checked Radio
                                                     </Label>
                                                 </FormGroup>
                                                 <FormGroup check>
                                                     <Label check>
-                                                        <Input type="radio" name="radioStacked" />{' '}
+                                                        <Input
+                                                            type="radio"
+                                                            name="radioStacked"
+                                                        />{' '}
                                                         Unchecked Radio
                                                     </Label>
                                                 </FormGroup>
                                                 <FormGroup check disabled>
                                                     <Label check>
-                                                        <Input type="radio" name="radioStacked" disabled />{' '}
+                                                        <Input
+                                                            type="radio"
+                                                            name="radioStacked"
+                                                            disabled
+                                                        />{' '}
                                                         Disabled Radio
                                                     </Label>
                                                 </FormGroup>
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Radios */}
-                                    { /* START Radios */}
+                                    {/* END Radios */}
+                                    {/* START Radios */}
                                     <div>
                                         <CardTitle tag="h6">
                                             Forms: Radio Inline
@@ -1030,29 +1220,44 @@ const Forms = () => (
                                             <FormGroup>
                                                 <FormGroup check inline>
                                                     <Label check>
-                                                        <Input type="radio" name="radioInline" defaultChecked />{' '}
+                                                        <Input
+                                                            type="radio"
+                                                            name="radioInline"
+                                                            defaultChecked
+                                                        />{' '}
                                                         Checked
                                                     </Label>
                                                 </FormGroup>
                                                 <FormGroup check inline>
                                                     <Label check>
-                                                        <Input type="radio" name="radioInline" />{' '}
+                                                        <Input
+                                                            type="radio"
+                                                            name="radioInline"
+                                                        />{' '}
                                                         Unchecked
                                                     </Label>
                                                 </FormGroup>
-                                                <FormGroup check disabled inline>
+                                                <FormGroup
+                                                    check
+                                                    disabled
+                                                    inline
+                                                >
                                                     <Label check>
-                                                        <Input type="radio" name="radioInline" disabled />{' '}
+                                                        <Input
+                                                            type="radio"
+                                                            name="radioInline"
+                                                            disabled
+                                                        />{' '}
                                                         Disabled
                                                     </Label>
                                                 </FormGroup>
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Radios */}
+                                    {/* END Radios */}
                                 </Col>
-                                <Col lg={ 6 }>
-                                    { /* START Radios */}
+                                <Col lg={6}>
+                                    {/* START Radios */}
                                     <div className="mb-5">
                                         <CardTitle tag="h6">
                                             Forms: Radio Stacked Custom
@@ -1062,31 +1267,31 @@ const Forms = () => (
                                         </CardTitle>
                                         <Form>
                                             <FormGroup>
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="radiosStackedCustom1" 
+                                                <CustomInput
+                                                    type="radio"
+                                                    id="radiosStackedCustom1"
                                                     name="radiosStackedCustom"
                                                     label="Checked Radio Custom"
-                                                    defaultChecked 
+                                                    defaultChecked
                                                 />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="radiosStackedCustom2" 
+                                                <CustomInput
+                                                    type="radio"
+                                                    id="radiosStackedCustom2"
                                                     name="radiosStackedCustom"
-                                                    label="Unchecked Radio Custom" 
+                                                    label="Unchecked Radio Custom"
                                                 />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="radiosStackedCustom3" 
+                                                <CustomInput
+                                                    type="radio"
+                                                    id="radiosStackedCustom3"
                                                     name="radiosStackedCustom"
-                                                    label="Disabled Radio Custom" 
+                                                    label="Disabled Radio Custom"
                                                     disabled
                                                 />
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Radios */}
-                                    { /* START Radios */}
+                                    {/* END Radios */}
+                                    {/* START Radios */}
                                     <div>
                                         <CardTitle tag="h6">
                                             Forms: Radio Inline
@@ -1096,40 +1301,40 @@ const Forms = () => (
                                         </CardTitle>
                                         <Form>
                                             <FormGroup>
-                                                <CustomInput 
-                                                    type="radio" 
+                                                <CustomInput
+                                                    type="radio"
                                                     id="radioInlineCustom1"
                                                     name="radioInlineCustom"
-                                                    label="Checked Custom" 
+                                                    label="Checked Custom"
                                                     inline
                                                     defaultChecked
                                                 />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="radioInlineCustom2" 
+                                                <CustomInput
+                                                    type="radio"
+                                                    id="radioInlineCustom2"
                                                     name="radioInlineCustom"
-                                                    label="Unchecked Custom" 
+                                                    label="Unchecked Custom"
                                                     inline
                                                 />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="radioInlineCustom3" 
+                                                <CustomInput
+                                                    type="radio"
+                                                    id="radioInlineCustom3"
                                                     name="radioInlineCustom"
-                                                    label="Disabled Custom" 
+                                                    label="Disabled Custom"
                                                     inline
                                                     disabled
                                                 />
                                             </FormGroup>
                                         </Form>
                                     </div>
-                                    { /* END Radios */}
+                                    {/* END Radios */}
                                 </Col>
                             </Row>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 2 */}
+            {/* END Section 2 */}
         </Container>
     </React.Fragment>
 );

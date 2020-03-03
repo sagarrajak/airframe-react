@@ -8,10 +8,10 @@ export class FilteringExample extends React.Component {
         caseSensitive: false,
         ignoreDiacritics: true,
     };
-  
+
     render() {
-        const {caseSensitive, ignoreDiacritics} = this.state;
-    
+        const { caseSensitive, ignoreDiacritics } = this.state;
+
         return (
             <React.Fragment>
                 <Typeahead
@@ -48,15 +48,19 @@ export class FilteringExample extends React.Component {
                 <FormGroup className="mt-2">
                     <CustomInput
                         checked={caseSensitive}
-                        onChange={(e) => this.setState({caseSensitive: e.target.checked})}
+                        onChange={e =>
+                            this.setState({ caseSensitive: e.target.checked })
+                        }
                         type="checkbox"
                         id="case-sensitive-enabled"
                         label="Case-sensitive filtering"
                     />
                     <CustomInput
                         checked={!ignoreDiacritics}
-                        onChange={(e) => {
-                            this.setState({ignoreDiacritics: !e.target.checked});
+                        onChange={e => {
+                            this.setState({
+                                ignoreDiacritics: !e.target.checked,
+                            });
                         }}
                         type="checkbox"
                         id="ignore-diactrical-enabled"
@@ -66,4 +70,4 @@ export class FilteringExample extends React.Component {
             </React.Fragment>
         );
     }
-  }
+}

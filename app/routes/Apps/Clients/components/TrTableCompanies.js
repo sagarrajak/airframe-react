@@ -2,21 +2,16 @@ import React from 'react';
 import faker from 'faker/locale/en_US';
 import PropTypes from 'prop-types';
 
-import { 
+import {
     Avatar,
     CustomInput,
     UncontrolledTooltip,
     AvatarAddOn,
-    Media
+    Media,
 } from './../../../../components';
 import { randomArray } from './../../../../utilities';
 
-const status = [
-    "success",
-    "danger",
-    "warning",
-    "secondary"
-];
+const status = ['success', 'danger', 'warning', 'secondary'];
 
 const brand = [
     <Media key="facebook">
@@ -27,12 +22,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse mt-0 d-flex">
-                Facebook
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse mt-0 d-flex">Facebook</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="twitter">
@@ -43,12 +34,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Twitter
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Twitter</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="linkedin">
@@ -59,12 +46,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Linkedin
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Linkedin</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="foursquare">
@@ -75,12 +58,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Foursquare
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Foursquare</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="lastfm">
@@ -91,12 +70,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                LastFM
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">LastFM</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="paypal">
@@ -107,12 +82,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                PayPal
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">PayPal</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="amazon">
@@ -123,12 +94,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Amazon
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Amazon</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="skype">
@@ -139,12 +106,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Skype
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Skype</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="spotify">
@@ -155,12 +118,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Spotify
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Spotify</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="pinterest">
@@ -171,12 +130,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Pinterest
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Pinterest</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="windows">
@@ -187,12 +142,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Windows
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Windows</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="android">
@@ -203,12 +154,8 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Android
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Android</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
     <Media key="medium">
@@ -219,69 +166,73 @@ const brand = [
             </span>
         </Media>
         <Media body>
-            <div className="text-inverse  mt-0 d-flex">
-                Medium
-            </div>
-            <span>
-                { faker.address.country() }
-            </span>
+            <div className="text-inverse  mt-0 d-flex">Medium</div>
+            <span>{faker.address.country()}</span>
         </Media>
     </Media>,
 ];
 
-const TrTableCompanies = (props) => (
+const TrTableCompanies = props => (
     <React.Fragment>
         <tr>
             <td className="align-middle">
-                <CustomInput type="checkbox" id={`trTableCompanies-${ props.id }` } label="" inline />
+                <CustomInput
+                    type="checkbox"
+                    id={`trTableCompanies-${props.id}`}
+                    label=""
+                    inline
+                />
             </td>
             <td className="align-middle">
-                <a href="#" id={`trTableCompaniesTooltip-${ props.id }` }>
+                <a href="#" id={`trTableCompaniesTooltip-${props.id}`}>
                     <i className="fa fa-fw fa-star-o"></i>
                 </a>
-                <UncontrolledTooltip placement="top" target={`trTableCompaniesTooltip-${ props.id }` }>
+                <UncontrolledTooltip
+                    placement="top"
+                    target={`trTableCompaniesTooltip-${props.id}`}
+                >
                     Add To Favorites
                 </UncontrolledTooltip>
             </td>
-            <td className="align-middle">
-                { randomArray(brand) }
-            </td>
+            <td className="align-middle">{randomArray(brand)}</td>
             <td className="align-middle">
                 <Avatar.Image
                     size="sm"
                     src="http://bs4.webkom.co/img/avatars/2.jpg"
                     className="mr-2"
                     addOns={[
-                        <AvatarAddOn.Icon 
+                        <AvatarAddOn.Icon
                             className="fa fa-circle"
                             color="white"
                             key="avatar-icon-bg"
                         />,
-                        <AvatarAddOn.Icon 
+                        <AvatarAddOn.Icon
                             className="fa fa-circle"
-                            color={ randomArray(status) }
+                            color={randomArray(status)}
                             key="avatar-icon-fg"
-                        />
+                        />,
                     ]}
                 />
             </td>
             <td className="align-middle text-right">
-                { faker.phone.phoneNumberFormat() }<br />
-                { faker.internet.email() } 
+                {faker.phone.phoneNumberFormat()}
+                <br />
+                {faker.internet.email()}
             </td>
             <td className="align-middle text-right">
-                { faker.address.streetAddress() }<br />
-                { faker.address.city() } 
+                {faker.address.streetAddress()}
+                <br />
+                {faker.address.city()}
             </td>
         </tr>
     </React.Fragment>
-)
+);
 
 TrTableCompanies.propTypes = {
-    id: PropTypes.node
+    id: PropTypes.node,
 };
 TrTableCompanies.defaultProps = {
-    id: "1"
+    id: '1',
 };
 
 export { TrTableCompanies };

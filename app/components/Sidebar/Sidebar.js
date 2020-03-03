@@ -5,20 +5,19 @@ import OuterClick from './../OuterClick';
 import { withPageConfig } from './../Layout';
 import { SidebarContent } from './SidebarContent';
 
-const Sidebar = (props) => (
+const Sidebar = props => (
     <React.Fragment>
-        { /* Enable OuterClick only in sidebar overlay mode */}
+        {/* Enable OuterClick only in sidebar overlay mode */}
         <OuterClick
             active={
-                !props.pageConfig.sidebarCollapsed && (
-                    props.pageConfig.screenSize === 'xs' ||
+                !props.pageConfig.sidebarCollapsed &&
+                (props.pageConfig.screenSize === 'xs' ||
                     props.pageConfig.screenSize === 'sm' ||
-                    props.pageConfig.screenSize === 'md'
-                )
+                    props.pageConfig.screenSize === 'md')
             }
-            onClickOutside={ () => props.pageConfig.toggleSidebar() }
+            onClickOutside={() => props.pageConfig.toggleSidebar()}
         >
-            <SidebarContent { ...props } />
+            <SidebarContent {...props} />
         </OuterClick>
     </React.Fragment>
 );
@@ -28,11 +27,9 @@ Sidebar.propTypes = {
     slim: PropTypes.bool,
     collapsed: PropTypes.bool,
     animationsDisabled: PropTypes.bool,
-    pageConfig: PropTypes.object
+    pageConfig: PropTypes.object,
 };
 
 const cfgSidebar = withPageConfig(Sidebar);
 
-export {
-    cfgSidebar as Sidebar
-};
+export { cfgSidebar as Sidebar };

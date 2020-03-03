@@ -7,43 +7,41 @@ import uuid from 'uuid/v4';
 import { MenuContext } from './MenuContext';
 
 /**
- * Renders a collapse trigger or a ReactRouter Link 
+ * Renders a collapse trigger or a ReactRouter Link
  */
-const SidebarMenuItemLink = (props) => (
-    (props.to || props.href) ? (
+const SidebarMenuItemLink = props =>
+    props.to || props.href ? (
         props.to ? (
-            <Link to={ props.to } className={`${props.classBase}__entry__link`}>
-                { props.children }
+            <Link to={props.to} className={`${props.classBase}__entry__link`}>
+                {props.children}
             </Link>
         ) : (
             <a
-                href={ props.href }
+                href={props.href}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${props.classBase}__entry__link`}
             >
-                { props.children }
+                {props.children}
             </a>
         )
-        
     ) : (
         <a
             href="javascript:;"
             className={`${props.classBase}__entry__link`}
-            onClick={ () => props.onToggle() }
+            onClick={() => props.onToggle()}
         >
-            { props.children }
+            {props.children}
         </a>
-    )
-)
+    );
 SidebarMenuItemLink.propTypes = {
     to: PropTypes.string,
     href: PropTypes.string,
     active: PropTypes.bool,
     onToggle: PropTypes.func,
     children: PropTypes.node,
-    classBase: PropTypes.string
-}
+    classBase: PropTypes.string,
+};
 
 /**
  * The main menu entry component
@@ -63,19 +61,16 @@ export class SidebarMenuItem extends React.Component {
         slim: PropTypes.bool,
         // User props
         icon: PropTypes.node,
-        title: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.node
-        ]),
+        title: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
         to: PropTypes.string,
         href: PropTypes.string,
         exact: PropTypes.bool,
         noCaret: PropTypes.bool,
-    }
+    };
 
     static defaultProps = {
-        exact: true
-    }
+        exact: true,
+    };
 
     constructor(props) {
         super(props);
@@ -87,9 +82,9 @@ export class SidebarMenuItem extends React.Component {
         const entry = {
             id: this.id,
             parentId: this.props.parentId,
-            exact: !!this.props.exact
+            exact: !!this.props.exact,
         };
-        
+
         if (this.props.to) {
             entry.url = this.props.to;
         }
@@ -113,11 +108,13 @@ export class SidebarMenuItem extends React.Component {
 
     render() {
         const entry = this.getEntry();
-        const classBase = this.props.isSubNode ? "sidebar-submenu" : "sidebar-menu";
+        const classBase = this.props.isSubNode
+            ? 'sidebar-submenu'
+            : 'sidebar-menu';
         const itemClass = classNames(`${classBase}__entry`, {
             [`${classBase}__entry--nested`]: !!this.props.children,
-            'open': entry && entry.open,
-            'active': entry && entry.active
+            open: entry && entry.open,
+            active: entry && entry.active,
         });
 
         return (
@@ -127,46 +124,41 @@ export class SidebarMenuItem extends React.Component {
                 })}
             >
                 <SidebarMenuItemLink
-                    to={ this.props.to || null }
-                    href={ this.props.href || null }
-                    onToggle={ this.toggleNode.bind(this) }
-                    classBase={ classBase }
+                    to={this.props.to || null}
+                    href={this.props.href || null}
+                    onToggle={this.toggleNode.bind(this)}
+                    classBase={classBase}
                 >
-                    {
-                        this.props.icon && React.cloneElement(this.props.icon, {
+                    {this.props.icon &&
+                        React.cloneElement(this.props.icon, {
                             className: classNames(
                                 this.props.icon.props.className,
-                                `${classBase}__entry__icon`
-                            )
-                        })
-                    }
-                    {
-                        typeof this.props.title === 'string' ?
-                            <span>{ this.props.title }</span> :
-                            this.props.title
-                    }
+                                `${classBase}__entry__icon`,
+                            ),
+                        })}
+                    {typeof this.props.title === 'string' ? (
+                        <span>{this.props.title}</span>
+                    ) : (
+                        this.props.title
+                    )}
                 </SidebarMenuItemLink>
-                {
-                    this.props.children && (
-                        <ul className="sidebar-submenu">
-                        {
-                            React.Children.map(this.props.children, (child) => (
-                                <MenuContext.Consumer>
-                                {
-                                    (ctx) => React.cloneElement(child, {
+                {this.props.children && (
+                    <ul className="sidebar-submenu">
+                        {React.Children.map(this.props.children, child => (
+                            <MenuContext.Consumer>
+                                {ctx =>
+                                    React.cloneElement(child, {
                                         isSubNode: true,
                                         parentId: this.id,
                                         currentUrl: this.props.currentUrl,
                                         slim: this.props.slim,
-                                        ...ctx
+                                        ...ctx,
                                     })
                                 }
-                                </MenuContext.Consumer>
-                            ))
-                        }
-                        </ul>
-                    )
-                }
+                            </MenuContext.Consumer>
+                        ))}
+                    </ul>
+                )}
             </li>
         );
     }

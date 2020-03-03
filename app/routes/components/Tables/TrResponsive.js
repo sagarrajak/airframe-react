@@ -1,14 +1,11 @@
 import React from 'react';
 import faker from 'faker/locale/en_US';
 
-import { 
-    Media,
-    UncontrolledTooltip
-} from './../../../components';
+import { Media, UncontrolledTooltip } from './../../../components';
 
 const TrResponsive = () => (
     <React.Fragment>
-        { /* START TR */}
+        {/* START TR */}
         <tr>
             <td className="align-middle">
                 <i className="fa fa -fw fa-circle text-danger"></i>
@@ -20,50 +17,44 @@ const TrResponsive = () => (
                     </Media>
                     <Media body>
                         <div className="mt-0 d-flex">
-                            <span className="text-inverse">
-                                Safari
-                            </span> / 
-                            { faker.system.semver() }
+                            <span className="text-inverse">Safari</span> /
+                            {faker.system.semver()}
                         </div>
-                        <span>
-                            macOs { faker.system.semver() }
-                        </span>
+                        <span>macOs {faker.system.semver()}</span>
                     </Media>
                 </Media>
             </td>
             <td className="align-middle">
                 <div>
-                    <samp>
-                        { faker.internet.ip() }
-                    </samp>
+                    <samp>{faker.internet.ip()}</samp>
                 </div>
+                <span>-</span>
+            </td>
+            <td className="align-middle">
+                <div>{faker.address.city()}</div>
                 <span>
-                    -
+                    {faker.address.state()}, {faker.address.country()}
                 </span>
             </td>
             <td className="align-middle">
-                <div>
-                    { faker.address.city() }
-                </div>
-                <span>
-                    { faker.address.state() }, { faker.address.country() }
-                </span>
-            </td>
-            <td className="align-middle">
-                { faker.date.weekday() }, 12 { faker.date.month() }, 2018<br />
+                {faker.date.weekday()}, 12 {faker.date.month()}, 2018
+                <br />
                 12:34 PM
             </td>
             <td className="align-middle text-right">
                 <a href="#" id="UncontrolledTooltipRevoke">
                     <i className="fa fa-fw fa-close text-danger"></i>
                 </a>
-                <UncontrolledTooltip placement="left" target="UncontrolledTooltipRevoke">
+                <UncontrolledTooltip
+                    placement="left"
+                    target="UncontrolledTooltipRevoke"
+                >
                     Revoke
                 </UncontrolledTooltip>
             </td>
         </tr>
-        { /* END TR */}
+        {/* END TR */}
     </React.Fragment>
-)
+);
 
 export { TrResponsive };

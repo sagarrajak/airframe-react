@@ -12,4 +12,4 @@ export const ControllingSelections = () => (
         options={options}
         placeholder="Choose a state..."
     />
-)
+);

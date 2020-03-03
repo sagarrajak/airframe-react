@@ -4,7 +4,7 @@ import {
     Button,
     Sidebar,
     UncontrolledPopover,
-    PopoverBody
+    PopoverBody,
 } from './../../../components';
 
 import { FooterAuth } from '../Pages/FooterAuth';
@@ -13,7 +13,7 @@ import { VersionSelector } from '../VersionSelector';
 
 const SidebarBottomA = () => (
     <React.Fragment>
-        { /* START Desktop */ }
+        {/* START Desktop */}
         <Sidebar.HideSlim>
             <Sidebar.Section className="pb-0">
                 <VersionSelector sidebar dashboard="Airframe" />
@@ -22,22 +22,20 @@ const SidebarBottomA = () => (
                 <FooterAuth className="text-muted" />
             </Sidebar.Section>
         </Sidebar.HideSlim>
-        { /* END Desktop */ }
+        {/* END Desktop */}
 
-        { /* START Slim Only */ }
+        {/* START Slim Only */}
         <Sidebar.ShowSlim>
             <Sidebar.Section className="text-center">
-                { /* Slim Version Selector */ }
+                {/* Slim Version Selector */}
                 <VersionSelector
                     dashboard="Airframe"
                     sidebar
                     compact
-                    render={() => (
-                        <i className="fa fa-fw fa-toggle-on"></i>
-                    )}
+                    render={() => <i className="fa fa-fw fa-toggle-on"></i>}
                 />
 
-                { /* Footer Text as Tooltip */ }
+                {/* Footer Text as Tooltip */}
                 <Button
                     id="UncontrolledSidebarPopoverFooter"
                     color="link"
@@ -45,15 +43,18 @@ const SidebarBottomA = () => (
                 >
                     <i className="fa fa-fw fa-question-circle-o"></i>
                 </Button>
-                <UncontrolledPopover placement="left-end" target="UncontrolledSidebarPopoverFooter">
+                {/* <UncontrolledPopover
+                    placement="left-end"
+                    target="UncontrolledSidebarPopoverFooter"
+                >
                     <PopoverBody>
                         <FooterText />
                     </PopoverBody>
-                </UncontrolledPopover>
+                </UncontrolledPopover> */}
             </Sidebar.Section>
         </Sidebar.ShowSlim>
-        { /* END Slim Only */ }
+        {/* END Slim Only */}
     </React.Fragment>
-)
+);
 
 export { SidebarBottomA };

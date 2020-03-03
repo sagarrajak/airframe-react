@@ -14,49 +14,44 @@ import {
     DropdownToggle,
     DropdownMenu,
     DropdownItem,
-    CardText
+    CardText,
 } from './../../../components';
-import { HeaderMain } from "../../components/HeaderMain";
-import { HeaderDemo } from "../../components/HeaderDemo";
+import { HeaderMain } from '../../components/HeaderMain';
+import { HeaderDemo } from '../../components/HeaderDemo';
 
 const cardText = ({ cardNo }) => (
     <CardText>
-        <span className="mr-2 text-muted">
-            #{ cardNo }
-        </span> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nisl elit, porta a sapien eget, fringilla sagittis ex.
+        <span className="mr-2 text-muted">#{cardNo}</span> Lorem ipsum dolor sit
+        amet, consectetur adipiscing elit. Nulla nisl elit, porta a sapien eget,
+        fringilla sagittis ex.
     </CardText>
 );
 
 const cardContent = (title = 'Some Card Title') => (
     <CardBody>
-        <CardTitle>
-            { title }
-        </CardTitle>
-        { cardText }
+        <CardTitle>{title}</CardTitle>
+        {cardText}
     </CardBody>
 );
 
 const Buttons = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Buttons"
-                className="mb-5 mt-4"
-            />
-            { /* START Header 1 */}
+            <HeaderMain title="Buttons" className="mb-5 mt-4" />
+            {/* START Header 1 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={1} 
-                        title="Buttons Colors" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={1}
+                        title="Buttons Colors"
                         subTitle="Available panel styles and colors"
                     />
                 </Col>
             </Row>
-            { /* END Header 1 */}
-            { /* START Section 1 */}
+            {/* END Header 1 */}
+            {/* START Section 1 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -66,9 +61,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="primary"&gt;Primary&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="primary"&gt;Primary&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="primary">Primary Button</Button>{' '}
@@ -83,9 +79,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="secondary"&gt;Secondary&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="secondary"&gt;Secondary&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="secondary">Secondary Button</Button>{' '}
@@ -100,16 +97,17 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="success"&gt;Success&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="success"&gt;Success&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="success">Success Button</Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -119,9 +117,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="warning"&gt;Warning&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="warning"&gt;Warning&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="warning">Warning Button</Button>{' '}
@@ -136,9 +135,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="danger"&gt;Danger&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="danger"&gt;Danger&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="danger">Danger Button</Button>{' '}
@@ -153,16 +153,17 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="info"&gt;Info&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="info"&gt;Info&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="info">Info Button</Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -172,9 +173,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="light"&gt;Light&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="light"&gt;Light&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="light">Warning Button</Button>{' '}
@@ -189,9 +191,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="dark"&gt;Dark&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="dark"&gt;Dark&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="dark">Dark Button</Button>{' '}
@@ -206,9 +209,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Custom color button, example:  
+                                Custom color button, example:
                                 <code>
-                                    &lt;Button color="purple"&gt;Purple&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="purple"&gt;Purple&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="purple">Custom Button</Button>{' '}
@@ -216,23 +220,23 @@ const Buttons = () => (
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 1 */}
+            {/* END Section 1 */}
 
-            { /* START Header 2 */}
+            {/* START Header 2 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={2} 
-                        title="Buttons Social Colors" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={2}
+                        title="Buttons Social Colors"
                         className="mt-5"
                         subTitle="Often the colors used in applications with social networking sites."
                     />
                 </Col>
             </Row>
-            { /* END Header 2 */}
-            { /* START Section 2 */}
+            {/* END Header 2 */}
+            {/* START Section 2 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -242,14 +246,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="facebook"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="facebook"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="facebook">
                                 <i className="fa fa-facebook mr-2"></i>
-                                Facebook Button</Button>{' '}
+                                Facebook Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -261,14 +267,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="twitter"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="twitter"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="facebook">
                                 <i className="fa fa-twitter mr-2"></i>
-                                Twitter Button</Button>{' '}
+                                Twitter Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -280,14 +288,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="lastfm"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="lastfm"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="lastfm">
                                 <i className="fa fa-lastfm mr-2"></i>
-                                LastFM Button</Button>{' '}
+                                LastFM Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -299,14 +309,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="pinterest"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="pinterest"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="pinterest">
                                 <i className="fa fa-pinterest mr-2"></i>
-                                Pinterest Button</Button>{' '}
+                                Pinterest Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -318,18 +330,20 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="linkedin"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="linkedin"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="linkedin">
                                 <i className="fa fa-linkedin mr-2"></i>
-                                Linkedin Button</Button>{' '}
+                                Linkedin Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -339,14 +353,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="medium"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="medium"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="medium">
                                 <i className="fa fa-medium mr-2"></i>
-                                Medium Button</Button>{' '}
+                                Medium Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -358,14 +374,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="android"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="android"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="android">
                                 <i className="fa fa-android mr-2"></i>
-                                Android Button</Button>{' '}
+                                Android Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -377,14 +395,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="spotify"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="spotify"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="spotify">
                                 <i className="fa fa-spotify mr-2"></i>
-                                Spotify Button</Button>{' '}
+                                Spotify Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -396,14 +416,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="foursquare"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="foursquare"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="foursquare">
                                 <i className="fa fa-foursquare mr-2"></i>
-                                Foursquare Button</Button>{' '}
+                                Foursquare Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -415,18 +437,20 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="skype"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="skype"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="skype">
                                 <i className="fa fa-skype mr-2"></i>
-                                Skype Button</Button>{' '}
+                                Skype Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -436,14 +460,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="youtube"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="youtube"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="youtube">
                                 <i className="fa fa-play mr-2"></i>
-                                Youtube Button</Button>{' '}
+                                Youtube Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -455,14 +481,16 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="windows"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="windows"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="windows">
                                 <i className="fa fa-windows mr-2"></i>
-                                Windows Button</Button>{' '}
+                                Windows Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -474,35 +502,37 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button, example:  
+                                Default button, example:
                                 <code>
-                                    &lt;Button color="amazon"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button
+                                    color="amazon"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button color="amazon">
                                 <i className="fa fa-amazon mr-2"></i>
-                                Amazon Button</Button>{' '}
+                                Amazon Button
+                            </Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 2 */}
+            {/* END Section 2 */}
 
-            { /* START Header 3 */}
+            {/* START Header 3 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={2} 
-                        title="Buttons Layouts" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={2}
+                        title="Buttons Layouts"
                         className="mt-5"
                         subTitle="Media list and media object layouts."
                     />
                 </Col>
             </Row>
-            { /* END Header 3 */}
-            { /* START Section 3 */}
+            {/* END Header 3 */}
+            {/* START Section 3 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -512,9 +542,10 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Outline button, example:  
+                                Outline button, example:
                                 <code>
-                                    &lt;Button outline color="secondary"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button outline
+                                    color="secondary"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button outline color="secondary">
@@ -531,8 +562,11 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Available in both directions, example:  
-                                <code>&lt;Button outline color="secondary"&gt;&lt;i className="fa fa-home mr-2" /&gt;&lt;/Button&gt;{' '}
+                                Available in both directions, example:
+                                <code>
+                                    &lt;Button outline
+                                    color="secondary"&gt;&lt;i className="fa
+                                    fa-home mr-2" /&gt;&lt;/Button&gt;{' '}
                                 </code>
                             </p>
                             <Button outline color="secondary">
@@ -549,10 +583,8 @@ const Buttons = () => (
                                     #3.03
                                 </span>
                             </CardTitle>
-                            <p>
-                                Below example:
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Below example:</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" caret>
                                     Default Button
@@ -580,7 +612,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -591,10 +623,8 @@ const Buttons = () => (
                                     #3.04
                                 </span>
                             </CardTitle>
-                            <p>
-                                Button with Contextual Colors
-                            </p>
-                             <Button color="secondary">
+                            <p>Button with Contextual Colors</p>
+                            <Button color="secondary">
                                 Default Button
                             </Button>{' '}
                         </CardBody>
@@ -607,9 +637,7 @@ const Buttons = () => (
                                     #3.05
                                 </span>
                             </CardTitle>
-                            <p>
-                                Button with Contextual Colors
-                            </p>
+                            <p>Button with Contextual Colors</p>
                             <Button color="secondary">
                                 <i className="fa fa-gear mr-2"></i>
                                 With Icon
@@ -624,10 +652,8 @@ const Buttons = () => (
                                     #3.06
                                 </span>
                             </CardTitle>
-                            <p>
-                                Colored button with dropdown
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Colored button with dropdown</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="primary" caret>
                                     Dropdown
@@ -655,7 +681,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -666,17 +692,15 @@ const Buttons = () => (
                                     #3.07
                                 </span>
                             </CardTitle>
-                            <p>
-                                Works with all button types
-                            </p>
-                             <Button outline color="secondary">
+                            <p>Works with all button types</p>
+                            <Button outline color="secondary">
                                 Rounded Button
                             </Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
-                   <Card className="mb-3">
+                <Col lg={4}>
+                    <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
                                 Button: Rounded Left Icon
@@ -684,9 +708,7 @@ const Buttons = () => (
                                     #3.08
                                 </span>
                             </CardTitle>
-                            <p>
-                                Available in both directions
-                            </p>
+                            <p>Available in both directions</p>
                             <Button color="secondary">
                                 <i className="fa fa-gear mr-2"></i>
                                 With Icon
@@ -701,10 +723,8 @@ const Buttons = () => (
                                     #3.09
                                 </span>
                             </CardTitle>
-                            <p>
-                                Rounded button with dropdown
-                            </p>
-                             <Button outline color="secondary">
+                            <p>Rounded button with dropdown</p>
+                            <Button outline color="secondary">
                                 Default Button
                             </Button>{' '}
                         </CardBody>
@@ -720,12 +740,11 @@ const Buttons = () => (
                             <p>
                                 Button as Link
                                 <code>
-                                    &lt;Button outline color="link"&gt;...&lt;/Button&gt;{' '}
+                                    &lt;Button outline
+                                    color="link"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
-                            <Button color="link">
-                                Linked Button
-                            </Button>{' '}
+                            <Button color="link">Linked Button</Button>{' '}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -736,9 +755,7 @@ const Buttons = () => (
                                     #3.11
                                 </span>
                             </CardTitle>
-                            <p>
-                                 Button as Link with Icon
-                            </p>
+                            <p>Button as Link with Icon</p>
                             <Button color="link">
                                 <i className="fa fa-gear mr-2"></i>
                                 With Icon
@@ -753,10 +770,8 @@ const Buttons = () => (
                                     #3.12
                                 </span>
                             </CardTitle>
-                            <p>
-                                Colored button with dropdown
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Colored button with dropdown</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="link" caret>
                                     Dropdown
@@ -784,7 +799,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -795,9 +810,7 @@ const Buttons = () => (
                                     #3.13
                                 </span>
                             </CardTitle>
-                            <p>
-                                Button with a single icon only
-                            </p>
+                            <p>Button with a single icon only</p>
                             <Button outline color="secondary">
                                 <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
@@ -811,16 +824,14 @@ const Buttons = () => (
                                     #3.14
                                 </span>
                             </CardTitle>
-                            <p>
-                                Button with a single icon only
-                            </p>
+                            <p>Button with a single icon only</p>
                             <Button outline color="secondary">
                                 <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -829,10 +840,8 @@ const Buttons = () => (
                                     #3.15
                                 </span>
                             </CardTitle>
-                            <p>
-                                Icon button with dropdown
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Icon button with dropdown</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" outline caret>
                                     <i className="fa fa-fw fa-bars"></i>
@@ -860,7 +869,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -871,9 +880,7 @@ const Buttons = () => (
                                     #3.13
                                 </span>
                             </CardTitle>
-                            <p>
-                                Button with a single icon only
-                            </p>
+                            <p>Button with a single icon only</p>
                             <Button color="secondary">
                                 <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
@@ -887,9 +894,7 @@ const Buttons = () => (
                                     #3.17
                                 </span>
                             </CardTitle>
-                            <p>
-                                Works with all button types
-                            </p>
+                            <p>Works with all button types</p>
                             <Button color="secondary">
                                 <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
@@ -903,10 +908,8 @@ const Buttons = () => (
                                     #3.18
                                 </span>
                             </CardTitle>
-                            <p>
-                                Icon button with dropdown
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Icon button with dropdown</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" caret>
                                     <i className="fa fa-fw fa-bars"></i>
@@ -934,7 +937,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -945,17 +948,29 @@ const Buttons = () => (
                                     #3.19
                                 </span>
                             </CardTitle>
-                            <p>
-                                Floating action button example
-                            </p>
+                            <p>Floating action button example</p>
                             <div className="d-flex">
-                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center">
+                                <Button
+                                    color="secondary"
+                                    outline
+                                    size="sm"
+                                    className="mr-2 align-self-center"
+                                >
                                     <i className="fa fa-fw fa-caret-left"></i>
                                 </Button>
-                                <Button color="secondary" size="lg" className="mr-2 align-self-center">
+                                <Button
+                                    color="secondary"
+                                    size="lg"
+                                    className="mr-2 align-self-center"
+                                >
                                     <i className="fa fa-fw fa-check"></i>
                                 </Button>
-                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center">
+                                <Button
+                                    color="secondary"
+                                    outline
+                                    size="sm"
+                                    className="mr-2 align-self-center"
+                                >
                                     <i className="fa fa-fw fa-caret-right"></i>
                                 </Button>
                             </div>
@@ -969,19 +984,31 @@ const Buttons = () => (
                                     #3.20
                                 </span>
                             </CardTitle>
-                            <p>
-                                Float buttons with text and icons
-                            </p>
+                            <p>Float buttons with text and icons</p>
                             <div className="d-flex">
-                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center text-center">
+                                <Button
+                                    color="secondary"
+                                    outline
+                                    size="sm"
+                                    className="mr-2 align-self-center text-center"
+                                >
                                     <i className="fa fa-fw fa-caret-left"></i>
                                     <div>Prev</div>
                                 </Button>
-                                <Button color="secondary" size="lg" className="mr-2 align-self-center text-center">
+                                <Button
+                                    color="secondary"
+                                    size="lg"
+                                    className="mr-2 align-self-center text-center"
+                                >
                                     <i className="fa fa-fw fa-check"></i>
                                     <div>Confirm</div>
                                 </Button>
-                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center">
+                                <Button
+                                    color="secondary"
+                                    outline
+                                    size="sm"
+                                    className="mr-2 align-self-center"
+                                >
                                     <i className="fa fa-fw fa-caret-right"></i>
                                     <div>Next</div>
                                 </Button>
@@ -990,23 +1017,23 @@ const Buttons = () => (
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 3 */}
+            {/* END Section 3 */}
 
-            { /* START Header 4 */}
+            {/* START Header 4 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={5} 
-                        title="Buttons Styling" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={5}
+                        title="Buttons Styling"
                         className="mt-5"
                         subTitle="Media list and media object layouts."
                     />
                 </Col>
             </Row>
-            { /* END Header 4 */}
-            { /* START Section 4 */}
+            {/* END Header 4 */}
+            {/* START Section 4 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1015,9 +1042,7 @@ const Buttons = () => (
                                     #4.01
                                 </span>
                             </CardTitle>
-                            <p>
-                                Button with a single icon only
-                            </p>
+                            <p>Button with a single icon only</p>
                             <Button color="primary" size="lg" className="mb-2">
                                 <i className="fa fa-folder-open-o mr-2"></i>
                                 Large Button
@@ -1035,7 +1060,7 @@ const Buttons = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1063,26 +1088,25 @@ const Buttons = () => (
                             </Button>{' '}
                         </CardBody>
                     </Card>
-
                 </Col>
             </Row>
-            { /* END Section 4 */}
+            {/* END Section 4 */}
 
-            { /* START Header 5 */}
+            {/* START Header 5 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={4} 
-                        title="Buttons States" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={4}
+                        title="Buttons States"
                         className="mt-5"
                         subTitle="Media list and media object layouts."
                     />
                 </Col>
             </Row>
-            { /* END Header 5 */}
-            { /* START Section 5 */}
+            {/* END Header 5 */}
+            {/* START Section 5 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1091,16 +1115,12 @@ const Buttons = () => (
                                     #5.01
                                 </span>
                             </CardTitle>
-                            <p>
-                                Default button, example:  
-                            </p>
-                            <Button color="primary">
-                                Default Button
-                            </Button>{' '}
+                            <p>Default button, example:</p>
+                            <Button color="primary">Default Button</Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1110,7 +1130,7 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Active button, just add: <code>active</code> to 
+                                Active button, just add: <code>active</code> to
                                 <code>&lt;Button /&gt;</code>.
                             </p>
                             <Button color="primary" active>
@@ -1119,7 +1139,7 @@ const Buttons = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1129,7 +1149,8 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Active button, just add: <code>disabled</code> to 
+                                Active button, just add: <code>disabled</code>{' '}
+                                to
                                 <code>&lt;Button /&gt;</code>.
                             </p>
                             <Button color="primary" active>
@@ -1137,26 +1158,25 @@ const Buttons = () => (
                             </Button>{' '}
                         </CardBody>
                     </Card>
-
                 </Col>
             </Row>
-            { /* END Section 5 */}
+            {/* END Section 5 */}
 
-            { /* START Header 6 */}
+            {/* START Header 6 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={6} 
-                        title="Buttons Icons Positions" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={6}
+                        title="Buttons Icons Positions"
                         className="mt-5"
                         subTitle="Media list and media object layouts."
                     />
                 </Col>
             </Row>
-            { /* END Header 6 */}
-            { /* START Section 6 */}
+            {/* END Header 6 */}
+            {/* START Section 6 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1165,9 +1185,7 @@ const Buttons = () => (
                                     #6.01
                                 </span>
                             </CardTitle>
-                            <p>
-                                Display icon on the left side
-                            </p>
+                            <p>Display icon on the left side</p>
                             <Button outline color="secondary">
                                 <i className="fa fa-envelope-o mr-2"></i>
                                 Left Position
@@ -1182,9 +1200,7 @@ const Buttons = () => (
                                     #6.02
                                 </span>
                             </CardTitle>
-                            <p>
-                                Display icon on the right side
-                            </p>
+                            <p>Display icon on the right side</p>
                             <Button outline color="secondary">
                                 Right Position
                                 <i className="fa fa-envelope-o ml-2"></i>
@@ -1192,7 +1208,7 @@ const Buttons = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1201,13 +1217,12 @@ const Buttons = () => (
                                     #6.03
                                 </span>
                             </CardTitle>
-                            <p>
-                                Additional option for right icon
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Additional option for right icon</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" outline caret>
-                                    Dropdown <i className="fa fa-fw fa-envelope-o mx-1"></i>
+                                    Dropdown{' '}
+                                    <i className="fa fa-fw fa-envelope-o mx-1"></i>
                                 </DropdownToggle>
                                 <DropdownMenu>
                                     <DropdownItem header>
@@ -1232,11 +1247,11 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1245,13 +1260,12 @@ const Buttons = () => (
                                     #6.04
                                 </span>
                             </CardTitle>
-                            <p>
-                                Additional option for left icon
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Additional option for left icon</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" outline caret>
-                                    <i className="fa fa-fw fa-envelope-o"></i> Dropdown 
+                                    <i className="fa fa-fw fa-envelope-o"></i>{' '}
+                                    Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu>
                                     <DropdownItem header>
@@ -1276,29 +1290,28 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
-
                 </Col>
             </Row>
-            { /* END Section 6 */}
+            {/* END Section 6 */}
 
-            { /* START Header 7 */}
+            {/* START Header 7 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={7} 
-                        title="Buttons Dropdowns" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={7}
+                        title="Buttons Dropdowns"
                         className="mt-5"
                         subTitle="Dropdown menus attached to buttons."
                     />
                 </Col>
             </Row>
-            { /* END Header 7 */}
-            { /* START Section 7 */}
+            {/* END Header 7 */}
+            {/* START Section 7 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1307,10 +1320,8 @@ const Buttons = () => (
                                     #7.01
                                 </span>
                             </CardTitle>
-                            <p>
-                                Basic button dropup example
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Basic button dropup example</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown direction="up">
                                 <DropdownToggle color="secondary" outline caret>
                                     Dropup
@@ -1338,7 +1349,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1349,10 +1360,8 @@ const Buttons = () => (
                                     #7.02
                                 </span>
                             </CardTitle>
-                            <p>
-                                Dropdown button with icon
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Dropdown button with icon</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" outline caret>
                                     <i className="fa fa-fw fa-user mr-1"></i>
@@ -1381,7 +1390,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1392,39 +1401,41 @@ const Buttons = () => (
                                     #7.03
                                 </span>
                             </CardTitle>
-                            <p>
-                                Segmented button dropdown
-                            </p>
-                            { /* START Button Group Dropdown */}
+                            <p>Segmented button dropdown</p>
+                            {/* START Button Group Dropdown */}
                             <ButtonGroup>
                                 <Button outline>Segmented</Button>
                                 <UncontrolledButtonDropdown>
-                                <DropdownToggle color="secondary" outline caret />
-                                <DropdownMenu right>
-                                    <DropdownItem header>
-                                        Your Options
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
-                                        View
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-ticket mr-2"></i>
-                                        Add Task
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
-                                        Add Files
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-trash mr-2"></i>
-                                        Delete
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledButtonDropdown>
+                                    <DropdownToggle
+                                        color="secondary"
+                                        outline
+                                        caret
+                                    />
+                                    <DropdownMenu right>
+                                        <DropdownItem header>
+                                            Your Options
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                            View
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-ticket mr-2"></i>
+                                            Add Task
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                            Add Files
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-trash mr-2"></i>
+                                            Delete
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            { /* END Button Group Dropdown */}
+                            {/* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1438,7 +1449,7 @@ const Buttons = () => (
                             <p>
                                 Dropup attached to <code>.r-30</code> button
                             </p>
-                            { /* START Button Dropdown */}
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown direction="up">
                                 <DropdownToggle color="secondary" outline caret>
                                     Dropup
@@ -1466,11 +1477,11 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
-                    </Card>        
+                    </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1479,10 +1490,8 @@ const Buttons = () => (
                                     #7.05
                                 </span>
                             </CardTitle>
-                            <p>
-                                Rouned button menu with icon
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Rouned button menu with icon</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" outline caret>
                                     Dropdown
@@ -1510,7 +1519,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1521,39 +1530,41 @@ const Buttons = () => (
                                     #7.06
                                 </span>
                             </CardTitle>
-                            <p>
-                                Rounded button with segments
-                            </p>
-                            { /* START Button Group Dropdown */}
+                            <p>Rounded button with segments</p>
+                            {/* START Button Group Dropdown */}
                             <ButtonGroup>
                                 <Button outline>Segmented</Button>
                                 <UncontrolledButtonDropdown>
-                                <DropdownToggle color="secondary" outline caret />
-                                <DropdownMenu right>
-                                    <DropdownItem header>
-                                        Your Options
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
-                                        View
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-ticket mr-2"></i>
-                                        Add Task
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
-                                        Add Files
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-trash mr-2"></i>
-                                        Delete
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledButtonDropdown>
+                                    <DropdownToggle
+                                        color="secondary"
+                                        outline
+                                        caret
+                                    />
+                                    <DropdownMenu right>
+                                        <DropdownItem header>
+                                            Your Options
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                            View
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-ticket mr-2"></i>
+                                            Add Task
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                            Add Files
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-trash mr-2"></i>
+                                            Delete
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            { /* END Button Group Dropdown */}
+                            {/* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1564,10 +1575,8 @@ const Buttons = () => (
                                     #7.07
                                 </span>
                             </CardTitle>
-                            <p>
-                                Dropup attached to icon button
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Dropup attached to icon button</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown direction="up">
                                 <DropdownToggle color="secondary" outline caret>
                                     <i className="fa fa-fw fa-gear"></i>
@@ -1595,7 +1604,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1606,16 +1615,18 @@ const Buttons = () => (
                                     #7.08
                                 </span>
                             </CardTitle>
-                            <p>
-                                Segmented button dropdown
-                            </p>
-                            { /* START Button Group Dropdown */}
+                            <p>Segmented button dropdown</p>
+                            {/* START Button Group Dropdown */}
                             <ButtonGroup>
                                 <Button outline>
                                     <i className="fa fa-fw fa-gear"></i>
                                 </Button>
                                 <UncontrolledButtonDropdown direction="up">
-                                    <DropdownToggle color="secondary" outline caret />
+                                    <DropdownToggle
+                                        color="secondary"
+                                        outline
+                                        caret
+                                    />
                                     <DropdownMenu right>
                                         <DropdownItem header>
                                             Your Options
@@ -1640,11 +1651,11 @@ const Buttons = () => (
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            { /* END Button Group Dropdown */}
+                            {/* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1653,41 +1664,43 @@ const Buttons = () => (
                                     #7.09
                                 </span>
                             </CardTitle>
-                            <p>
-                                Dropdown in segmented icon button
-                            </p>
-                            { /* START Button Group Dropdown */}
+                            <p>Dropdown in segmented icon button</p>
+                            {/* START Button Group Dropdown */}
                             <ButtonGroup>
                                 <Button outline>
                                     <i className="fa fa-fw fa-gear"></i>
                                 </Button>
                                 <UncontrolledButtonDropdown>
-                                <DropdownToggle color="secondary" outline caret />
-                                <DropdownMenu right>
-                                    <DropdownItem header>
-                                        Your Options
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
-                                        View
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-ticket mr-2"></i>
-                                        Add Task
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
-                                        Add Files
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-trash mr-2"></i>
-                                        Delete
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledButtonDropdown>
+                                    <DropdownToggle
+                                        color="secondary"
+                                        outline
+                                        caret
+                                    />
+                                    <DropdownMenu right>
+                                        <DropdownItem header>
+                                            Your Options
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                            View
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-ticket mr-2"></i>
+                                            Add Task
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                            Add Files
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-trash mr-2"></i>
+                                            Delete
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            { /* END Button Group Dropdown */}
+                            {/* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1698,10 +1711,8 @@ const Buttons = () => (
                                     #7.10
                                 </span>
                             </CardTitle>
-                            <p>
-                                Basic button dropright example
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Basic button dropright example</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown direction="right">
                                 <DropdownToggle color="secondary" outline caret>
                                     Dropright
@@ -1729,7 +1740,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1740,10 +1751,8 @@ const Buttons = () => (
                                     #7.11
                                 </span>
                             </CardTitle>
-                            <p>
-                                Basic button dropright example
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Basic button dropright example</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown direction="left">
                                 <DropdownToggle color="secondary" outline caret>
                                     Dropleft
@@ -1771,7 +1780,7 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1782,10 +1791,8 @@ const Buttons = () => (
                                     #7.12
                                 </span>
                             </CardTitle>
-                            <p>
-                                Basic button dropleft example
-                            </p>
-                            { /* START Button Dropdown */}
+                            <p>Basic button dropleft example</p>
+                            {/* START Button Dropdown */}
                             <UncontrolledButtonDropdown>
                                 <DropdownToggle color="secondary" outline caret>
                                     Dropdown Menu Right
@@ -1813,28 +1820,28 @@ const Buttons = () => (
                                     </DropdownItem>
                                 </DropdownMenu>
                             </UncontrolledButtonDropdown>
-                            { /* END Button Dropdown */}
+                            {/* END Button Dropdown */}
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 7 */}
+            {/* END Section 7 */}
 
-            { /* START Header 8 */}
+            {/* START Header 8 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={8} 
-                        title="Buttons Options" 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={8}
+                        title="Buttons Options"
                         className="mt-5"
                         subTitle="Media list and media object layouts."
                     />
                 </Col>
             </Row>
-            { /* END Header 8 */}
-            { /* START Section 8 */}
+            {/* END Header 8 */}
+            {/* START Section 8 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1844,15 +1851,22 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default Button Group, example:  
+                                Default Button Group, example:
                                 <code>
-                                &lt;ButtonGroup&gt;&lt;Button outline color="secondary"&gt;...&lt;/Button&gt;&lt;/ButtonGroup&gt;
+                                    &lt;ButtonGroup&gt;&lt;Button outline
+                                    color="secondary"&gt;...&lt;/Button&gt;&lt;/ButtonGroup&gt;
                                 </code>
                             </p>
                             <ButtonGroup>
-                                <Button outline color="secondary">Left</Button>
-                                <Button outline color="secondary">Middle</Button>
-                                <Button outline color="secondary">Right</Button>
+                                <Button outline color="secondary">
+                                    Left
+                                </Button>
+                                <Button outline color="secondary">
+                                    Middle
+                                </Button>
+                                <Button outline color="secondary">
+                                    Right
+                                </Button>
                             </ButtonGroup>
                         </CardBody>
                     </Card>
@@ -1865,29 +1879,43 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Example:   
+                                Example:
                                 <code>
-                                &lt;ButtonToolbar&gt;&lt;ButtonGroup&gt;&lt;Button outline color="secondary"&gt;...&lt;/Button&gt;&lt;/ButtonGroup&gt;&lt;/ButtonToolbar&gt;
+                                    &lt;ButtonToolbar&gt;&lt;ButtonGroup&gt;&lt;Button
+                                    outline
+                                    color="secondary"&gt;...&lt;/Button&gt;&lt;/ButtonGroup&gt;&lt;/ButtonToolbar&gt;
                                 </code>
                             </p>
                             <ButtonToolbar>
                                 <ButtonGroup className="mr-2">
-                                    <Button outline color="secondary">1</Button>
-                                    <Button outline color="secondary">2</Button>
-                                    <Button outline color="secondary">3</Button>
+                                    <Button outline color="secondary">
+                                        1
+                                    </Button>
+                                    <Button outline color="secondary">
+                                        2
+                                    </Button>
+                                    <Button outline color="secondary">
+                                        3
+                                    </Button>
                                 </ButtonGroup>
                                 <ButtonGroup className="mr-2">
-                                    <Button outline color="secondary">3</Button>
-                                    <Button outline color="secondary">4</Button>
+                                    <Button outline color="secondary">
+                                        3
+                                    </Button>
+                                    <Button outline color="secondary">
+                                        4
+                                    </Button>
                                 </ButtonGroup>
                                 <ButtonGroup>
-                                    <Button outline color="secondary">5</Button>
+                                    <Button outline color="secondary">
+                                        5
+                                    </Button>
                                 </ButtonGroup>
                             </ButtonToolbar>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1931,7 +1959,7 @@ const Buttons = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -1956,9 +1984,7 @@ const Buttons = () => (
                                     #8.07
                                 </span>
                             </CardTitle>
-                            <p>
-                                Below example
-                            </p>
+                            <p>Below example</p>
                             <i>TO-DO...</i>
                         </CardBody>
                     </Card>
@@ -1970,15 +1996,13 @@ const Buttons = () => (
                                     #8.08
                                 </span>
                             </CardTitle>
-                            <p>
-                                Below example
-                            </p>
+                            <p>Below example</p>
                             <i>TO-DO...</i>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 8 */}
+            {/* END Section 8 */}
         </Container>
     </React.Fragment>
 );

@@ -1,21 +1,17 @@
 import React from 'react';
 import { Typeahead } from 'react-bootstrap-typeahead';
 
-import {
-    CustomInput,
-    Card,
-    FormGroup
-} from './../../../../components';
+import { CustomInput, Card, FormGroup } from './../../../../components';
 import options from './exampleData';
 
 export class BodyContainer extends React.Component {
     state = {
         bodyContainer: true,
-        dropup: false
+        dropup: false,
     };
-  
+
     render() {
-        const {bodyContainer, dropup} = this.state;
+        const { bodyContainer, dropup } = this.state;
 
         return (
             <React.Fragment>
@@ -26,7 +22,7 @@ export class BodyContainer extends React.Component {
                         padding: '40px',
                     }}
                 >
-                    <div style={{height: '300px'}}>
+                    <div style={{ height: '300px' }}>
                         <Typeahead
                             {...this.state}
                             labelKey="name"
@@ -56,9 +52,9 @@ export class BodyContainer extends React.Component {
             </React.Fragment>
         );
     }
-  
-    _handleChange = (e) => {
-        const {checked, name} = e.target;
-        this.setState({[name]: checked});
-    }
+
+    _handleChange = e => {
+        const { checked, name } = e.target;
+        this.setState({ [name]: checked });
+    };
 }

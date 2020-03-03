@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { 
+import {
     Container,
     Row,
     Col,
@@ -9,34 +9,31 @@ import {
     CardBody,
     Badge,
 } from './../../../components';
-import { HeaderMain } from "../../components/HeaderMain";
-import { HeaderDemo } from "../../components/HeaderDemo";
+import { HeaderMain } from '../../components/HeaderMain';
+import { HeaderDemo } from '../../components/HeaderDemo';
 
 const BadgesLabels = () => (
     <React.Fragment>
         <Container>
-            <HeaderMain 
-                title="Badges & Labels"
-                className="mb-5 mt-4"
-            />
-            { /* START Header 1 */}
+            <HeaderMain title="Badges & Labels" className="mb-5 mt-4" />
+            {/* START Header 1 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={1} 
-                        title="Badges Default" 
-                        subTitle={(
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={1}
+                        title="Badges Default"
+                        subTitle={
                             <React.Fragment>
                                 Basic button layout options.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 1 */}
-            { /* START Section 1 */}
+            {/* END Header 1 */}
+            {/* START Section 1 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -46,8 +43,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-default</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-default</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="primary">Primary</Badge>
                         </CardBody>
@@ -61,8 +59,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-secondary</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-secondary</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="secondary">Secondary</Badge>
                         </CardBody>
@@ -76,14 +75,15 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-success</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-success</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="success">Success</Badge>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -93,8 +93,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-danger</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-danger</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="danger">Danger</Badge>
                         </CardBody>
@@ -108,8 +109,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-warning</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-warning</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="warning">Warning</Badge>
                         </CardBody>
@@ -123,14 +125,15 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-info</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-info</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="info">Info</Badge>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -140,8 +143,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-light</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-light</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="light">Light</Badge>
                         </CardBody>
@@ -155,35 +159,36 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-dark</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-dark</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="dark">Dark</Badge>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 1 */}
+            {/* END Section 1 */}
 
-            { /* START Header 2 */}
+            {/* START Header 2 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={2} 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={2}
                         title="Badges Options"
                         className="mt-5"
-                        subTitle={(
+                        subTitle={
                             <React.Fragment>
                                 Basic button layout options.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 2 */}
-            { /* START Section 2 */}
+            {/* END Header 2 */}
+            {/* START Section 2 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -193,10 +198,13 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-default</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-default</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
-                            <Badge color="primary" pill>Badge Pill</Badge>
+                            <Badge color="primary" pill>
+                                Badge Pill
+                            </Badge>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -208,8 +216,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-secondary</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-secondary</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="secondary">Without Rounds</Badge>
                         </CardBody>
@@ -223,14 +232,15 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-success</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-success</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="success">Badge Dropdown</Badge>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -240,8 +250,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-danger</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-danger</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="info">
                                 <i className="fa fa-home"></i>
@@ -257,8 +268,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-warning</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-warning</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="warning" href="#">
                                 <i className="fa fa-link"></i>
@@ -274,8 +286,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-info</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-info</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="danger">
                                 <i className="fa fa-exclamation"></i>
@@ -283,18 +296,19 @@ const BadgesLabels = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
-                                Badge: Only Icon Rounded Link 
+                                Badge: Only Icon Rounded Link
                                 <span className="small ml-1 text-muted">
                                     #2.07
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-light</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-light</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="dark" href="#">
                                 <i className="fa fa-gear"></i>
@@ -303,38 +317,39 @@ const BadgesLabels = () => (
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 2 */}
+            {/* END Section 2 */}
 
-            { /* START Header 3 */}
+            {/* START Header 3 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={3} 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={3}
                         title="Badges Border"
                         className="mt-5"
-                        subTitle={(
+                        subTitle={
                             <React.Fragment>
                                 Basic button layout options.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 3 */}
-            { /* START Section 3 */}
+            {/* END Header 3 */}
+            {/* START Section 3 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
-                                Badge Border: Primary 
+                                Badge Border: Primary
                                 <span className="small ml-1 text-muted">
                                     #3.01
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-default</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-default</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="primary">Primary</Badge>
                         </CardBody>
@@ -348,8 +363,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-secondary</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-secondary</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="secondary">Secondary</Badge>
                         </CardBody>
@@ -363,14 +379,15 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-success</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-success</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="success">Success</Badge>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -380,8 +397,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-danger</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-danger</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="danger">Danger</Badge>
                         </CardBody>
@@ -395,8 +413,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-warning</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-warning</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="warning">Warning</Badge>
                         </CardBody>
@@ -410,14 +429,15 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-info</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-info</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="info">Info</Badge>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -427,8 +447,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-light</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-light</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="light">Light</Badge>
                         </CardBody>
@@ -442,35 +463,36 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-dark</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-dark</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="dark">Dark</Badge>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 3 */}
+            {/* END Section 3 */}
 
-            { /* START Header 2 */}
+            {/* START Header 2 */}
             <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={4} 
+                <Col lg={12}>
+                    <HeaderDemo
+                        no={4}
                         title="Badges Border Options"
                         className="mt-5"
-                        subTitle={(
+                        subTitle={
                             <React.Fragment>
                                 Basic button layout options.
                             </React.Fragment>
-                        )}
+                        }
                     />
                 </Col>
             </Row>
-            { /* END Header 2 */}
-            { /* START Section 2 */}
+            {/* END Header 2 */}
+            {/* START Section 2 */}
             <Row>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -480,10 +502,13 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-default</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-default</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
-                            <Badge color="primary" pill>Badge Pill</Badge>
+                            <Badge color="primary" pill>
+                                Badge Pill
+                            </Badge>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -495,8 +520,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-secondary</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-secondary</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="secondary">Without Rounds</Badge>
                         </CardBody>
@@ -510,14 +536,15 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-success</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-success</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="success">Badge Dropdown</Badge>
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
@@ -527,8 +554,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-danger</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-danger</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="info">
                                 <i className="fa fa-home"></i>
@@ -544,8 +572,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-warning</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-warning</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="warning" href="#">
                                 <i className="fa fa-link"></i>
@@ -561,8 +590,9 @@ const BadgesLabels = () => (
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-info</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-info</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="danger">
                                 <i className="fa fa-exclamation"></i>
@@ -570,18 +600,19 @@ const BadgesLabels = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={4}>
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
-                                Badge Border: Only Icon Rounded Link 
+                                Badge Border: Only Icon Rounded Link
                                 <span className="small ml-1 text-muted">
                                     #4.07
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Default label styling. To use, 
-                                add <code>.label-light</code> to the base <code>.label</code> class.
+                                Default label styling. To use, add{' '}
+                                <code>.label-light</code> to the base{' '}
+                                <code>.label</code> class.
                             </p>
                             <Badge color="dark" href="#">
                                 <i className="fa fa-gear"></i>
@@ -590,9 +621,7 @@ const BadgesLabels = () => (
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 2 */}
-
-
+            {/* END Section 2 */}
         </Container>
     </React.Fragment>
 );

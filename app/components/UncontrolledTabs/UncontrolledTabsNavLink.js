@@ -6,23 +6,24 @@ import { NavLink } from 'reactstrap';
 
 import { Consumer } from './context';
 
-const UncontrolledTabsNavLink = (props) => (
+const UncontrolledTabsNavLink = props => (
     <Consumer>
-    {
-        (value) => (
+        {value => (
             <NavLink
-                { ..._.omit(props, ['tabId']) }
-                onClick={ () => { value.setActiveTabId(props.tabId) } }
-                className={ classNames({ active: props.tabId === value.activeTabId }) }
+                {..._.omit(props, ['tabId'])}
+                onClick={() => {
+                    value.setActiveTabId(props.tabId);
+                }}
+                className={classNames({
+                    active: props.tabId === value.activeTabId,
+                })}
                 href="javascript:;"
             />
-        )
-    }
+        )}
     </Consumer>
 );
 UncontrolledTabsNavLink.propTypes = {
-    tabId: PropTypes.string.isRequired
+    tabId: PropTypes.string.isRequired,
 };
 
 export { UncontrolledTabsNavLink };
-

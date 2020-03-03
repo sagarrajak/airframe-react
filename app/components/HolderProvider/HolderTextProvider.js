@@ -11,26 +11,20 @@ class HolderTextProvider extends React.Component {
         bg: PropTypes.string,
         fg: PropTypes.string,
         text: PropTypes.string,
-        width: PropTypes.oneOfType([
-            PropTypes.number,
-            PropTypes.string
-        ]),
-        height: PropTypes.oneOfType([
-            PropTypes.number,
-            PropTypes.string
-        ]),
+        width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         font: PropTypes.string,
         align: PropTypes.string,
         outline: PropTypes.bool,
         lineWrap: PropTypes.number,
-        children: PropTypes.node
-    }
+        children: PropTypes.node,
+    };
     static defaultProps = {
         width: '100p',
         height: 220,
         bg: colors['200'],
-        fg: colors['500']
-    }
+        fg: colors['500'],
+    };
 
     constructor(props) {
         super(props);
@@ -65,8 +59,8 @@ class HolderTextProvider extends React.Component {
                     images: domElement,
                     object: null,
                     bgnodes: null,
-                    stylenodes: null
-                })
+                    stylenodes: null,
+                });
 
                 return true;
             }
@@ -82,11 +76,10 @@ class HolderTextProvider extends React.Component {
         const phPropsQuery = qs.stringify(phProps);
 
         return React.cloneElement(onlyChild, {
-            'id': this.domId,
-            'data-src': `holder.js/${this.props.width}x${this.props.height}?${phPropsQuery}`
+            id: this.domId,
+            'data-src': `holder.js/${this.props.width}x${this.props.height}?${phPropsQuery}`,
         });
     }
 }
 
 export { HolderTextProvider };
-

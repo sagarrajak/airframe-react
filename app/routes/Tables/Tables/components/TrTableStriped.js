@@ -23,25 +23,21 @@ const no = [
 
 const TrTableStriped = () => (
     <React.Fragment>
-        {
-            _.times(4, (index) => (
-                <tr key={ index }>
-                    <td className="align-middle">
-                        { no[index%4] }.
-                    </td>
-                    <td className="align-middle">
-                        <span className="text-inverse">
-                            { faker.commerce.productName() }
-                        </span>
-                    </td>
-                    <td className="align-middle">
-                        { faker.date.weekday() }, 12 { faker.date.month() }, 2018
-                    </td>
-                    { lastMonth[index%2] }
-                </tr>
-            ))
-        }
+        {_.times(4, index => (
+            <tr key={index}>
+                <td className="align-middle">{no[index % 4]}.</td>
+                <td className="align-middle">
+                    <span className="text-inverse">
+                        {faker.commerce.productName()}
+                    </span>
+                </td>
+                <td className="align-middle">
+                    {faker.date.weekday()}, 12 {faker.date.month()}, 2018
+                </td>
+                {lastMonth[index % 2]}
+            </tr>
+        ))}
     </React.Fragment>
-)
+);
 
 export { TrTableStriped };

@@ -16,20 +16,20 @@ import {
     InputGroup,
     Input,
     InputGroupAddon,
-    Button
+    Button,
 } from './../../components';
 
-const messagesColors = [
-    "text-success",
-    "text-danger",
-    "text-warning"
-];
+const messagesColors = ['text-success', 'text-danger', 'text-warning'];
 
-const NavbarMessages = (props) => (
-    <UncontrolledDropdown nav inNavbar { ...props }>
+const NavbarMessages = props => (
+    <UncontrolledDropdown nav inNavbar {...props}>
         <DropdownToggle nav>
             <IconWithBadge
-                badge={ <Badge pill color="secondary">6</Badge> }
+                badge={
+                    <Badge pill color="secondary">
+                        6
+                    </Badge>
+                }
             >
                 <i className="fa fa-envelope-o fa-fw" />
             </IconWithBadge>
@@ -54,14 +54,18 @@ const NavbarMessages = (props) => (
 
             <ExtendedDropdown.Section list>
                 <ListGroup>
-                {
-                    _.times(3, (index) => (
-                        <ListGroupItem tag={ ExtendedDropdown.Link } to="/apps/email-details" key={ index } action>
+                    {_.times(3, index => (
+                        <ListGroupItem
+                            tag={ExtendedDropdown.Link}
+                            to="/apps/email-details"
+                            key={index}
+                            action
+                        >
                             <Media>
                                 <Media left>
                                     <Avatar.Image
-                                        src={ faker.image.avatar() }
-                                        className='mr-4'
+                                        src={faker.image.avatar()}
+                                        className="mr-4"
                                     />
                                 </Media>
                                 <Media body>
@@ -70,24 +74,30 @@ const NavbarMessages = (props) => (
                                             className={`fa fa-circle small ${messagesColors[index]} mr-2 d-flex align-items-center`}
                                         />
                                         <span className="h6 pb-0 mb-0 d-flex align-items-center">
-                                            { faker.name.firstName() } { faker.name.lastName() }
+                                            {faker.name.firstName()}{' '}
+                                            {faker.name.lastName()}
                                         </span>
-                                        
+
                                         <span className="ml-1 small">(23)</span>
-                                        <span className="ml-auto small">Now</span>
+                                        <span className="ml-auto small">
+                                            Now
+                                        </span>
                                     </span>
                                     <p className="mt-2 mb-1">
-                                        { faker.lorem.sentences() }
+                                        {faker.lorem.sentences()}
                                     </p>
                                 </Media>
                             </Media>
                         </ListGroupItem>
-                    ))
-                }
+                    ))}
                 </ListGroup>
             </ExtendedDropdown.Section>
 
-            <ExtendedDropdown.Section className="text-center" tag={ ExtendedDropdown.Link } to="/apps/inbox">
+            <ExtendedDropdown.Section
+                className="text-center"
+                tag={ExtendedDropdown.Link}
+                to="/apps/inbox"
+            >
                 View All
                 <i className="fa fa-angle-right fa-fw ml-2" />
             </ExtendedDropdown.Section>
@@ -96,7 +106,7 @@ const NavbarMessages = (props) => (
 );
 NavbarMessages.propTypes = {
     className: PropTypes.string,
-    style: PropTypes.object
+    style: PropTypes.object,
 };
 
 export { NavbarMessages };

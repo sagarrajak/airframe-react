@@ -13,22 +13,22 @@ class SelectFilter extends React.Component {
         options: PropTypes.array.isRequired,
         placeholder: PropTypes.string,
         getFilter: PropTypes.func,
-        onClick: PropTypes.func
-    }
+        onClick: PropTypes.func,
+    };
 
     constructor() {
         super();
 
         this.state = {
-            value: ''
-        }
+            value: '',
+        };
         this.inputId = uid();
         this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
         if (_.isFunction(this.props.getFilter)) {
-            this.props.getFilter((value) => {
+            this.props.getFilter(value => {
                 this.setState({ value });
             });
         }
@@ -54,25 +54,32 @@ class SelectFilter extends React.Component {
             <CustomInput
                 type="select"
                 bsSize="sm"
-                onChange={(e) => { this.setState({ value: e.target.value }) }}
-                onClick={ this.handleClick }
-                value={ this.state.value }
+                onChange={e => {
+                    this.setState({ value: e.target.value });
+                }}
+                onClick={this.handleClick}
+                value={this.state.value}
                 className="d-block bg-white"
                 id={this.inputId}
             >
-                <option value="">{ placeholder }</option>
+                <option value="">{placeholder}</option>
 
-                {
-                    _.map(options, ({ value, label }, index) => (
-                        <option value={value} key={ index }>{ label }</option>
-                    ))
-                }
+                {_.map(options, ({ value, label }, index) => (
+                    <option value={value} key={index}>
+                        {label}
+                    </option>
+                ))}
             </CustomInput>
-        )
+        );
     }
 }
 
-export const buildCustomSelectFilter = ({ placeholder, options, getFilter, ...other } = {}) => ({
+export const buildCustomSelectFilter = ({
+    placeholder,
+    options,
+    getFilter,
+    ...other
+} = {}) => ({
     filter: customFilter(other),
     filterRenderer: function TextFilterWrap(onFilter, column) {
         return (
@@ -82,9 +89,9 @@ export const buildCustomSelectFilter = ({ placeholder, options, getFilter, ...ot
                     column,
                     placeholder,
                     options,
-                    getFilter
+                    getFilter,
                 }}
             />
-        )
-    }
+        );
+    },
 });

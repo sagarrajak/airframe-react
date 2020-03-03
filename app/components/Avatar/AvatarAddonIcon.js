@@ -4,23 +4,24 @@ import classNames from 'classnames';
 
 import avatarColors from './../../colors.scss';
 
-const AvatarAddonIcon = (props) => {
-    const addOnClass = classNames({
-        'avatar__icon__inner': props.small
-    }, avatarColors[`fg-color--${ props.color }`]);
-
-    return (
-        <i className={ classNames(addOnClass, props.className) }></i>
+const AvatarAddonIcon = props => {
+    const addOnClass = classNames(
+        {
+            avatar__icon__inner: props.small,
+        },
+        avatarColors[`fg-color--${props.color}`],
     );
+
+    return <i className={classNames(addOnClass, props.className)}></i>;
 };
 AvatarAddonIcon.propTypes = {
     small: PropTypes.bool,
     className: PropTypes.string,
-    color: PropTypes.string
+    color: PropTypes.string,
 };
 AvatarAddonIcon.defaultProps = {
-    color: "success"
+    color: 'success',
 };
-AvatarAddonIcon.addOnId = "avatar--icon";
+AvatarAddonIcon.addOnId = 'avatar--icon';
 
 export { AvatarAddonIcon };

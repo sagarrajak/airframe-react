@@ -9,7 +9,7 @@ import {
     NavbarToggler,
     UncontrolledCollapse,
     SidebarTrigger,
-    ThemeConsumer
+    ThemeConsumer,
 } from './../../components';
 
 import { NavbarActivityFeed } from './NavbarActivityFeed';
@@ -19,19 +19,13 @@ import { LogoThemed } from './../../routes/components/LogoThemed/LogoThemed';
 
 export const SidebarWithNavbarNavbar = () => (
     <ThemeConsumer>
-    {
-        ({ color }) => (
+        {({ color }) => (
             <React.Fragment>
-                { /*    First Navbar    */}
-                <Navbar
-                    light
-                    expand
-                    fluid
-                    className="bg-white pb-0 pb-lg-2"
-                >
+                {/*    First Navbar    */}
+                <Navbar light expand fluid className="bg-white pb-0 pb-lg-2">
                     <Nav navbar>
                         <NavItem>
-                            <SidebarTrigger/>
+                            <SidebarTrigger />
                         </NavItem>
                         <NavItem className="navbar-brand d-lg-none">
                             <Link to="/">
@@ -40,9 +34,7 @@ export const SidebarWithNavbarNavbar = () => (
                         </NavItem>
                     </Nav>
 
-                    <h1
-                        className="h5 mb-0 mr-auto ml-2 d-none d-lg-block"
-                    >
+                    <h1 className="h5 mb-0 mr-auto ml-2 d-none d-lg-block">
                         Sidebar with Navbar
                     </h1>
 
@@ -52,12 +44,12 @@ export const SidebarWithNavbarNavbar = () => (
                         <NavbarUser className="ml-2" />
                     </Nav>
                 </Navbar>
-                { /*    Second Navbar    */}
+                {/*    Second Navbar    */}
                 <Navbar
                     shadow
                     expand="lg"
                     light
-                    color={ color }
+                    color={color}
                     fluid
                     className="pt-0 pt-lg-2"
                 >
@@ -65,12 +57,15 @@ export const SidebarWithNavbarNavbar = () => (
                         Sidebar with Navbar
                     </h1>
 
-                    <UncontrolledCollapse navbar toggler="#navbar-navigation-toggler">
+                    <UncontrolledCollapse
+                        navbar
+                        toggler="#navbar-navigation-toggler"
+                    >
                         <Nav accent navbar>
                             <NavItem>
                                 <NavLink
                                     active
-                                    tag={ Link }
+                                    tag={Link}
                                     to="/layouts/sidebar-with-navbar"
                                 >
                                     Preview
@@ -96,14 +91,17 @@ export const SidebarWithNavbarNavbar = () => (
 
                     <Nav navbar pills className="ml-auto">
                         <NavItem>
-                            <NavLink tag={ NavbarToggler } id="navbar-navigation-toggler" className="b-0">
+                            <NavLink
+                                tag={NavbarToggler}
+                                id="navbar-navigation-toggler"
+                                className="b-0"
+                            >
                                 <i className="fa fa-ellipsis-h fa-fw"></i>
                             </NavLink>
                         </NavItem>
                     </Nav>
                 </Navbar>
             </React.Fragment>
-        )
-    }
+        )}
     </ThemeConsumer>
 );
